@@ -1,0 +1,1 @@
+docker run --rm --user 0:0 --name opm-run-20260817T080520-1a1c4e575bbb -v /root/aios-hack/aios/data/dataset-extra-500/decks/levels-0132:/deck:ro -v /root/aios-hack/aios/data/dataset-extra-500/runs/20260817T080520-1a1c4e575bbb/output:/out openporousmedia/opmreleases:latest flow /deck/Model_Z.data --output-dir=/out --parsing-strictness=low
