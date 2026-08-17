@@ -1,0 +1,3324 @@
+**********************************************************************
+*                                                                    *
+*                        This is flow 2026.04                        *
+*                                                                    *
+* Flow is a simulator for fully implicit three-phase black-oil flow, *
+*             including solvent and polymer capabilities.            *
+*          For more information, see https://opm-project.org         *
+*                                                                    *
+**********************************************************************
+
+Using 1 MPI processes with 2 OMP threads on each 
+
+Reading deck file '/deck/Model_Z.data'
+    0 Reading RUNSPEC  in /deck/Model_Z.data line 6
+    1 Reading UNIFOUT  in /deck/Model_Z.data line 8
+    2 Reading START    in /deck/Model_Z.data line 15
+    3 Reading OIL      in /deck/Model_Z.data line 19
+    4 Reading WATER    in /deck/Model_Z.data line 22
+    5 Reading GAS      in /deck/Model_Z.data line 25
+    6 Reading DISGAS   in /deck/Model_Z.data line 28
+    7 Reading METRIC   in /deck/Model_Z.data line 31
+    8 Reading ENDSCALE in /deck/Model_Z.data line 34
+    9 Reading DIMENS   in /deck/Model_Z.data line 38
+   10 Reading TABDIMS  in /deck/Model_Z.data line 42
+   11 Reading REGDIMS  in /deck/Model_Z.data line 46
+   12 Reading WELLDIMS in /deck/Model_Z.data line 50
+   13 Reading EQLDIMS  in /deck/Model_Z.data line 53
+   14 Reading AQUDIMS  in /deck/Model_Z.data line 57
+   15 Reading GRIDOPTS in /deck/Model_Z.data line 61
+   16 Reading GRID     in /deck/Model_Z.data line 71
+   17 Reading INIT     in /deck/Model_Z_grid.inc line 1
+   18 Reading MINPV    in /deck/Model_Z_grid.inc line 3
+   19 Reading COORD    in /deck/Model_Z_grid.inc line 6
+   20 Reading ZCORN    in /deck/Model_Z_grid.inc line 9485
+   21 Reading ACTNUM   in /deck/Model_Z_grid.inc line 557125
+   22 Reading PORO     in /deck/Model_Z_grid.inc line 558558
+   23 Reading NTG      in /deck/Model_Z_grid.inc line 589077
+   24 Reading PERMX    in /deck/Model_Z_grid.inc line 590510
+   25 Reading PERMY    in /deck/Model_Z_grid.inc line 621038
+   26 Reading PERMZ    in /deck/Model_Z_grid.inc line 651547
+   27 Reading PINCHREG in /deck/Model_Z_grid.inc line 682052
+   28 Reading EDIT     in /deck/Model_Z.data line 80
+   29 Reading PORV     in /deck/Model_Z_edit.inc line 2
+   30 Reading MULTZ    in /deck/Model_Z_edit.inc line 30502
+   31 Reading PROPS    in /deck/Model_Z.data line 89
+   32 Reading PVTO     in /deck/Model_Z_props.inc line 6
+   33 Reading PVDG     in /deck/Model_Z_props.inc line 355
+   34 Reading PVTW     in /deck/Model_Z_props.inc line 364
+   35 Reading DENSITY  in /deck/Model_Z_props.inc line 370
+   36 Reading RTEMP    in /deck/Model_Z_props.inc line 376
+   37 Reading ROCK     in /deck/Model_Z_props.inc line 381
+   38 Reading STCOND   in /deck/Model_Z_props.inc line 387
+   39 Reading SCALECRS in /deck/Model_Z_props.inc line 392
+   40 Reading SWOF     in /deck/Model_Z_props.inc line 398
+   41 Reading SGOF     in /deck/Model_Z_props.inc line 502
+   42 Reading REGIONS  in /deck/Model_Z.data line 98
+   43 Reading SATNUM   in /deck/Model_Z_regs.inc line 2
+   44 Reading PVTNUM   in /deck/Model_Z_regs.inc line 1435
+   45 Reading EQLNUM   in /deck/Model_Z_regs.inc line 2868
+   46 Reading FIP_C1   in /deck/Model_Z_regs.inc line 4475
+   47 Reading FIP_ZONE in /deck/Model_Z_regs.inc line 5908
+   48 Reading SOLUTION in /deck/Model_Z.data line 107
+   49 Reading EQUIL    in /deck/Model_Z_init.inc line 6
+   50 Reading RSVD     in /deck/Model_Z_init.inc line 25
+   51 Reading SUMMARY  in /deck/Model_Z.data line 116
+   52 Reading WLPT     in /deck/Model_Z_summary.inc line 4
+   53 Reading WWIT     in /deck/Model_Z_summary.inc line 110
+   54 Reading WLPR     in /deck/Model_Z_summary.inc line 216
+   55 Reading WWIR     in /deck/Model_Z_summary.inc line 322
+   56 Reading WTHP     in /deck/Model_Z_summary.inc line 428
+   57 Reading WBHP     in /deck/Model_Z_summary.inc line 534
+   58 Reading WEFF     in /deck/Model_Z_summary.inc line 640
+   59 Reading WMCTL    in /deck/Model_Z_summary.inc line 746
+   60 Reading COPT     in /deck/Model_Z_summary.inc line 852
+   61 Reading COPR     in /deck/Model_Z_summary.inc line 2223
+   62 Reading FPR      in /deck/Model_Z_summary.inc line 3594
+   63 Reading FOIP     in /deck/Model_Z_summary.inc line 3597
+   64 Reading FWIP     in /deck/Model_Z_summary.inc line 3600
+   65 Reading FOPT     in /deck/Model_Z_summary.inc line 3603
+   66 Reading FWPT     in /deck/Model_Z_summary.inc line 3606
+   67 Reading FWIT     in /deck/Model_Z_summary.inc line 3609
+   68 Reading SCHEDULE in /deck/Model_Z.data line 125
+   69 Reading RPTSCHED in /deck/Model_Z_sch.inc line 1
+   70 Reading WELSPECS in /deck/Model_Z_sch.inc line 5
+   71 Reading DATES    in /deck/Model_Z_sch.inc line 111
+   72 Reading COMPDAT  in /deck/Model_Z_sch.inc line 115
+   73 Reading WCONPROD in /deck/Model_Z_sch.inc line 137
+   74 Reading DATES    in /deck/Model_Z_sch.inc line 145
+   75 Reading COMPDAT  in /deck/Model_Z_sch.inc line 149
+   76 Reading WCONPROD in /deck/Model_Z_sch.inc line 156
+   77 Reading DATES    in /deck/Model_Z_sch.inc line 165
+   78 Reading COMPDAT  in /deck/Model_Z_sch.inc line 169
+   79 Reading WCONPROD in /deck/Model_Z_sch.inc line 176
+   80 Reading DATES    in /deck/Model_Z_sch.inc line 186
+   81 Reading COMPDAT  in /deck/Model_Z_sch.inc line 190
+   82 Reading WCONPROD in /deck/Model_Z_sch.inc line 216
+   83 Reading DATES    in /deck/Model_Z_sch.inc line 232
+   84 Reading WCONPROD in /deck/Model_Z_sch.inc line 236
+   85 Reading DATES    in /deck/Model_Z_sch.inc line 252
+   86 Reading WCONPROD in /deck/Model_Z_sch.inc line 256
+   87 Reading DATES    in /deck/Model_Z_sch.inc line 272
+   88 Reading COMPDAT  in /deck/Model_Z_sch.inc line 276
+   89 Reading WCONPROD in /deck/Model_Z_sch.inc line 285
+   90 Reading DATES    in /deck/Model_Z_sch.inc line 303
+   91 Reading COMPDAT  in /deck/Model_Z_sch.inc line 307
+   92 Reading WCONPROD in /deck/Model_Z_sch.inc line 337
+   93 Reading DATES    in /deck/Model_Z_sch.inc line 362
+   94 Reading COMPDAT  in /deck/Model_Z_sch.inc line 366
+   95 Reading WCONPROD in /deck/Model_Z_sch.inc line 394
+   96 Reading DATES    in /deck/Model_Z_sch.inc line 427
+   97 Reading COMPDAT  in /deck/Model_Z_sch.inc line 431
+   98 Reading WCONPROD in /deck/Model_Z_sch.inc line 441
+   99 Reading DATES    in /deck/Model_Z_sch.inc line 478
+  100 Reading WCONPROD in /deck/Model_Z_sch.inc line 482
+  101 Reading DATES    in /deck/Model_Z_sch.inc line 519
+  102 Reading WCONPROD in /deck/Model_Z_sch.inc line 523
+  103 Reading DATES    in /deck/Model_Z_sch.inc line 560
+  104 Reading WCONPROD in /deck/Model_Z_sch.inc line 564
+  105 Reading DATES    in /deck/Model_Z_sch.inc line 601
+  106 Reading WCONPROD in /deck/Model_Z_sch.inc line 605
+  107 Reading DATES    in /deck/Model_Z_sch.inc line 642
+  108 Reading WCONPROD in /deck/Model_Z_sch.inc line 646
+  109 Reading DATES    in /deck/Model_Z_sch.inc line 683
+  110 Reading WCONPROD in /deck/Model_Z_sch.inc line 687
+  111 Reading DATES    in /deck/Model_Z_sch.inc line 724
+  112 Reading WCONPROD in /deck/Model_Z_sch.inc line 728
+  113 Reading DATES    in /deck/Model_Z_sch.inc line 765
+  114 Reading COMPDAT  in /deck/Model_Z_sch.inc line 769
+  115 Reading WCONPROD in /deck/Model_Z_sch.inc line 797
+  116 Reading DATES    in /deck/Model_Z_sch.inc line 841
+  117 Reading WCONPROD in /deck/Model_Z_sch.inc line 845
+  118 Reading DATES    in /deck/Model_Z_sch.inc line 889
+  119 Reading WCONPROD in /deck/Model_Z_sch.inc line 893
+  120 Reading DATES    in /deck/Model_Z_sch.inc line 937
+  121 Reading COMPDAT  in /deck/Model_Z_sch.inc line 941
+  122 Reading WCONPROD in /deck/Model_Z_sch.inc line 949
+  123 Reading DATES    in /deck/Model_Z_sch.inc line 994
+  124 Reading COMPDAT  in /deck/Model_Z_sch.inc line 998
+  125 Reading WCONPROD in /deck/Model_Z_sch.inc line 1011
+  126 Reading DATES    in /deck/Model_Z_sch.inc line 1059
+  127 Reading WCONPROD in /deck/Model_Z_sch.inc line 1063
+  128 Reading DATES    in /deck/Model_Z_sch.inc line 1111
+  129 Reading COMPDAT  in /deck/Model_Z_sch.inc line 1115
+  130 Reading WCONPROD in /deck/Model_Z_sch.inc line 1129
+  131 Reading DATES    in /deck/Model_Z_sch.inc line 1179
+  132 Reading COMPDAT  in /deck/Model_Z_sch.inc line 1183
+  133 Reading WCONPROD in /deck/Model_Z_sch.inc line 1193
+  134 Reading DATES    in /deck/Model_Z_sch.inc line 1245
+  135 Reading WCONPROD in /deck/Model_Z_sch.inc line 1249
+  136 Reading DATES    in /deck/Model_Z_sch.inc line 1301
+  137 Reading WCONPROD in /deck/Model_Z_sch.inc line 1305
+  138 Reading DATES    in /deck/Model_Z_sch.inc line 1357
+  139 Reading WCONPROD in /deck/Model_Z_sch.inc line 1361
+  140 Reading DATES    in /deck/Model_Z_sch.inc line 1413
+  141 Reading WCONPROD in /deck/Model_Z_sch.inc line 1417
+  142 Reading DATES    in /deck/Model_Z_sch.inc line 1469
+  143 Reading WCONPROD in /deck/Model_Z_sch.inc line 1473
+  144 Reading DATES    in /deck/Model_Z_sch.inc line 1525
+  145 Reading WCONPROD in /deck/Model_Z_sch.inc line 1529
+  146 Reading DATES    in /deck/Model_Z_sch.inc line 1581
+  147 Reading COMPDAT  in /deck/Model_Z_sch.inc line 1585
+  148 Reading WCONPROD in /deck/Model_Z_sch.inc line 1595
+  149 Reading DATES    in /deck/Model_Z_sch.inc line 1649
+  150 Reading COMPDAT  in /deck/Model_Z_sch.inc line 1653
+  151 Reading WCONPROD in /deck/Model_Z_sch.inc line 1672
+  152 Reading WCONINJE in /deck/Model_Z_sch.inc line 1726
+  153 Reading DATES    in /deck/Model_Z_sch.inc line 1732
+  154 Reading COMPDAT  in /deck/Model_Z_sch.inc line 1736
+  155 Reading WCONPROD in /deck/Model_Z_sch.inc line 1747
+  156 Reading WCONINJE in /deck/Model_Z_sch.inc line 1801
+  157 Reading DATES    in /deck/Model_Z_sch.inc line 1807
+  158 Reading COMPDAT  in /deck/Model_Z_sch.inc line 1811
+  159 Reading WCONPROD in /deck/Model_Z_sch.inc line 1825
+  160 Reading WCONINJE in /deck/Model_Z_sch.inc line 1882
+  161 Reading DATES    in /deck/Model_Z_sch.inc line 1888
+  162 Reading WCONPROD in /deck/Model_Z_sch.inc line 1892
+  163 Reading WCONINJE in /deck/Model_Z_sch.inc line 1949
+  164 Reading DATES    in /deck/Model_Z_sch.inc line 1955
+  165 Reading WCONPROD in /deck/Model_Z_sch.inc line 1959
+  166 Reading WCONINJE in /deck/Model_Z_sch.inc line 2016
+  167 Reading DATES    in /deck/Model_Z_sch.inc line 2022
+  168 Reading COMPDAT  in /deck/Model_Z_sch.inc line 2026
+  169 Reading WCONPROD in /deck/Model_Z_sch.inc line 2043
+  170 Reading WCONINJE in /deck/Model_Z_sch.inc line 2104
+  171 Reading DATES    in /deck/Model_Z_sch.inc line 2110
+  172 Reading WCONPROD in /deck/Model_Z_sch.inc line 2114
+  173 Reading WCONINJE in /deck/Model_Z_sch.inc line 2175
+  174 Reading DATES    in /deck/Model_Z_sch.inc line 2181
+  175 Reading WCONPROD in /deck/Model_Z_sch.inc line 2185
+  176 Reading WCONINJE in /deck/Model_Z_sch.inc line 2246
+  177 Reading DATES    in /deck/Model_Z_sch.inc line 2252
+  178 Reading WCONPROD in /deck/Model_Z_sch.inc line 2256
+  179 Reading WCONINJE in /deck/Model_Z_sch.inc line 2317
+  180 Reading DATES    in /deck/Model_Z_sch.inc line 2323
+  181 Reading WCONPROD in /deck/Model_Z_sch.inc line 2327
+  182 Reading WCONINJE in /deck/Model_Z_sch.inc line 2388
+  183 Reading DATES    in /deck/Model_Z_sch.inc line 2394
+  184 Reading WCONPROD in /deck/Model_Z_sch.inc line 2398
+  185 Reading WCONINJE in /deck/Model_Z_sch.inc line 2459
+  186 Reading DATES    in /deck/Model_Z_sch.inc line 2465
+  187 Reading WCONPROD in /deck/Model_Z_sch.inc line 2469
+  188 Reading WCONINJE in /deck/Model_Z_sch.inc line 2530
+  189 Reading DATES    in /deck/Model_Z_sch.inc line 2536
+  190 Reading COMPDAT  in /deck/Model_Z_sch.inc line 2540
+  191 Reading WCONPROD in /deck/Model_Z_sch.inc line 2567
+  192 Reading WCONINJE in /deck/Model_Z_sch.inc line 2634
+  193 Reading DATES    in /deck/Model_Z_sch.inc line 2640
+  194 Reading WCONPROD in /deck/Model_Z_sch.inc line 2644
+  195 Reading WCONINJE in /deck/Model_Z_sch.inc line 2711
+  196 Reading DATES    in /deck/Model_Z_sch.inc line 2717
+  197 Reading WCONPROD in /deck/Model_Z_sch.inc line 2721
+  198 Reading WCONINJE in /deck/Model_Z_sch.inc line 2788
+  199 Reading DATES    in /deck/Model_Z_sch.inc line 2794
+  200 Reading WCONPROD in /deck/Model_Z_sch.inc line 2798
+  201 Reading WCONINJE in /deck/Model_Z_sch.inc line 2865
+  202 Reading DATES    in /deck/Model_Z_sch.inc line 2871
+  203 Reading WCONPROD in /deck/Model_Z_sch.inc line 2875
+  204 Reading WCONINJE in /deck/Model_Z_sch.inc line 2942
+  205 Reading DATES    in /deck/Model_Z_sch.inc line 2948
+  206 Reading COMPDAT  in /deck/Model_Z_sch.inc line 2952
+  207 Reading WCONPROD in /deck/Model_Z_sch.inc line 2969
+  208 Reading WCONINJE in /deck/Model_Z_sch.inc line 3040
+  209 Reading DATES    in /deck/Model_Z_sch.inc line 3046
+  210 Reading WCONPROD in /deck/Model_Z_sch.inc line 3050
+  211 Reading WCONINJE in /deck/Model_Z_sch.inc line 3121
+  212 Reading DATES    in /deck/Model_Z_sch.inc line 3127
+  213 Reading WCONPROD in /deck/Model_Z_sch.inc line 3131
+  214 Reading WCONINJE in /deck/Model_Z_sch.inc line 3202
+  215 Reading DATES    in /deck/Model_Z_sch.inc line 3208
+  216 Reading WCONPROD in /deck/Model_Z_sch.inc line 3212
+  217 Reading WCONINJE in /deck/Model_Z_sch.inc line 3283
+  218 Reading DATES    in /deck/Model_Z_sch.inc line 3289
+  219 Reading WCONPROD in /deck/Model_Z_sch.inc line 3293
+  220 Reading WCONINJE in /deck/Model_Z_sch.inc line 3364
+  221 Reading DATES    in /deck/Model_Z_sch.inc line 3370
+  222 Reading WCONPROD in /deck/Model_Z_sch.inc line 3374
+  223 Reading WCONINJE in /deck/Model_Z_sch.inc line 3445
+  224 Reading DATES    in /deck/Model_Z_sch.inc line 3451
+  225 Reading WCONPROD in /deck/Model_Z_sch.inc line 3455
+  226 Reading WCONINJE in /deck/Model_Z_sch.inc line 3526
+  227 Reading DATES    in /deck/Model_Z_sch.inc line 3532
+  228 Reading COMPDAT  in /deck/Model_Z_sch.inc line 3536
+  229 Reading WCONPROD in /deck/Model_Z_sch.inc line 3543
+  230 Reading WCONINJE in /deck/Model_Z_sch.inc line 3616
+  231 Reading DATES    in /deck/Model_Z_sch.inc line 3622
+  232 Reading WCONPROD in /deck/Model_Z_sch.inc line 3626
+  233 Reading WCONINJE in /deck/Model_Z_sch.inc line 3699
+  234 Reading DATES    in /deck/Model_Z_sch.inc line 3705
+  235 Reading WCONPROD in /deck/Model_Z_sch.inc line 3709
+  236 Reading WCONINJE in /deck/Model_Z_sch.inc line 3782
+  237 Reading DATES    in /deck/Model_Z_sch.inc line 3788
+  238 Reading COMPDAT  in /deck/Model_Z_sch.inc line 3792
+  239 Reading WCONPROD in /deck/Model_Z_sch.inc line 3799
+  240 Reading WCONINJE in /deck/Model_Z_sch.inc line 3873
+  241 Reading DATES    in /deck/Model_Z_sch.inc line 3879
+  242 Reading WCONPROD in /deck/Model_Z_sch.inc line 3883
+  243 Reading WCONINJE in /deck/Model_Z_sch.inc line 3957
+  244 Reading DATES    in /deck/Model_Z_sch.inc line 3963
+  245 Reading WCONPROD in /deck/Model_Z_sch.inc line 3967
+  246 Reading WCONINJE in /deck/Model_Z_sch.inc line 4041
+  247 Reading DATES    in /deck/Model_Z_sch.inc line 4047
+  248 Reading WCONPROD in /deck/Model_Z_sch.inc line 4051
+  249 Reading WCONINJE in /deck/Model_Z_sch.inc line 4125
+  250 Reading DATES    in /deck/Model_Z_sch.inc line 4131
+  251 Reading WCONPROD in /deck/Model_Z_sch.inc line 4135
+  252 Reading WCONINJE in /deck/Model_Z_sch.inc line 4209
+  253 Reading DATES    in /deck/Model_Z_sch.inc line 4215
+  254 Reading WCONPROD in /deck/Model_Z_sch.inc line 4219
+  255 Reading WCONINJE in /deck/Model_Z_sch.inc line 4293
+  256 Reading DATES    in /deck/Model_Z_sch.inc line 4299
+  257 Reading WCONPROD in /deck/Model_Z_sch.inc line 4303
+  258 Reading WCONINJE in /deck/Model_Z_sch.inc line 4377
+  259 Reading DATES    in /deck/Model_Z_sch.inc line 4383
+  260 Reading COMPDAT  in /deck/Model_Z_sch.inc line 4387
+  261 Reading WCONPROD in /deck/Model_Z_sch.inc line 4393
+  262 Reading WCONINJE in /deck/Model_Z_sch.inc line 4467
+  263 Reading DATES    in /deck/Model_Z_sch.inc line 4474
+  264 Reading COMPDAT  in /deck/Model_Z_sch.inc line 4478
+  265 Reading WCONPROD in /deck/Model_Z_sch.inc line 4488
+  266 Reading WCONINJE in /deck/Model_Z_sch.inc line 4561
+  267 Reading DATES    in /deck/Model_Z_sch.inc line 4569
+  268 Reading COMPDAT  in /deck/Model_Z_sch.inc line 4573
+  269 Reading WCONPROD in /deck/Model_Z_sch.inc line 4581
+  270 Reading WCONINJE in /deck/Model_Z_sch.inc line 4656
+  271 Reading DATES    in /deck/Model_Z_sch.inc line 4664
+  272 Reading WCONPROD in /deck/Model_Z_sch.inc line 4668
+  273 Reading WCONINJE in /deck/Model_Z_sch.inc line 4743
+  274 Reading DATES    in /deck/Model_Z_sch.inc line 4751
+  275 Reading WCONPROD in /deck/Model_Z_sch.inc line 4755
+  276 Reading WCONINJE in /deck/Model_Z_sch.inc line 4830
+  277 Reading DATES    in /deck/Model_Z_sch.inc line 4838
+  278 Reading WCONPROD in /deck/Model_Z_sch.inc line 4842
+  279 Reading WCONINJE in /deck/Model_Z_sch.inc line 4917
+  280 Reading DATES    in /deck/Model_Z_sch.inc line 4925
+  281 Reading WCONPROD in /deck/Model_Z_sch.inc line 4929
+  282 Reading WCONINJE in /deck/Model_Z_sch.inc line 5004
+  283 Reading DATES    in /deck/Model_Z_sch.inc line 5012
+  284 Reading WCONPROD in /deck/Model_Z_sch.inc line 5016
+  285 Reading WCONINJE in /deck/Model_Z_sch.inc line 5091
+  286 Reading DATES    in /deck/Model_Z_sch.inc line 5099
+  287 Reading WCONPROD in /deck/Model_Z_sch.inc line 5103
+  288 Reading WCONINJE in /deck/Model_Z_sch.inc line 5178
+  289 Reading DATES    in /deck/Model_Z_sch.inc line 5186
+  290 Reading WCONPROD in /deck/Model_Z_sch.inc line 5190
+  291 Reading WCONINJE in /deck/Model_Z_sch.inc line 5265
+  292 Reading DATES    in /deck/Model_Z_sch.inc line 5273
+  293 Reading WCONPROD in /deck/Model_Z_sch.inc line 5277
+  294 Reading WCONINJE in /deck/Model_Z_sch.inc line 5352
+  295 Reading DATES    in /deck/Model_Z_sch.inc line 5360
+  296 Reading WCONPROD in /deck/Model_Z_sch.inc line 5364
+  297 Reading WCONINJE in /deck/Model_Z_sch.inc line 5439
+  298 Reading DATES    in /deck/Model_Z_sch.inc line 5447
+  299 Reading WCONPROD in /deck/Model_Z_sch.inc line 5451
+  300 Reading WCONINJE in /deck/Model_Z_sch.inc line 5526
+  301 Reading DATES    in /deck/Model_Z_sch.inc line 5534
+  302 Reading WCONPROD in /deck/Model_Z_sch.inc line 5538
+  303 Reading WCONINJE in /deck/Model_Z_sch.inc line 5613
+  304 Reading DATES    in /deck/Model_Z_sch.inc line 5621
+  305 Reading WCONPROD in /deck/Model_Z_sch.inc line 5625
+  306 Reading WCONINJE in /deck/Model_Z_sch.inc line 5700
+  307 Reading DATES    in /deck/Model_Z_sch.inc line 5708
+  308 Reading WCONPROD in /deck/Model_Z_sch.inc line 5712
+  309 Reading WCONINJE in /deck/Model_Z_sch.inc line 5787
+  310 Reading DATES    in /deck/Model_Z_sch.inc line 5795
+  311 Reading WCONPROD in /deck/Model_Z_sch.inc line 5799
+  312 Reading WCONINJE in /deck/Model_Z_sch.inc line 5874
+  313 Reading DATES    in /deck/Model_Z_sch.inc line 5882
+  314 Reading COMPDAT  in /deck/Model_Z_sch.inc line 5886
+  315 Reading WCONPROD in /deck/Model_Z_sch.inc line 5893
+  316 Reading WCONINJE in /deck/Model_Z_sch.inc line 5969
+  317 Reading DATES    in /deck/Model_Z_sch.inc line 5977
+  318 Reading WCONPROD in /deck/Model_Z_sch.inc line 5981
+  319 Reading WCONINJE in /deck/Model_Z_sch.inc line 6057
+  320 Reading DATES    in /deck/Model_Z_sch.inc line 6065
+  321 Reading WCONPROD in /deck/Model_Z_sch.inc line 6069
+  322 Reading WCONINJE in /deck/Model_Z_sch.inc line 6145
+  323 Reading DATES    in /deck/Model_Z_sch.inc line 6153
+  324 Reading WCONPROD in /deck/Model_Z_sch.inc line 6157
+  325 Reading WCONINJE in /deck/Model_Z_sch.inc line 6233
+  326 Reading DATES    in /deck/Model_Z_sch.inc line 6241
+  327 Reading WCONPROD in /deck/Model_Z_sch.inc line 6245
+  328 Reading WCONINJE in /deck/Model_Z_sch.inc line 6321
+  329 Reading DATES    in /deck/Model_Z_sch.inc line 6329
+  330 Reading COMPDAT  in /deck/Model_Z_sch.inc line 6333
+  331 Reading WCONPROD in /deck/Model_Z_sch.inc line 6340
+  332 Reading WCONINJE in /deck/Model_Z_sch.inc line 6417
+  333 Reading DATES    in /deck/Model_Z_sch.inc line 6425
+  334 Reading WCONPROD in /deck/Model_Z_sch.inc line 6429
+  335 Reading WCONINJE in /deck/Model_Z_sch.inc line 6506
+  336 Reading DATES    in /deck/Model_Z_sch.inc line 6514
+  337 Reading COMPDAT  in /deck/Model_Z_sch.inc line 6518
+  338 Reading WCONPROD in /deck/Model_Z_sch.inc line 6527
+  339 Reading WCONINJE in /deck/Model_Z_sch.inc line 6604
+  340 Reading DATES    in /deck/Model_Z_sch.inc line 6613
+  341 Reading WCONPROD in /deck/Model_Z_sch.inc line 6617
+  342 Reading WCONINJE in /deck/Model_Z_sch.inc line 6693
+  343 Reading DATES    in /deck/Model_Z_sch.inc line 6702
+  344 Reading WCONPROD in /deck/Model_Z_sch.inc line 6706
+  345 Reading WCONINJE in /deck/Model_Z_sch.inc line 6782
+  346 Reading DATES    in /deck/Model_Z_sch.inc line 6791
+  347 Reading WCONPROD in /deck/Model_Z_sch.inc line 6795
+  348 Reading WCONINJE in /deck/Model_Z_sch.inc line 6871
+  349 Reading DATES    in /deck/Model_Z_sch.inc line 6880
+  350 Reading WCONPROD in /deck/Model_Z_sch.inc line 6884
+  351 Reading WCONINJE in /deck/Model_Z_sch.inc line 6960
+  352 Reading DATES    in /deck/Model_Z_sch.inc line 6969
+  353 Reading WCONPROD in /deck/Model_Z_sch.inc line 6973
+  354 Reading WCONINJE in /deck/Model_Z_sch.inc line 7049
+  355 Reading DATES    in /deck/Model_Z_sch.inc line 7058
+  356 Reading WCONPROD in /deck/Model_Z_sch.inc line 7062
+  357 Reading WCONINJE in /deck/Model_Z_sch.inc line 7138
+  358 Reading DATES    in /deck/Model_Z_sch.inc line 7147
+  359 Reading WCONPROD in /deck/Model_Z_sch.inc line 7151
+  360 Reading WCONINJE in /deck/Model_Z_sch.inc line 7227
+  361 Reading DATES    in /deck/Model_Z_sch.inc line 7236
+  362 Reading COMPDAT  in /deck/Model_Z_sch.inc line 7240
+  363 Reading WCONPROD in /deck/Model_Z_sch.inc line 7277
+  364 Reading WCONINJE in /deck/Model_Z_sch.inc line 7353
+  365 Reading DATES    in /deck/Model_Z_sch.inc line 7370
+  366 Reading WCONPROD in /deck/Model_Z_sch.inc line 7374
+  367 Reading WCONINJE in /deck/Model_Z_sch.inc line 7444
+  368 Reading DATES    in /deck/Model_Z_sch.inc line 7461
+  369 Reading WCONPROD in /deck/Model_Z_sch.inc line 7465
+  370 Reading WCONINJE in /deck/Model_Z_sch.inc line 7535
+  371 Reading DATES    in /deck/Model_Z_sch.inc line 7552
+  372 Reading WCONPROD in /deck/Model_Z_sch.inc line 7556
+  373 Reading WCONINJE in /deck/Model_Z_sch.inc line 7626
+  374 Reading DATES    in /deck/Model_Z_sch.inc line 7643
+  375 Reading WCONPROD in /deck/Model_Z_sch.inc line 7647
+  376 Reading WCONINJE in /deck/Model_Z_sch.inc line 7717
+  377 Reading DATES    in /deck/Model_Z_sch.inc line 7734
+  378 Reading WCONPROD in /deck/Model_Z_sch.inc line 7738
+  379 Reading WCONINJE in /deck/Model_Z_sch.inc line 7808
+  380 Reading DATES    in /deck/Model_Z_sch.inc line 7825
+  381 Reading COMPDAT  in /deck/Model_Z_sch.inc line 7829
+  382 Reading WCONPROD in /deck/Model_Z_sch.inc line 7838
+  383 Reading WCONINJE in /deck/Model_Z_sch.inc line 7908
+  384 Reading DATES    in /deck/Model_Z_sch.inc line 7926
+  385 Reading COMPDAT  in /deck/Model_Z_sch.inc line 7930
+  386 Reading WCONPROD in /deck/Model_Z_sch.inc line 7939
+  387 Reading WCONINJE in /deck/Model_Z_sch.inc line 8008
+  388 Reading DATES    in /deck/Model_Z_sch.inc line 8027
+  389 Reading COMPDAT  in /deck/Model_Z_sch.inc line 8031
+  390 Reading WCONPROD in /deck/Model_Z_sch.inc line 8042
+  391 Reading WCONINJE in /deck/Model_Z_sch.inc line 8110
+  392 Reading DATES    in /deck/Model_Z_sch.inc line 8130
+  393 Reading WCONPROD in /deck/Model_Z_sch.inc line 8134
+  394 Reading WCONINJE in /deck/Model_Z_sch.inc line 8201
+  395 Reading DATES    in /deck/Model_Z_sch.inc line 8221
+  396 Reading COMPDAT  in /deck/Model_Z_sch.inc line 8225
+  397 Reading WCONPROD in /deck/Model_Z_sch.inc line 8235
+  398 Reading WCONINJE in /deck/Model_Z_sch.inc line 8302
+  399 Reading DATES    in /deck/Model_Z_sch.inc line 8323
+  400 Reading WCONPROD in /deck/Model_Z_sch.inc line 8327
+  401 Reading WCONINJE in /deck/Model_Z_sch.inc line 8393
+  402 Reading DATES    in /deck/Model_Z_sch.inc line 8414
+  403 Reading WCONPROD in /deck/Model_Z_sch.inc line 8418
+  404 Reading WCONINJE in /deck/Model_Z_sch.inc line 8484
+  405 Reading DATES    in /deck/Model_Z_sch.inc line 8505
+  406 Reading WCONPROD in /deck/Model_Z_sch.inc line 8509
+  407 Reading WCONINJE in /deck/Model_Z_sch.inc line 8575
+  408 Reading DATES    in /deck/Model_Z_sch.inc line 8596
+  409 Reading WCONPROD in /deck/Model_Z_sch.inc line 8600
+  410 Reading WCONINJE in /deck/Model_Z_sch.inc line 8666
+  411 Reading DATES    in /deck/Model_Z_sch.inc line 8687
+  412 Reading WCONPROD in /deck/Model_Z_sch.inc line 8691
+  413 Reading WCONINJE in /deck/Model_Z_sch.inc line 8757
+  414 Reading DATES    in /deck/Model_Z_sch.inc line 8778
+  415 Reading WCONPROD in /deck/Model_Z_sch.inc line 8782
+  416 Reading WCONINJE in /deck/Model_Z_sch.inc line 8848
+  417 Reading DATES    in /deck/Model_Z_sch.inc line 8869
+  418 Reading WCONPROD in /deck/Model_Z_sch.inc line 8873
+  419 Reading WCONINJE in /deck/Model_Z_sch.inc line 8939
+  420 Reading DATES    in /deck/Model_Z_sch.inc line 8960
+  421 Reading WCONPROD in /deck/Model_Z_sch.inc line 8964
+  422 Reading WCONINJE in /deck/Model_Z_sch.inc line 9030
+  423 Reading DATES    in /deck/Model_Z_sch.inc line 9051
+  424 Reading WCONPROD in /deck/Model_Z_sch.inc line 9055
+  425 Reading WCONINJE in /deck/Model_Z_sch.inc line 9121
+  426 Reading DATES    in /deck/Model_Z_sch.inc line 9142
+  427 Reading WCONPROD in /deck/Model_Z_sch.inc line 9146
+  428 Reading WCONINJE in /deck/Model_Z_sch.inc line 9212
+  429 Reading DATES    in /deck/Model_Z_sch.inc line 9233
+  430 Reading WCONPROD in /deck/Model_Z_sch.inc line 9237
+  431 Reading WCONINJE in /deck/Model_Z_sch.inc line 9303
+  432 Reading DATES    in /deck/Model_Z_sch.inc line 9324
+  433 Reading WCONPROD in /deck/Model_Z_sch.inc line 9328
+  434 Reading WCONINJE in /deck/Model_Z_sch.inc line 9394
+  435 Reading DATES    in /deck/Model_Z_sch.inc line 9415
+  436 Reading WCONPROD in /deck/Model_Z_sch.inc line 9419
+  437 Reading WCONINJE in /deck/Model_Z_sch.inc line 9485
+  438 Reading DATES    in /deck/Model_Z_sch.inc line 9506
+  439 Reading WCONPROD in /deck/Model_Z_sch.inc line 9510
+  440 Reading WCONINJE in /deck/Model_Z_sch.inc line 9576
+  441 Reading DATES    in /deck/Model_Z_sch.inc line 9597
+  442 Reading WCONPROD in /deck/Model_Z_sch.inc line 9601
+  443 Reading WCONINJE in /deck/Model_Z_sch.inc line 9667
+  444 Reading DATES    in /deck/Model_Z_sch.inc line 9688
+  445 Reading WCONPROD in /deck/Model_Z_sch.inc line 9692
+  446 Reading WCONINJE in /deck/Model_Z_sch.inc line 9758
+  447 Reading DATES    in /deck/Model_Z_sch.inc line 9779
+  448 Reading WCONPROD in /deck/Model_Z_sch.inc line 9783
+  449 Reading WCONINJE in /deck/Model_Z_sch.inc line 9849
+  450 Reading DATES    in /deck/Model_Z_sch.inc line 9870
+  451 Reading WCONPROD in /deck/Model_Z_sch.inc line 9874
+  452 Reading WCONINJE in /deck/Model_Z_sch.inc line 9940
+  453 Reading DATES    in /deck/Model_Z_sch.inc line 9961
+  454 Reading WCONPROD in /deck/Model_Z_sch.inc line 9965
+  455 Reading WCONINJE in /deck/Model_Z_sch.inc line 10031
+  456 Reading DATES    in /deck/Model_Z_sch.inc line 10052
+  457 Reading WCONPROD in /deck/Model_Z_sch.inc line 10056
+  458 Reading WCONINJE in /deck/Model_Z_sch.inc line 10122
+  459 Reading DATES    in /deck/Model_Z_sch.inc line 10143
+  460 Reading WCONPROD in /deck/Model_Z_sch.inc line 10147
+  461 Reading WCONINJE in /deck/Model_Z_sch.inc line 10213
+  462 Reading DATES    in /deck/Model_Z_sch.inc line 10234
+  463 Reading WCONPROD in /deck/Model_Z_sch.inc line 10238
+  464 Reading WCONINJE in /deck/Model_Z_sch.inc line 10304
+  465 Reading DATES    in /deck/Model_Z_sch.inc line 10325
+  466 Reading WCONPROD in /deck/Model_Z_sch.inc line 10329
+  467 Reading WCONINJE in /deck/Model_Z_sch.inc line 10395
+  468 Reading DATES    in /deck/Model_Z_sch.inc line 10416
+  469 Reading WCONPROD in /deck/Model_Z_sch.inc line 10420
+  470 Reading WCONINJE in /deck/Model_Z_sch.inc line 10486
+  471 Reading DATES    in /deck/Model_Z_sch.inc line 10507
+  472 Reading WCONPROD in /deck/Model_Z_sch.inc line 10511
+  473 Reading WCONINJE in /deck/Model_Z_sch.inc line 10577
+  474 Reading DATES    in /deck/Model_Z_sch.inc line 10598
+  475 Reading WCONPROD in /deck/Model_Z_sch.inc line 10602
+  476 Reading WCONINJE in /deck/Model_Z_sch.inc line 10668
+  477 Reading DATES    in /deck/Model_Z_sch.inc line 10689
+  478 Reading WCONPROD in /deck/Model_Z_sch.inc line 10693
+  479 Reading WCONINJE in /deck/Model_Z_sch.inc line 10759
+  480 Reading DATES    in /deck/Model_Z_sch.inc line 10780
+  481 Reading COMPDAT  in /deck/Model_Z_sch.inc line 10784
+  482 Reading WCONPROD in /deck/Model_Z_sch.inc line 10798
+  483 Reading WCONINJE in /deck/Model_Z_sch.inc line 10864
+  484 Reading DATES    in /deck/Model_Z_sch.inc line 10887
+  485 Reading WCONPROD in /deck/Model_Z_sch.inc line 10891
+  486 Reading WCONINJE in /deck/Model_Z_sch.inc line 10955
+  487 Reading DATES    in /deck/Model_Z_sch.inc line 10978
+  488 Reading WCONPROD in /deck/Model_Z_sch.inc line 10982
+  489 Reading WCONINJE in /deck/Model_Z_sch.inc line 11046
+  490 Reading DATES    in /deck/Model_Z_sch.inc line 11069
+  491 Reading WCONPROD in /deck/Model_Z_sch.inc line 11073
+  492 Reading WCONINJE in /deck/Model_Z_sch.inc line 11137
+  493 Reading DATES    in /deck/Model_Z_sch.inc line 11160
+  494 Reading COMPDAT  in /deck/Model_Z_sch.inc line 11164
+  495 Reading WCONPROD in /deck/Model_Z_sch.inc line 11180
+  496 Reading WCONINJE in /deck/Model_Z_sch.inc line 11244
+  497 Reading DATES    in /deck/Model_Z_sch.inc line 11270
+  498 Reading WCONPROD in /deck/Model_Z_sch.inc line 11274
+  499 Reading WCONINJE in /deck/Model_Z_sch.inc line 11335
+  500 Reading DATES    in /deck/Model_Z_sch.inc line 11361
+  501 Reading WCONPROD in /deck/Model_Z_sch.inc line 11365
+  502 Reading WCONINJE in /deck/Model_Z_sch.inc line 11426
+  503 Reading DATES    in /deck/Model_Z_sch.inc line 11452
+  504 Reading WCONPROD in /deck/Model_Z_sch.inc line 11456
+  505 Reading WCONINJE in /deck/Model_Z_sch.inc line 11517
+  506 Reading DATES    in /deck/Model_Z_sch.inc line 11543
+  507 Reading WCONPROD in /deck/Model_Z_sch.inc line 11547
+  508 Reading WCONINJE in /deck/Model_Z_sch.inc line 11608
+  509 Reading DATES    in /deck/Model_Z_sch.inc line 11634
+  510 Reading WCONPROD in /deck/Model_Z_sch.inc line 11638
+  511 Reading WCONINJE in /deck/Model_Z_sch.inc line 11699
+  512 Reading DATES    in /deck/Model_Z_sch.inc line 11725
+  513 Reading COMPDAT  in /deck/Model_Z_sch.inc line 11729
+  514 Reading WCONINJE in /deck/Model_Z_sch.inc line 11750
+  515 Reading WCONPROD in /deck/Model_Z_sch.inc line 11756
+  516 Reading WCONINJE in /deck/Model_Z_sch.inc line 11816
+  517 Reading DATES    in /deck/Model_Z_sch.inc line 11842
+  518 Reading WCONPROD in /deck/Model_Z_sch.inc line 11849
+  519 Reading WCONINJE in /deck/Model_Z_sch.inc line 11909
+  520 Reading DATES    in /deck/Model_Z_sch.inc line 11938
+  521 Reading WCONPROD in /deck/Model_Z_sch.inc line 11945
+  522 Reading WCONINJE in /deck/Model_Z_sch.inc line 12005
+  523 Reading DATES    in /deck/Model_Z_sch.inc line 12034
+  524 Reading WCONPROD in /deck/Model_Z_sch.inc line 12041
+  525 Reading WCONINJE in /deck/Model_Z_sch.inc line 12101
+  526 Reading DATES    in /deck/Model_Z_sch.inc line 12130
+  527 Reading COMPDAT  in /deck/Model_Z_sch.inc line 12134
+  528 Reading WCONPROD in /deck/Model_Z_sch.inc line 12146
+  529 Reading WCONINJE in /deck/Model_Z_sch.inc line 12205
+  530 Reading DATES    in /deck/Model_Z_sch.inc line 12235
+  531 Reading WCONPROD in /deck/Model_Z_sch.inc line 12242
+  532 Reading WCONINJE in /deck/Model_Z_sch.inc line 12301
+  533 Reading DATES    in /deck/Model_Z_sch.inc line 12331
+  534 Reading WCONPROD in /deck/Model_Z_sch.inc line 12338
+  535 Reading WCONINJE in /deck/Model_Z_sch.inc line 12397
+  536 Reading DATES    in /deck/Model_Z_sch.inc line 12427
+  537 Reading WCONPROD in /deck/Model_Z_sch.inc line 12434
+  538 Reading WCONINJE in /deck/Model_Z_sch.inc line 12493
+  539 Reading DATES    in /deck/Model_Z_sch.inc line 12523
+  540 Reading WCONPROD in /deck/Model_Z_sch.inc line 12530
+  541 Reading WCONINJE in /deck/Model_Z_sch.inc line 12589
+  542 Reading DATES    in /deck/Model_Z_sch.inc line 12619
+  543 Reading WCONPROD in /deck/Model_Z_sch.inc line 12626
+  544 Reading WCONINJE in /deck/Model_Z_sch.inc line 12685
+  545 Reading DATES    in /deck/Model_Z_sch.inc line 12715
+  546 Reading WCONPROD in /deck/Model_Z_sch.inc line 12722
+  547 Reading WCONINJE in /deck/Model_Z_sch.inc line 12781
+  548 Reading DATES    in /deck/Model_Z_sch.inc line 12811
+  549 Reading WCONPROD in /deck/Model_Z_sch.inc line 12818
+  550 Reading WCONINJE in /deck/Model_Z_sch.inc line 12877
+  551 Reading DATES    in /deck/Model_Z_sch.inc line 12907
+  552 Reading COMPDAT  in /deck/Model_Z_sch.inc line 12911
+  553 Reading WCONPROD in /deck/Model_Z_sch.inc line 12927
+  554 Reading WCONINJE in /deck/Model_Z_sch.inc line 12985
+  555 Reading DATES    in /deck/Model_Z_sch.inc line 13016
+  556 Reading WCONPROD in /deck/Model_Z_sch.inc line 13023
+  557 Reading WCONINJE in /deck/Model_Z_sch.inc line 13081
+  558 Reading DATES    in /deck/Model_Z_sch.inc line 13112
+  559 Reading COMPDAT  in /deck/Model_Z_sch.inc line 13116
+  560 Reading WCONPROD in /deck/Model_Z_sch.inc line 13132
+  561 Reading WCONPROD in /deck/Model_Z_sch.inc line 13137
+  562 Reading WCONINJE in /deck/Model_Z_sch.inc line 13195
+  563 Reading DATES    in /deck/Model_Z_sch.inc line 13226
+  564 Reading COMPDAT  in /deck/Model_Z_sch.inc line 13230
+  565 Reading WCONPROD in /deck/Model_Z_sch.inc line 13241
+  566 Reading WCONPROD in /deck/Model_Z_sch.inc line 13245
+  567 Reading WCONINJE in /deck/Model_Z_sch.inc line 13305
+  568 Reading DATES    in /deck/Model_Z_sch.inc line 13336
+  569 Reading WCONPROD in /deck/Model_Z_sch.inc line 13343
+  570 Reading WCONINJE in /deck/Model_Z_sch.inc line 13404
+  571 Reading DATES    in /deck/Model_Z_sch.inc line 13435
+  572 Reading WCONPROD in /deck/Model_Z_sch.inc line 13442
+  573 Reading WCONINJE in /deck/Model_Z_sch.inc line 13503
+  574 Reading DATES    in /deck/Model_Z_sch.inc line 13534
+  575 Reading WCONPROD in /deck/Model_Z_sch.inc line 13541
+  576 Reading WCONINJE in /deck/Model_Z_sch.inc line 13602
+  577 Reading DATES    in /deck/Model_Z_sch.inc line 13633
+  578 Reading WCONPROD in /deck/Model_Z_sch.inc line 13640
+  579 Reading WCONINJE in /deck/Model_Z_sch.inc line 13701
+  580 Reading DATES    in /deck/Model_Z_sch.inc line 13732
+  581 Reading WCONPROD in /deck/Model_Z_sch.inc line 13739
+  582 Reading WCONINJE in /deck/Model_Z_sch.inc line 13800
+  583 Reading DATES    in /deck/Model_Z_sch.inc line 13831
+  584 Reading WCONPROD in /deck/Model_Z_sch.inc line 13838
+  585 Reading WCONINJE in /deck/Model_Z_sch.inc line 13899
+  586 Reading DATES    in /deck/Model_Z_sch.inc line 13930
+  587 Reading COMPDAT  in /deck/Model_Z_sch.inc line 13934
+  588 Reading WCONPROD in /deck/Model_Z_sch.inc line 13945
+  589 Reading WCONPROD in /deck/Model_Z_sch.inc line 13949
+  590 Reading WCONINJE in /deck/Model_Z_sch.inc line 14010
+  591 Reading DATES    in /deck/Model_Z_sch.inc line 14041
+  592 Reading WCONPROD in /deck/Model_Z_sch.inc line 14048
+  593 Reading WCONINJE in /deck/Model_Z_sch.inc line 14110
+  594 Reading DATES    in /deck/Model_Z_sch.inc line 14141
+  595 Reading WCONPROD in /deck/Model_Z_sch.inc line 14148
+  596 Reading WCONINJE in /deck/Model_Z_sch.inc line 14210
+  597 Reading DATES    in /deck/Model_Z_sch.inc line 14241
+  598 Reading WCONPROD in /deck/Model_Z_sch.inc line 14248
+  599 Reading WCONINJE in /deck/Model_Z_sch.inc line 14310
+  600 Reading DATES    in /deck/Model_Z_sch.inc line 14341
+  601 Reading WCONPROD in /deck/Model_Z_sch.inc line 14348
+  602 Reading WCONINJE in /deck/Model_Z_sch.inc line 14410
+  603 Reading DATES    in /deck/Model_Z_sch.inc line 14441
+  604 Reading WCONPROD in /deck/Model_Z_sch.inc line 14448
+  605 Reading WCONINJE in /deck/Model_Z_sch.inc line 14510
+  606 Reading DATES    in /deck/Model_Z_sch.inc line 14541
+  607 Reading WCONPROD in /deck/Model_Z_sch.inc line 14548
+  608 Reading WCONINJE in /deck/Model_Z_sch.inc line 14610
+  609 Reading DATES    in /deck/Model_Z_sch.inc line 14641
+  610 Reading WCONPROD in /deck/Model_Z_sch.inc line 14648
+  611 Reading WCONINJE in /deck/Model_Z_sch.inc line 14710
+  612 Reading DATES    in /deck/Model_Z_sch.inc line 14741
+  613 Reading WCONPROD in /deck/Model_Z_sch.inc line 14748
+  614 Reading WCONINJE in /deck/Model_Z_sch.inc line 14810
+  615 Reading DATES    in /deck/Model_Z_sch.inc line 14841
+  616 Reading WCONPROD in /deck/Model_Z_sch.inc line 14848
+  617 Reading WCONINJE in /deck/Model_Z_sch.inc line 14910
+  618 Reading DATES    in /deck/Model_Z_sch.inc line 14941
+  619 Reading WCONPROD in /deck/Model_Z_sch.inc line 14948
+  620 Reading WCONINJE in /deck/Model_Z_sch.inc line 15010
+  621 Reading DATES    in /deck/Model_Z_sch.inc line 15041
+  622 Reading WCONPROD in /deck/Model_Z_sch.inc line 15048
+  623 Reading WCONINJE in /deck/Model_Z_sch.inc line 15110
+  624 Reading DATES    in /deck/Model_Z_sch.inc line 15141
+  625 Reading WCONPROD in /deck/Model_Z_sch.inc line 15148
+  626 Reading WCONINJE in /deck/Model_Z_sch.inc line 15210
+  627 Reading DATES    in /deck/Model_Z_sch.inc line 15241
+  628 Reading WCONPROD in /deck/Model_Z_sch.inc line 15248
+  629 Reading WCONINJE in /deck/Model_Z_sch.inc line 15310
+  630 Reading DATES    in /deck/Model_Z_sch.inc line 15341
+  631 Reading WCONPROD in /deck/Model_Z_sch.inc line 15348
+  632 Reading WCONINJE in /deck/Model_Z_sch.inc line 15410
+  633 Reading DATES    in /deck/Model_Z_sch.inc line 15441
+  634 Reading WCONPROD in /deck/Model_Z_sch.inc line 15448
+  635 Reading WCONINJE in /deck/Model_Z_sch.inc line 15510
+  636 Reading DATES    in /deck/Model_Z_sch.inc line 15541
+  637 Reading WCONPROD in /deck/Model_Z_sch.inc line 15548
+  638 Reading WCONINJE in /deck/Model_Z_sch.inc line 15610
+  639 Reading DATES    in /deck/Model_Z_sch.inc line 15641
+  640 Reading WCONPROD in /deck/Model_Z_sch.inc line 15648
+  641 Reading WCONINJE in /deck/Model_Z_sch.inc line 15710
+  642 Reading DATES    in /deck/Model_Z_sch.inc line 15741
+  643 Reading WCONPROD in /deck/Model_Z_sch.inc line 15748
+  644 Reading WCONINJE in /deck/Model_Z_sch.inc line 15810
+  645 Reading DATES    in /deck/Model_Z_sch.inc line 15841
+  646 Reading WCONPROD in /deck/Model_Z_sch.inc line 15848
+  647 Reading WCONINJE in /deck/Model_Z_sch.inc line 15910
+  648 Reading DATES    in /deck/Model_Z_sch.inc line 15941
+  649 Reading WCONPROD in /deck/Model_Z_sch.inc line 15948
+  650 Reading WCONINJE in /deck/Model_Z_sch.inc line 16010
+  651 Reading DATES    in /deck/Model_Z_sch.inc line 16041
+  652 Reading WCONPROD in /deck/Model_Z_sch.inc line 16048
+  653 Reading WCONINJE in /deck/Model_Z_sch.inc line 16110
+  654 Reading DATES    in /deck/Model_Z_sch.inc line 16141
+  655 Reading COMPDAT  in /deck/Model_Z_sch.inc line 16145
+  656 Reading WCONPROD in /deck/Model_Z_sch.inc line 16156
+  657 Reading WCONINJE in /deck/Model_Z_sch.inc line 16217
+  658 Reading DATES    in /deck/Model_Z_sch.inc line 16249
+  659 Reading WCONPROD in /deck/Model_Z_sch.inc line 16256
+  660 Reading WCONINJE in /deck/Model_Z_sch.inc line 16317
+  661 Reading DATES    in /deck/Model_Z_sch.inc line 16349
+  662 Reading COMPDAT  in /deck/Model_Z_sch.inc line 16353
+  663 Reading WCONPROD in /deck/Model_Z_sch.inc line 16363
+  664 Reading WCONPROD in /deck/Model_Z_sch.inc line 16367
+  665 Reading WCONINJE in /deck/Model_Z_sch.inc line 16428
+  666 Reading DATES    in /deck/Model_Z_sch.inc line 16460
+  667 Reading COMPDAT  in /deck/Model_Z_sch.inc line 16464
+  668 Reading WCONINJE in /deck/Model_Z_sch.inc line 16473
+  669 Reading WCONPROD in /deck/Model_Z_sch.inc line 16477
+  670 Reading WCONINJE in /deck/Model_Z_sch.inc line 16539
+  671 Reading DATES    in /deck/Model_Z_sch.inc line 16571
+  672 Reading WCONPROD in /deck/Model_Z_sch.inc line 16578
+  673 Reading WCONINJE in /deck/Model_Z_sch.inc line 16640
+  674 Reading DATES    in /deck/Model_Z_sch.inc line 16673
+  675 Reading WCONPROD in /deck/Model_Z_sch.inc line 16680
+  676 Reading WCONINJE in /deck/Model_Z_sch.inc line 16742
+  677 Reading DATES    in /deck/Model_Z_sch.inc line 16775
+  678 Reading WCONPROD in /deck/Model_Z_sch.inc line 16782
+  679 Reading WCONINJE in /deck/Model_Z_sch.inc line 16844
+  680 Reading DATES    in /deck/Model_Z_sch.inc line 16877
+  681 Reading WCONPROD in /deck/Model_Z_sch.inc line 16884
+  682 Reading WCONINJE in /deck/Model_Z_sch.inc line 16946
+  683 Reading DATES    in /deck/Model_Z_sch.inc line 16979
+  684 Reading WCONPROD in /deck/Model_Z_sch.inc line 16986
+  685 Reading WCONINJE in /deck/Model_Z_sch.inc line 17048
+  686 Reading DATES    in /deck/Model_Z_sch.inc line 17081
+  687 Reading WCONPROD in /deck/Model_Z_sch.inc line 17088
+  688 Reading WCONINJE in /deck/Model_Z_sch.inc line 17150
+  689 Reading DATES    in /deck/Model_Z_sch.inc line 17183
+  690 Reading WCONPROD in /deck/Model_Z_sch.inc line 17190
+  691 Reading WCONINJE in /deck/Model_Z_sch.inc line 17252
+  692 Reading DATES    in /deck/Model_Z_sch.inc line 17285
+  693 Reading WCONPROD in /deck/Model_Z_sch.inc line 17292
+  694 Reading WCONINJE in /deck/Model_Z_sch.inc line 17354
+  695 Reading DATES    in /deck/Model_Z_sch.inc line 17387
+  696 Reading COMPDAT  in /deck/Model_Z_sch.inc line 17391
+  697 Reading WCONPROD in /deck/Model_Z_sch.inc line 17403
+  698 Reading WCONINJE in /deck/Model_Z_sch.inc line 17464
+  699 Reading DATES    in /deck/Model_Z_sch.inc line 17498
+  700 Reading WCONPROD in /deck/Model_Z_sch.inc line 17505
+  701 Reading WCONINJE in /deck/Model_Z_sch.inc line 17566
+  702 Reading DATES    in /deck/Model_Z_sch.inc line 17600
+  703 Reading COMPDAT  in /deck/Model_Z_sch.inc line 17604
+  704 Reading WCONINJE in /deck/Model_Z_sch.inc line 17613
+  705 Reading WCONPROD in /deck/Model_Z_sch.inc line 17617
+  706 Reading WCONINJE in /deck/Model_Z_sch.inc line 17678
+  707 Reading DATES    in /deck/Model_Z_sch.inc line 17712
+  708 Reading COMPDAT  in /deck/Model_Z_sch.inc line 17716
+  709 Reading WCONINJE in /deck/Model_Z_sch.inc line 17725
+  710 Reading WCONPROD in /deck/Model_Z_sch.inc line 17729
+  711 Reading WCONINJE in /deck/Model_Z_sch.inc line 17790
+  712 Reading DATES    in /deck/Model_Z_sch.inc line 17825
+  713 Reading COMPDAT  in /deck/Model_Z_sch.inc line 17829
+  714 Reading WCONPROD in /deck/Model_Z_sch.inc line 17842
+  715 Reading WCONINJE in /deck/Model_Z_sch.inc line 17901
+  716 Reading DATES    in /deck/Model_Z_sch.inc line 17939
+  717 Reading WCONPROD in /deck/Model_Z_sch.inc line 17946
+  718 Reading WCONINJE in /deck/Model_Z_sch.inc line 18005
+  719 Reading DATES    in /deck/Model_Z_sch.inc line 18043
+  720 Reading WCONPROD in /deck/Model_Z_sch.inc line 18050
+  721 Reading WCONINJE in /deck/Model_Z_sch.inc line 18109
+  722 Reading DATES    in /deck/Model_Z_sch.inc line 18147
+  723 Reading WCONPROD in /deck/Model_Z_sch.inc line 18154
+  724 Reading WCONINJE in /deck/Model_Z_sch.inc line 18213
+  725 Reading DATES    in /deck/Model_Z_sch.inc line 18251
+  726 Reading WCONPROD in /deck/Model_Z_sch.inc line 18258
+  727 Reading WCONINJE in /deck/Model_Z_sch.inc line 18317
+  728 Reading DATES    in /deck/Model_Z_sch.inc line 18355
+  729 Reading WCONPROD in /deck/Model_Z_sch.inc line 18362
+  730 Reading WCONINJE in /deck/Model_Z_sch.inc line 18421
+  731 Reading DATES    in /deck/Model_Z_sch.inc line 18459
+  732 Reading WCONPROD in /deck/Model_Z_sch.inc line 18466
+  733 Reading WCONINJE in /deck/Model_Z_sch.inc line 18525
+  734 Reading DATES    in /deck/Model_Z_sch.inc line 18563
+  735 Reading WCONPROD in /deck/Model_Z_sch.inc line 18570
+  736 Reading WCONINJE in /deck/Model_Z_sch.inc line 18629
+  737 Reading DATES    in /deck/Model_Z_sch.inc line 18667
+  738 Reading COMPDAT  in /deck/Model_Z_sch.inc line 18671
+  739 Reading WCONPROD in /deck/Model_Z_sch.inc line 18683
+  740 Reading WCONINJE in /deck/Model_Z_sch.inc line 18741
+  741 Reading DATES    in /deck/Model_Z_sch.inc line 18780
+  742 Reading WCONPROD in /deck/Model_Z_sch.inc line 18787
+  743 Reading WCONINJE in /deck/Model_Z_sch.inc line 18845
+  744 Reading DATES    in /deck/Model_Z_sch.inc line 18884
+  745 Reading WCONPROD in /deck/Model_Z_sch.inc line 18891
+  746 Reading WCONINJE in /deck/Model_Z_sch.inc line 18949
+  747 Reading DATES    in /deck/Model_Z_sch.inc line 18988
+  748 Reading WCONPROD in /deck/Model_Z_sch.inc line 18995
+  749 Reading WCONINJE in /deck/Model_Z_sch.inc line 19053
+  750 Reading DATES    in /deck/Model_Z_sch.inc line 19092
+  751 Reading COMPDAT  in /deck/Model_Z_sch.inc line 19096
+  752 Reading WCONPROD in /deck/Model_Z_sch.inc line 19108
+  753 Reading WCONINJE in /deck/Model_Z_sch.inc line 19165
+  754 Reading DATES    in /deck/Model_Z_sch.inc line 19205
+  755 Reading COMPDAT  in /deck/Model_Z_sch.inc line 19209
+  756 Reading WCONPROD in /deck/Model_Z_sch.inc line 19220
+  757 Reading WCONPROD in /deck/Model_Z_sch.inc line 19224
+  758 Reading WCONINJE in /deck/Model_Z_sch.inc line 19281
+  759 Reading DATES    in /deck/Model_Z_sch.inc line 19321
+  760 Reading WCONPROD in /deck/Model_Z_sch.inc line 19328
+  761 Reading WCONINJE in /deck/Model_Z_sch.inc line 19386
+  762 Reading DATES    in /deck/Model_Z_sch.inc line 19426
+  763 Reading WCONPROD in /deck/Model_Z_sch.inc line 19433
+  764 Reading WCONINJE in /deck/Model_Z_sch.inc line 19491
+  765 Reading DATES    in /deck/Model_Z_sch.inc line 19531
+  766 Reading COMPDAT  in /deck/Model_Z_sch.inc line 19535
+  767 Reading WCONPROD in /deck/Model_Z_sch.inc line 19546
+  768 Reading WCONPROD in /deck/Model_Z_sch.inc line 19550
+  769 Reading WCONINJE in /deck/Model_Z_sch.inc line 19608
+  770 Reading DATES    in /deck/Model_Z_sch.inc line 19648
+  771 Reading WCONPROD in /deck/Model_Z_sch.inc line 19655
+  772 Reading WCONINJE in /deck/Model_Z_sch.inc line 19714
+  773 Reading DATES    in /deck/Model_Z_sch.inc line 19754
+  774 Reading WCONPROD in /deck/Model_Z_sch.inc line 19761
+  775 Reading WCONINJE in /deck/Model_Z_sch.inc line 19820
+  776 Reading DATES    in /deck/Model_Z_sch.inc line 19860
+  777 Reading WCONPROD in /deck/Model_Z_sch.inc line 19867
+  778 Reading WCONINJE in /deck/Model_Z_sch.inc line 19926
+  779 Reading DATES    in /deck/Model_Z_sch.inc line 19966
+  780 Reading WCONPROD in /deck/Model_Z_sch.inc line 19973
+  781 Reading WCONINJE in /deck/Model_Z_sch.inc line 20032
+  782 Reading DATES    in /deck/Model_Z_sch.inc line 20072
+  783 Reading WCONPROD in /deck/Model_Z_sch.inc line 20079
+  784 Reading WCONINJE in /deck/Model_Z_sch.inc line 20138
+  785 Reading DATES    in /deck/Model_Z_sch.inc line 20178
+  786 Reading WCONPROD in /deck/Model_Z_sch.inc line 20185
+  787 Reading WCONINJE in /deck/Model_Z_sch.inc line 20244
+  788 Reading DATES    in /deck/Model_Z_sch.inc line 20284
+  789 Reading WCONPROD in /deck/Model_Z_sch.inc line 20291
+  790 Reading WCONINJE in /deck/Model_Z_sch.inc line 20350
+  791 Reading DATES    in /deck/Model_Z_sch.inc line 20390
+  792 Reading WCONPROD in /deck/Model_Z_sch.inc line 20397
+  793 Reading WCONINJE in /deck/Model_Z_sch.inc line 20456
+  794 Reading DATES    in /deck/Model_Z_sch.inc line 20496
+  795 Reading WCONPROD in /deck/Model_Z_sch.inc line 20503
+  796 Reading WCONINJE in /deck/Model_Z_sch.inc line 20562
+  797 Reading DATES    in /deck/Model_Z_sch.inc line 20602
+  798 Reading WCONPROD in /deck/Model_Z_sch.inc line 20609
+  799 Reading WCONINJE in /deck/Model_Z_sch.inc line 20668
+  800 Reading DATES    in /deck/Model_Z_sch.inc line 20708
+  801 Reading WCONPROD in /deck/Model_Z_sch.inc line 20715
+  802 Reading WCONINJE in /deck/Model_Z_sch.inc line 20774
+  803 Reading DATES    in /deck/Model_Z_sch.inc line 20814
+  804 Reading WCONPROD in /deck/Model_Z_sch.inc line 20821
+  805 Reading WCONINJE in /deck/Model_Z_sch.inc line 20880
+  806 Reading DATES    in /deck/Model_Z_sch.inc line 20920
+  807 Reading WCONPROD in /deck/Model_Z_sch.inc line 20927
+  808 Reading WCONINJE in /deck/Model_Z_sch.inc line 20986
+  809 Reading DATES    in /deck/Model_Z_sch.inc line 21026
+  810 Reading WCONPROD in /deck/Model_Z_sch.inc line 21033
+  811 Reading WCONINJE in /deck/Model_Z_sch.inc line 21092
+  812 Reading DATES    in /deck/Model_Z_sch.inc line 21132
+  813 Reading WCONPROD in /deck/Model_Z_sch.inc line 21139
+  814 Reading WCONINJE in /deck/Model_Z_sch.inc line 21198
+  815 Reading DATES    in /deck/Model_Z_sch.inc line 21238
+  816 Reading WCONPROD in /deck/Model_Z_sch.inc line 21245
+  817 Reading WCONINJE in /deck/Model_Z_sch.inc line 21304
+  818 Reading DATES    in /deck/Model_Z_sch.inc line 21344
+  819 Reading WCONPROD in /deck/Model_Z_sch.inc line 21351
+  820 Reading WCONINJE in /deck/Model_Z_sch.inc line 21410
+  821 Reading DATES    in /deck/Model_Z_sch.inc line 21450
+  822 Reading WCONPROD in /deck/Model_Z_sch.inc line 21457
+  823 Reading WCONINJE in /deck/Model_Z_sch.inc line 21516
+  824 Reading DATES    in /deck/Model_Z_sch.inc line 21556
+  825 Reading COMPDAT  in /deck/Model_Z_sch.inc line 21560
+  826 Reading WCONPROD in /deck/Model_Z_sch.inc line 21576
+  827 Reading WCONPROD in /deck/Model_Z_sch.inc line 21581
+  828 Reading WCONINJE in /deck/Model_Z_sch.inc line 21640
+  829 Reading DATES    in /deck/Model_Z_sch.inc line 21680
+  830 Reading WCONPROD in /deck/Model_Z_sch.inc line 21687
+  831 Reading WCONINJE in /deck/Model_Z_sch.inc line 21748
+  832 Reading DATES    in /deck/Model_Z_sch.inc line 21788
+  833 Reading WCONPROD in /deck/Model_Z_sch.inc line 21795
+  834 Reading WCONINJE in /deck/Model_Z_sch.inc line 21856
+  835 Reading DATES    in /deck/Model_Z_sch.inc line 21896
+  836 Reading WCONPROD in /deck/Model_Z_sch.inc line 21903
+  837 Reading WCONINJE in /deck/Model_Z_sch.inc line 21964
+  838 Reading DATES    in /deck/Model_Z_sch.inc line 22004
+  839 Reading WCONPROD in /deck/Model_Z_sch.inc line 22011
+  840 Reading WCONINJE in /deck/Model_Z_sch.inc line 22072
+  841 Reading DATES    in /deck/Model_Z_sch.inc line 22112
+  842 Reading WCONPROD in /deck/Model_Z_sch.inc line 22119
+  843 Reading WCONINJE in /deck/Model_Z_sch.inc line 22180
+  844 Reading DATES    in /deck/Model_Z_sch.inc line 22220
+  845 Reading WCONPROD in /deck/Model_Z_sch.inc line 22227
+  846 Reading WCONINJE in /deck/Model_Z_sch.inc line 22288
+  847 Reading DATES    in /deck/Model_Z_sch.inc line 22328
+  848 Reading COMPDAT  in /deck/Model_Z_sch.inc line 22332
+  849 Reading WCONPROD in /deck/Model_Z_sch.inc line 22340
+  850 Reading WCONPROD in /deck/Model_Z_sch.inc line 22344
+  851 Reading WCONINJE in /deck/Model_Z_sch.inc line 22405
+  852 Reading DATES    in /deck/Model_Z_sch.inc line 22445
+  853 Reading WCONPROD in /deck/Model_Z_sch.inc line 22452
+  854 Reading WCONINJE in /deck/Model_Z_sch.inc line 22514
+  855 Reading DATES    in /deck/Model_Z_sch.inc line 22554
+  856 Reading WCONPROD in /deck/Model_Z_sch.inc line 22561
+  857 Reading WCONINJE in /deck/Model_Z_sch.inc line 22623
+  858 Reading DATES    in /deck/Model_Z_sch.inc line 22663
+  859 Reading WCONPROD in /deck/Model_Z_sch.inc line 22670
+  860 Reading WCONINJE in /deck/Model_Z_sch.inc line 22732
+  861 Reading DATES    in /deck/Model_Z_sch.inc line 22772
+  862 Reading WCONPROD in /deck/Model_Z_sch.inc line 22779
+  863 Reading WCONINJE in /deck/Model_Z_sch.inc line 22841
+  864 Reading DATES    in /deck/Model_Z_sch.inc line 22881
+  865 Reading WCONPROD in /deck/Model_Z_sch.inc line 22888
+  866 Reading WCONINJE in /deck/Model_Z_sch.inc line 22950
+  867 Reading DATES    in /deck/Model_Z_sch.inc line 22990
+  868 Reading WCONPROD in /deck/Model_Z_sch.inc line 22997
+  869 Reading WCONINJE in /deck/Model_Z_sch.inc line 23059
+  870 Reading DATES    in /deck/Model_Z_sch.inc line 23099
+  871 Reading COMPDAT  in /deck/Model_Z_sch.inc line 23103
+  872 Reading WCONPROD in /deck/Model_Z_sch.inc line 23113
+  873 Reading WCONPROD in /deck/Model_Z_sch.inc line 23117
+  874 Reading WCONINJE in /deck/Model_Z_sch.inc line 23179
+  875 Reading DATES    in /deck/Model_Z_sch.inc line 23219
+  876 Reading COMPDAT  in /deck/Model_Z_sch.inc line 23223
+  877 Reading WCONINJE in /deck/Model_Z_sch.inc line 23233
+  878 Reading WCONPROD in /deck/Model_Z_sch.inc line 23237
+  879 Reading WCONINJE in /deck/Model_Z_sch.inc line 23300
+  880 Reading DATES    in /deck/Model_Z_sch.inc line 23340
+  881 Reading WCONPROD in /deck/Model_Z_sch.inc line 23347
+  882 Reading WCONINJE in /deck/Model_Z_sch.inc line 23410
+  883 Reading DATES    in /deck/Model_Z_sch.inc line 23451
+  884 Reading WCONPROD in /deck/Model_Z_sch.inc line 23458
+  885 Reading WCONINJE in /deck/Model_Z_sch.inc line 23521
+  886 Reading DATES    in /deck/Model_Z_sch.inc line 23562
+  887 Reading WCONPROD in /deck/Model_Z_sch.inc line 23569
+  888 Reading WCONINJE in /deck/Model_Z_sch.inc line 23632
+  889 Reading DATES    in /deck/Model_Z_sch.inc line 23673
+  890 Reading WCONPROD in /deck/Model_Z_sch.inc line 23680
+  891 Reading WCONINJE in /deck/Model_Z_sch.inc line 23743
+  892 Reading DATES    in /deck/Model_Z_sch.inc line 23784
+  893 Reading WCONPROD in /deck/Model_Z_sch.inc line 23791
+  894 Reading WCONINJE in /deck/Model_Z_sch.inc line 23854
+  895 Reading DATES    in /deck/Model_Z_sch.inc line 23895
+  896 Reading WCONPROD in /deck/Model_Z_sch.inc line 23902
+  897 Reading WCONINJE in /deck/Model_Z_sch.inc line 23965
+  898 Reading DATES    in /deck/Model_Z_sch.inc line 24006
+  899 Reading WCONPROD in /deck/Model_Z_sch.inc line 24013
+  900 Reading WCONINJE in /deck/Model_Z_sch.inc line 24076
+  901 Reading DATES    in /deck/Model_Z_sch.inc line 24117
+  902 Reading COMPDAT  in /deck/Model_Z_sch.inc line 24121
+  903 Reading WCONPROD in /deck/Model_Z_sch.inc line 24131
+  904 Reading WCONPROD in /deck/Model_Z_sch.inc line 24135
+  905 Reading WCONINJE in /deck/Model_Z_sch.inc line 24198
+  906 Reading DATES    in /deck/Model_Z_sch.inc line 24239
+  907 Reading WCONPROD in /deck/Model_Z_sch.inc line 24246
+  908 Reading WCONINJE in /deck/Model_Z_sch.inc line 24310
+  909 Reading DATES    in /deck/Model_Z_sch.inc line 24351
+  910 Reading WCONPROD in /deck/Model_Z_sch.inc line 24358
+  911 Reading WCONINJE in /deck/Model_Z_sch.inc line 24422
+  912 Reading DATES    in /deck/Model_Z_sch.inc line 24463
+  913 Reading WCONPROD in /deck/Model_Z_sch.inc line 24470
+  914 Reading WCONINJE in /deck/Model_Z_sch.inc line 24534
+  915 Reading DATES    in /deck/Model_Z_sch.inc line 24575
+  916 Reading WCONPROD in /deck/Model_Z_sch.inc line 24582
+  917 Reading WCONINJE in /deck/Model_Z_sch.inc line 24646
+  918 Reading DATES    in /deck/Model_Z_sch.inc line 24687
+  919 Reading WCONPROD in /deck/Model_Z_sch.inc line 24694
+  920 Reading WCONINJE in /deck/Model_Z_sch.inc line 24758
+  921 Reading DATES    in /deck/Model_Z_sch.inc line 24799
+  922 Reading WCONPROD in /deck/Model_Z_sch.inc line 24806
+  923 Reading WCONINJE in /deck/Model_Z_sch.inc line 24870
+  924 Reading DATES    in /deck/Model_Z_sch.inc line 24911
+  925 Reading WCONPROD in /deck/Model_Z_sch.inc line 24918
+  926 Reading WCONINJE in /deck/Model_Z_sch.inc line 24982
+  927 Reading DATES    in /deck/Model_Z_sch.inc line 25023
+  928 Reading WCONPROD in /deck/Model_Z_sch.inc line 25030
+  929 Reading WCONINJE in /deck/Model_Z_sch.inc line 25094
+  930 Reading DATES    in /deck/Model_Z_sch.inc line 25135
+  931 Reading WCONPROD in /deck/Model_Z_sch.inc line 25142
+  932 Reading WCONINJE in /deck/Model_Z_sch.inc line 25206
+  933 Reading DATES    in /deck/Model_Z_sch.inc line 25247
+  934 Reading WCONPROD in /deck/Model_Z_sch.inc line 25254
+  935 Reading WCONINJE in /deck/Model_Z_sch.inc line 25318
+  936 Reading DATES    in /deck/Model_Z_sch.inc line 25359
+  937 Reading WCONPROD in /deck/Model_Z_sch.inc line 25366
+  938 Reading WCONINJE in /deck/Model_Z_sch.inc line 25430
+  939 Reading DATES    in /deck/Model_Z_sch.inc line 25471
+  940 Reading WCONPROD in /deck/Model_Z_sch.inc line 25478
+  941 Reading WCONINJE in /deck/Model_Z_sch.inc line 25542
+  942 Reading DATES    in /deck/Model_Z_sch.inc line 25583
+  943 Reading WCONPROD in /deck/Model_Z_sch.inc line 25590
+  944 Reading WCONINJE in /deck/Model_Z_sch.inc line 25654
+  945 Reading DATES    in /deck/Model_Z_sch.inc line 25695
+  946 Reading WCONPROD in /deck/Model_Z_sch.inc line 25702
+  947 Reading WCONINJE in /deck/Model_Z_sch.inc line 25766
+  948 Reading DATES    in /deck/Model_Z_sch.inc line 25807
+  949 Reading WCONPROD in /deck/Model_Z_sch.inc line 25814
+  950 Reading WCONINJE in /deck/Model_Z_sch.inc line 25878
+  951 Reading DATES    in /deck/Model_Z_sch.inc line 25919
+  952 Reading WCONPROD in /deck/Model_Z_sch.inc line 25926
+  953 Reading WCONINJE in /deck/Model_Z_sch.inc line 25990
+  954 Reading DATES    in /deck/Model_Z_sch.inc line 26031
+  955 Reading WCONPROD in /deck/Model_Z_sch.inc line 26038
+  956 Reading WCONINJE in /deck/Model_Z_sch.inc line 26102
+  957 Reading DATES    in /deck/Model_Z_sch.inc line 26143
+  958 Reading WCONPROD in /deck/Model_Z_sch.inc line 26150
+  959 Reading WCONINJE in /deck/Model_Z_sch.inc line 26214
+  960 Reading DATES    in /deck/Model_Z_sch.inc line 26255
+  961 Reading WCONPROD in /deck/Model_Z_sch.inc line 26262
+  962 Reading WCONINJE in /deck/Model_Z_sch.inc line 26326
+  963 Reading DATES    in /deck/Model_Z_sch.inc line 26367
+  964 Reading WCONPROD in /deck/Model_Z_sch.inc line 26374
+  965 Reading WCONINJE in /deck/Model_Z_sch.inc line 26438
+  966 Reading DATES    in /deck/Model_Z_sch.inc line 26479
+  967 Reading WCONPROD in /deck/Model_Z_sch.inc line 26486
+  968 Reading WCONINJE in /deck/Model_Z_sch.inc line 26550
+  969 Reading DATES    in /deck/Model_Z_sch.inc line 26591
+  970 Reading WCONPROD in /deck/Model_Z_sch.inc line 26598
+  971 Reading WCONINJE in /deck/Model_Z_sch.inc line 26662
+  972 Reading DATES    in /deck/Model_Z_sch.inc line 26703
+  973 Reading COMPDAT  in /deck/Model_Z_sch.inc line 26707
+  974 Reading WCONPROD in /deck/Model_Z_sch.inc line 26717
+  975 Reading WCONPROD in /deck/Model_Z_sch.inc line 26721
+  976 Reading WCONINJE in /deck/Model_Z_sch.inc line 26785
+  977 Reading DATES    in /deck/Model_Z_sch.inc line 26826
+  978 Reading COMPDAT  in /deck/Model_Z_sch.inc line 26830
+  979 Reading WCONPROD in /deck/Model_Z_sch.inc line 26843
+  980 Reading WCONINJE in /deck/Model_Z_sch.inc line 26847
+  981 Reading WCONPROD in /deck/Model_Z_sch.inc line 26851
+  982 Reading WCONINJE in /deck/Model_Z_sch.inc line 26916
+  983 Reading DATES    in /deck/Model_Z_sch.inc line 26957
+  984 Reading WCONPROD in /deck/Model_Z_sch.inc line 26964
+  985 Reading WCONINJE in /deck/Model_Z_sch.inc line 27030
+  986 Reading DATES    in /deck/Model_Z_sch.inc line 27072
+  987 Reading WCONPROD in /deck/Model_Z_sch.inc line 27079
+  988 Reading WCONINJE in /deck/Model_Z_sch.inc line 27145
+  989 Reading DATES    in /deck/Model_Z_sch.inc line 27187
+  990 Reading WCONPROD in /deck/Model_Z_sch.inc line 27194
+  991 Reading WCONINJE in /deck/Model_Z_sch.inc line 27260
+  992 Reading DATES    in /deck/Model_Z_sch.inc line 27302
+  993 Reading WCONPROD in /deck/Model_Z_sch.inc line 27309
+  994 Reading WCONINJE in /deck/Model_Z_sch.inc line 27375
+  995 Reading DATES    in /deck/Model_Z_sch.inc line 27417
+  996 Reading WCONPROD in /deck/Model_Z_sch.inc line 27424
+  997 Reading WCONINJE in /deck/Model_Z_sch.inc line 27490
+  998 Reading DATES    in /deck/Model_Z_sch.inc line 27532
+  999 Reading WCONPROD in /deck/Model_Z_sch.inc line 27539
+ 1000 Reading WCONINJE in /deck/Model_Z_sch.inc line 27605
+ 1001 Reading DATES    in /deck/Model_Z_sch.inc line 27647
+ 1002 Reading WCONPROD in /deck/Model_Z_sch.inc line 27654
+ 1003 Reading WCONINJE in /deck/Model_Z_sch.inc line 27720
+ 1004 Reading DATES    in /deck/Model_Z_sch.inc line 27762
+ 1005 Reading WCONPROD in /deck/Model_Z_sch.inc line 27769
+ 1006 Reading WCONINJE in /deck/Model_Z_sch.inc line 27835
+ 1007 Reading DATES    in /deck/Model_Z_sch.inc line 27877
+ 1008 Reading WCONPROD in /deck/Model_Z_sch.inc line 27884
+ 1009 Reading WCONINJE in /deck/Model_Z_sch.inc line 27950
+ 1010 Reading DATES    in /deck/Model_Z_sch.inc line 27992
+ 1011 Reading WCONPROD in /deck/Model_Z_sch.inc line 27999
+ 1012 Reading WCONINJE in /deck/Model_Z_sch.inc line 28065
+ 1013 Reading DATES    in /deck/Model_Z_sch.inc line 28107
+ 1014 Reading WCONPROD in /deck/Model_Z_sch.inc line 28114
+ 1015 Reading WCONINJE in /deck/Model_Z_sch.inc line 28180
+ 1016 Reading DATES    in /deck/Model_Z_sch.inc line 28222
+ 1017 Reading WCONPROD in /deck/Model_Z_sch.inc line 28229
+ 1018 Reading WCONINJE in /deck/Model_Z_sch.inc line 28295
+ 1019 Reading DATES    in /deck/Model_Z_sch.inc line 28337
+ 1020 Reading WCONPROD in /deck/Model_Z_sch.inc line 28344
+ 1021 Reading WCONINJE in /deck/Model_Z_sch.inc line 28410
+ 1022 Reading DATES    in /deck/Model_Z_sch.inc line 28452
+ 1023 Reading WCONPROD in /deck/Model_Z_sch.inc line 28459
+ 1024 Reading WCONINJE in /deck/Model_Z_sch.inc line 28525
+ 1025 Reading DATES    in /deck/Model_Z_sch.inc line 28567
+ 1026 Reading WCONPROD in /deck/Model_Z_sch.inc line 28574
+ 1027 Reading WCONINJE in /deck/Model_Z_sch.inc line 28640
+ 1028 Reading DATES    in /deck/Model_Z_sch.inc line 28682
+ 1029 Reading WCONPROD in /deck/Model_Z_sch.inc line 28689
+ 1030 Reading WCONINJE in /deck/Model_Z_sch.inc line 28755
+ 1031 Reading DATES    in /deck/Model_Z_sch.inc line 28797
+ 1032 Reading WCONPROD in /deck/Model_Z_sch.inc line 28804
+ 1033 Reading WCONINJE in /deck/Model_Z_sch.inc line 28870
+ 1034 Reading DATES    in /deck/Model_Z_sch.inc line 28912
+ 1035 Reading WCONPROD in /deck/Model_Z_sch.inc line 28919
+ 1036 Reading WCONINJE in /deck/Model_Z_sch.inc line 28985
+ 1037 Reading DATES    in /deck/Model_Z_sch.inc line 29027
+ 1038 Reading WCONPROD in /deck/Model_Z_sch.inc line 29034
+ 1039 Reading WCONINJE in /deck/Model_Z_sch.inc line 29100
+ 1040 Reading DATES    in /deck/Model_Z_sch.inc line 29142
+ 1041 Reading WCONPROD in /deck/Model_Z_sch.inc line 29149
+ 1042 Reading WCONINJE in /deck/Model_Z_sch.inc line 29215
+ 1043 Reading DATES    in /deck/Model_Z_sch.inc line 29257
+ 1044 Reading WCONPROD in /deck/Model_Z_sch.inc line 29264
+ 1045 Reading WCONINJE in /deck/Model_Z_sch.inc line 29330
+ 1046 Reading DATES    in /deck/Model_Z_sch.inc line 29372
+ 1047 Reading WCONPROD in /deck/Model_Z_sch.inc line 29379
+ 1048 Reading WCONINJE in /deck/Model_Z_sch.inc line 29445
+ 1049 Reading DATES    in /deck/Model_Z_sch.inc line 29487
+ 1050 Reading WCONPROD in /deck/Model_Z_sch.inc line 29494
+ 1051 Reading WCONINJE in /deck/Model_Z_sch.inc line 29560
+ 1052 Reading DATES    in /deck/Model_Z_sch.inc line 29602
+ 1053 Reading WCONPROD in /deck/Model_Z_sch.inc line 29609
+ 1054 Reading WCONINJE in /deck/Model_Z_sch.inc line 29675
+ 1055 Reading DATES    in /deck/Model_Z_sch.inc line 29717
+ 1056 Reading WCONPROD in /deck/Model_Z_sch.inc line 29724
+ 1057 Reading WCONINJE in /deck/Model_Z_sch.inc line 29790
+ 1058 Reading DATES    in /deck/Model_Z_sch.inc line 29832
+ 1059 Reading WCONPROD in /deck/Model_Z_sch.inc line 29839
+ 1060 Reading WCONINJE in /deck/Model_Z_sch.inc line 29905
+ 1061 Reading DATES    in /deck/Model_Z_sch.inc line 29947
+ 1062 Reading WCONPROD in /deck/Model_Z_sch.inc line 29954
+ 1063 Reading WCONINJE in /deck/Model_Z_sch.inc line 30020
+ 1064 Reading DATES    in /deck/Model_Z_sch.inc line 30062
+ 1065 Reading WCONPROD in /deck/Model_Z_sch.inc line 30069
+ 1066 Reading WCONINJE in /deck/Model_Z_sch.inc line 30135
+ 1067 Reading DATES    in /deck/Model_Z_sch.inc line 30177
+ 1068 Reading WCONPROD in /deck/Model_Z_sch.inc line 30184
+ 1069 Reading WCONINJE in /deck/Model_Z_sch.inc line 30250
+ 1070 Reading DATES    in /deck/Model_Z_sch.inc line 30292
+ 1071 Reading WCONPROD in /deck/Model_Z_sch.inc line 30299
+ 1072 Reading WCONINJE in /deck/Model_Z_sch.inc line 30365
+ 1073 Reading DATES    in /deck/Model_Z_sch.inc line 30407
+ 1074 Reading WCONPROD in /deck/Model_Z_sch.inc line 30414
+ 1075 Reading WCONINJE in /deck/Model_Z_sch.inc line 30480
+ 1076 Reading DATES    in /deck/Model_Z_sch.inc line 30522
+ 1077 Reading WCONPROD in /deck/Model_Z_sch.inc line 30529
+ 1078 Reading WCONINJE in /deck/Model_Z_sch.inc line 30595
+ 1079 Reading DATES    in /deck/Model_Z_sch.inc line 30637
+ 1080 Reading WCONPROD in /deck/Model_Z_sch.inc line 30644
+ 1081 Reading WCONINJE in /deck/Model_Z_sch.inc line 30710
+ 1082 Reading DATES    in /deck/Model_Z_sch.inc line 30752
+ 1083 Reading WCONPROD in /deck/Model_Z_sch.inc line 30759
+ 1084 Reading WCONINJE in /deck/Model_Z_sch.inc line 30825
+ 1085 Reading DATES    in /deck/Model_Z_sch.inc line 30867
+ 1086 Reading WCONPROD in /deck/Model_Z_sch.inc line 30874
+ 1087 Reading WCONINJE in /deck/Model_Z_sch.inc line 30940
+ 1088 Reading DATES    in /deck/Model_Z_sch.inc line 30982
+ 1089 Reading WCONPROD in /deck/Model_Z_sch.inc line 30989
+ 1090 Reading WCONINJE in /deck/Model_Z_sch.inc line 31055
+ 1091 Reading DATES    in /deck/Model_Z_sch.inc line 31097
+ 1092 Reading WCONPROD in /deck/Model_Z_sch.inc line 31104
+ 1093 Reading WCONINJE in /deck/Model_Z_sch.inc line 31170
+ 1094 Reading DATES    in /deck/Model_Z_sch.inc line 31212
+ 1095 Reading COMPDAT  in /deck/Model_Z_sch.inc line 31216
+ 1096 Reading WCONPROD in /deck/Model_Z_sch.inc line 31227
+ 1097 Reading WCONINJE in /deck/Model_Z_sch.inc line 31292
+ 1098 Reading DATES    in /deck/Model_Z_sch.inc line 31335
+ 1099 Reading WCONPROD in /deck/Model_Z_sch.inc line 31342
+ 1100 Reading WCONINJE in /deck/Model_Z_sch.inc line 31407
+ 1101 Reading DATES    in /deck/Model_Z_sch.inc line 31450
+ 1102 Reading WCONPROD in /deck/Model_Z_sch.inc line 31457
+ 1103 Reading WCONINJE in /deck/Model_Z_sch.inc line 31522
+ 1104 Reading DATES    in /deck/Model_Z_sch.inc line 31565
+ 1105 Reading WCONPROD in /deck/Model_Z_sch.inc line 31572
+ 1106 Reading WCONINJE in /deck/Model_Z_sch.inc line 31637
+ 1107 Reading DATES    in /deck/Model_Z_sch.inc line 31680
+ 1108 Reading WCONPROD in /deck/Model_Z_sch.inc line 31687
+ 1109 Reading WCONINJE in /deck/Model_Z_sch.inc line 31752
+ 1110 Reading DATES    in /deck/Model_Z_sch.inc line 31795
+ 1111 Reading WCONPROD in /deck/Model_Z_sch.inc line 31802
+ 1112 Reading WCONINJE in /deck/Model_Z_sch.inc line 31867
+ 1113 Reading DATES    in /deck/Model_Z_sch.inc line 31910
+ 1114 Reading WCONPROD in /deck/Model_Z_sch.inc line 31917
+ 1115 Reading WCONINJE in /deck/Model_Z_sch.inc line 31982
+ 1116 Reading DATES    in /deck/Model_Z_sch.inc line 32025
+ 1117 Reading WCONPROD in /deck/Model_Z_sch.inc line 32032
+ 1118 Reading WCONINJE in /deck/Model_Z_sch.inc line 32097
+ 1119 Reading DATES    in /deck/Model_Z_sch.inc line 32140
+ 1120 Reading WCONPROD in /deck/Model_Z_sch.inc line 32147
+ 1121 Reading WCONINJE in /deck/Model_Z_sch.inc line 32212
+ 1122 Reading DATES    in /deck/Model_Z_sch.inc line 32255
+ 1123 Reading WCONPROD in /deck/Model_Z_sch.inc line 32262
+ 1124 Reading WCONINJE in /deck/Model_Z_sch.inc line 32327
+ 1125 Reading DATES    in /deck/Model_Z_sch.inc line 32370
+ 1126 Reading WCONPROD in /deck/Model_Z_sch.inc line 32377
+ 1127 Reading WCONINJE in /deck/Model_Z_sch.inc line 32442
+ 1128 Reading DATES    in /deck/Model_Z_sch.inc line 32485
+ 1129 Reading WCONPROD in /deck/Model_Z_sch.inc line 32492
+ 1130 Reading WCONINJE in /deck/Model_Z_sch.inc line 32557
+ 1131 Reading DATES    in /deck/Model_Z_sch.inc line 32600
+ 1132 Reading WCONPROD in /deck/Model_Z_sch.inc line 32607
+ 1133 Reading WCONINJE in /deck/Model_Z_sch.inc line 32672
+ 1134 Reading DATES    in /deck/Model_Z_sch.inc line 32715
+ 1135 Reading WCONPROD in /deck/Model_Z_sch.inc line 32722
+ 1136 Reading WCONINJE in /deck/Model_Z_sch.inc line 32787
+ 1137 Reading DATES    in /deck/Model_Z_sch.inc line 32830
+ 1138 Reading WCONPROD in /deck/Model_Z_sch.inc line 32837
+ 1139 Reading WCONINJE in /deck/Model_Z_sch.inc line 32902
+ 1140 Reading DATES    in /deck/Model_Z_sch.inc line 32945
+ 1141 Reading WCONPROD in /deck/Model_Z_sch.inc line 32952
+ 1142 Reading WCONINJE in /deck/Model_Z_sch.inc line 33017
+ 1143 Reading DATES    in /deck/Model_Z_sch.inc line 33060
+ 1144 Reading WCONPROD in /deck/Model_Z_sch.inc line 33067
+ 1145 Reading WCONINJE in /deck/Model_Z_sch.inc line 33132
+ 1146 Reading DATES    in /deck/Model_Z_sch.inc line 33175
+ 1147 Reading WCONPROD in /deck/Model_Z_sch.inc line 33182
+ 1148 Reading WCONINJE in /deck/Model_Z_sch.inc line 33247
+ 1149 Reading DATES    in /deck/Model_Z_sch.inc line 33290
+ 1150 Reading WCONPROD in /deck/Model_Z_sch.inc line 33297
+ 1151 Reading WCONINJE in /deck/Model_Z_sch.inc line 33362
+ 1152 Reading DATES    in /deck/Model_Z_sch.inc line 33405
+ 1153 Reading WCONPROD in /deck/Model_Z_sch.inc line 33412
+ 1154 Reading WCONINJE in /deck/Model_Z_sch.inc line 33477
+ 1155 Reading DATES    in /deck/Model_Z_sch.inc line 33520
+ 1156 Reading WCONPROD in /deck/Model_Z_sch.inc line 33527
+ 1157 Reading WCONINJE in /deck/Model_Z_sch.inc line 33592
+ 1158 Reading DATES    in /deck/Model_Z_sch.inc line 33635
+ 1159 Reading WCONPROD in /deck/Model_Z_sch.inc line 33642
+ 1160 Reading WCONINJE in /deck/Model_Z_sch.inc line 33707
+ 1161 Reading DATES    in /deck/Model_Z_sch.inc line 33750
+ 1162 Reading WCONPROD in /deck/Model_Z_sch.inc line 33757
+ 1163 Reading WCONINJE in /deck/Model_Z_sch.inc line 33822
+ 1164 Reading DATES    in /deck/Model_Z_sch.inc line 33865
+ 1165 Reading WCONPROD in /deck/Model_Z_sch.inc line 33872
+ 1166 Reading WCONINJE in /deck/Model_Z_sch.inc line 33937
+ 1167 Reading DATES    in /deck/Model_Z_sch.inc line 33980
+ 1168 Reading WCONPROD in /deck/Model_Z_sch.inc line 33987
+ 1169 Reading WCONINJE in /deck/Model_Z_sch.inc line 34052
+ 1170 Reading DATES    in /deck/Model_Z_sch.inc line 34095
+ 1171 Reading WCONPROD in /deck/Model_Z_sch.inc line 34102
+ 1172 Reading WCONINJE in /deck/Model_Z_sch.inc line 34167
+ 1173 Reading DATES    in /deck/Model_Z_sch.inc line 34210
+ 1174 Reading WCONPROD in /deck/Model_Z_sch.inc line 34217
+ 1175 Reading WCONINJE in /deck/Model_Z_sch.inc line 34282
+ 1176 Reading DATES    in /deck/Model_Z_sch.inc line 34325
+ 1177 Reading WCONPROD in /deck/Model_Z_sch.inc line 34332
+ 1178 Reading WCONINJE in /deck/Model_Z_sch.inc line 34397
+ 1179 Reading DATES    in /deck/Model_Z_sch.inc line 34440
+ 1180 Reading WCONPROD in /deck/Model_Z_sch.inc line 34447
+ 1181 Reading WCONINJE in /deck/Model_Z_sch.inc line 34512
+ 1182 Reading DATES    in /deck/Model_Z_sch.inc line 34555
+ 1183 Reading WCONPROD in /deck/Model_Z_sch.inc line 34562
+ 1184 Reading WCONINJE in /deck/Model_Z_sch.inc line 34627
+ 1185 Reading DATES    in /deck/Model_Z_sch.inc line 34670
+ 1186 Reading WCONPROD in /deck/Model_Z_sch.inc line 34677
+ 1187 Reading WCONINJE in /deck/Model_Z_sch.inc line 34742
+ 1188 Reading DATES    in /deck/Model_Z_sch.inc line 34785
+ 1189 Reading WCONPROD in /deck/Model_Z_sch.inc line 34792
+ 1190 Reading WCONINJE in /deck/Model_Z_sch.inc line 34857
+ 1191 Reading DATES    in /deck/Model_Z_sch.inc line 34900
+ 1192 Reading WCONPROD in /deck/Model_Z_sch.inc line 34907
+ 1193 Reading WCONINJE in /deck/Model_Z_sch.inc line 34972
+ 1194 Reading DATES    in /deck/Model_Z_sch.inc line 35015
+ 1195 Reading WCONPROD in /deck/Model_Z_sch.inc line 35022
+ 1196 Reading WCONINJE in /deck/Model_Z_sch.inc line 35087
+ 1197 Reading DATES    in /deck/Model_Z_sch.inc line 35130
+ 1198 Reading WCONPROD in /deck/Model_Z_sch.inc line 35137
+ 1199 Reading WCONINJE in /deck/Model_Z_sch.inc line 35202
+ 1200 Reading DATES    in /deck/Model_Z_sch.inc line 35245
+ 1201 Reading WCONPROD in /deck/Model_Z_sch.inc line 35252
+ 1202 Reading WCONINJE in /deck/Model_Z_sch.inc line 35317
+ 1203 Reading DATES    in /deck/Model_Z_sch.inc line 35360
+ 1204 Reading WCONPROD in /deck/Model_Z_sch.inc line 35367
+ 1205 Reading WCONINJE in /deck/Model_Z_sch.inc line 35432
+ 1206 Reading DATES    in /deck/Model_Z_sch.inc line 35475
+ 1207 Reading WCONPROD in /deck/Model_Z_sch.inc line 35482
+ 1208 Reading WCONINJE in /deck/Model_Z_sch.inc line 35547
+ 1209 Reading DATES    in /deck/Model_Z_sch.inc line 35590
+ 1210 Reading WCONPROD in /deck/Model_Z_sch.inc line 35597
+ 1211 Reading WCONINJE in /deck/Model_Z_sch.inc line 35662
+ 1212 Reading DATES    in /deck/Model_Z_sch.inc line 35705
+ 1213 Reading WCONPROD in /deck/Model_Z_sch.inc line 35712
+ 1214 Reading WCONINJE in /deck/Model_Z_sch.inc line 35777
+ 1215 Reading DATES    in /deck/Model_Z_sch.inc line 35820
+ 1216 Reading WPIMULT  in /deck/Model_Z_sch.inc line 35826
+ 1217 Reading WCONPROD in /deck/Model_Z_sch.inc line 35837
+ 1218 Reading WCONINJE in /deck/Model_Z_sch.inc line 35902
+ 1219 Reading DATES    in /deck/Model_Z_sch.inc line 35945
+ 1220 Reading WCONPROD in /deck/Model_Z_sch.inc line 35952
+ 1221 Reading WCONINJE in /deck/Model_Z_sch.inc line 36017
+ 1222 Reading DATES    in /deck/Model_Z_sch.inc line 36060
+ 1223 Reading WCONPROD in /deck/Model_Z_sch.inc line 36067
+ 1224 Reading WCONINJE in /deck/Model_Z_sch.inc line 36132
+ 1225 Reading DATES    in /deck/Model_Z_sch.inc line 36175
+ 1226 Reading WCONPROD in /deck/Model_Z_sch.inc line 36182
+ 1227 Reading WCONINJE in /deck/Model_Z_sch.inc line 36247
+ 1228 Reading DATES    in /deck/Model_Z_sch.inc line 36290
+
+Warning: Unsupported keywords or keyword items:
+
+  PINCHREG: keyword not supported
+  In file: /deck/Model_Z_grid.inc, line 682052
+
+Warning: The ALL CAPS case: MODEL_Z will be used when writing output files from this simulation.
+
+Creating corner-point grid from keywords COORD, ZCORN and others
+
+Warning:  COMPS is not specified, the following keywords related to compositional simulation in PROPS section will be ignored:
+ STCOND
+3 fluid phases are active
+
+Processing dynamic information from
+/deck/Model_Z.data line 125
+Initializing report step 0/371 at 1991-06-01 0 DAYS line 125
+Reading from: /deck/Model_Z_sch.inc line 1
+Processing keyword RPTSCHED at line 1
+Processing keyword WELSPECS at line 5
+Complete report step 1 (1249 DAYS) at 1994-11-01 (0 DAYS)
+
+Initializing report step 2/371 at 1994-11-01 (0 DAYS) line 111
+Processing keyword COMPDAT at line 115
+Processing keyword WCONPROD at line 137
+Complete report step 2 (30 DAYS) at 1994-12-01 (1249 DAYS)
+
+Initializing report step 3/371 at 1994-12-01 (1249 DAYS) line 145
+Processing keyword COMPDAT at line 149
+Processing keyword WCONPROD at line 156
+Complete report step 3 (31 DAYS) at 1995-01-01 (1279 DAYS)
+
+Initializing report step 4/371 at 1995-01-01 (1279 DAYS) line 165
+Processing keyword COMPDAT at line 169
+Processing keyword WCONPROD at line 176
+Complete report step 4 (31 DAYS) at 1995-02-01 (1310 DAYS)
+
+Initializing report step 5/371 at 1995-02-01 (1310 DAYS) line 186
+Processing keyword COMPDAT at line 190
+Processing keyword WCONPROD at line 216
+Complete report step 5 (28 DAYS) at 1995-03-01 (1341 DAYS)
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line441
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line482
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line523
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line564
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line605
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line646
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line687
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line728
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line797
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line845
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line893
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line949
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1011
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1063
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1129
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1193
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1249
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1305
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1361
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1417
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1473
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1529
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1595
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1672
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1747
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1825
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1892
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line1959
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2043
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2114
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2185
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2256
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2327
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2398
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2469
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2567
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2644
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2721
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2798
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2875
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line2969
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3050
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3131
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3212
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3293
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3374
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3455
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3543
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3626
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3709
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3799
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3883
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line3967
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4051
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4135
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4219
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4303
+Well 59 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4581
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4668
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4755
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4842
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line4929
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5016
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5103
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5190
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5277
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5364
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5451
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5538
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5625
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5712
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5799
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5893
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line5981
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6069
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6157
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6245
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6340
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6429
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6527
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6617
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6706
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6795
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6884
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line6973
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7062
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7151
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7277
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7374
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7465
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7556
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7647
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7738
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7838
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line7939
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8042
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8134
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8235
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8327
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8418
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8509
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8600
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8691
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8782
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8873
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line8964
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9055
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9146
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9237
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9328
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9419
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9510
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9601
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9692
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9783
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9874
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line9965
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10056
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10147
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10238
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10329
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10420
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10511
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10602
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10693
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10798
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10891
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line10982
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11073
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11180
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11274
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11365
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11456
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11547
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11638
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11756
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11849
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line11945
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12041
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12146
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12242
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12338
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12434
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12530
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12626
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12722
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12818
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line12927
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13023
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13137
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13245
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13343
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13442
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13541
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13640
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13739
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13838
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line13949
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14048
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14148
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14248
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14348
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14448
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14548
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14648
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14748
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14848
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line14948
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15048
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15148
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15248
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15348
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15448
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15548
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15648
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15748
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15848
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line15948
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16048
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16156
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16256
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16367
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16477
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16578
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16680
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16782
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16884
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line16986
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line17088
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line17190
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line17292
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line17403
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line17505
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line17617
+Well 71 has no connections to grid and will remain SHUT
+
+Warning: Problem with WCONPROD
+In /deck/Model_Z_sch.inc line17729
+Well 71 has no connections to grid and will remain SHUT
+
+Processing grid
+1 pinch-out connection generated
+Total number of active cells: 240250 / total pore volume: 258401619350 RM3
+
+Warning: Equilibration region 2 has no active cells
+
+Warning: Equilibration region 3 has no active cells
+
+Warning: Equilibration region 5 has no active cells
+
+Warning: Equilibration region 6 has no active cells
+
+Warning: Equilibration region 7 has no active cells
+
+Warning: Equilibration region 8 has no active cells
+
+Warning: Equilibration region 9 has no active cells
+
+Warning: Equilibration region 10 has no active cells
+
+Warning: Equilibration region 11 has no active cells
+
+Warning: Equilibration region 12 has no active cells
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/371 at day 0/12511, date = 01-Jun-1991
+Using Newton nonlinear solver.
+Restart file written for report step   0/371, date = 01-Jun-1991 00:00:00
+
+Starting time step 0, stepsize 1 days, at day 0/1249, date = 01-Jun-1991
+ Newton its= 2, linearizations= 3 (1.3sec), linear its=  2 (1.1sec)
+
+Starting time step 1, stepsize 3 days, at day 1/1249, date = 02-Jun-1991
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  2 (0.6sec)
+
+Starting time step 2, stepsize 9 days, at day 4/1249, date = 05-Jun-1991
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  2 (0.6sec)
+
+Starting time step 3, stepsize 27 days, at day 13/1249, date = 14-Jun-1991
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  1 (0.6sec)
+
+Starting time step 4, stepsize 81 days, at day 40/1249, date = 11-Jul-1991
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  1 (0.5sec)
+
+Starting time step 5, stepsize 243 days, at day 121/1249, date = 30-Sep-1991
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  2 (0.7sec)
+
+Starting time step 6, stepsize 365 days, at day 364/1249, date = 30-May-1992
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  2 (0.6sec)
+
+Starting time step 7, stepsize 260 days, at day 729/1249, date = 30-May-1993
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.7sec)
+
+Starting time step 8, stepsize 260 days, at day 989/1249, date = 14-Feb-1994
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.8sec)
+
+Report step  1/371 at day 1249/12511, date = 01-Nov-1994
+
+Starting time step 0, stepsize 30 days, at day 1249/1279, date = 01-Nov-1994
+    Well 42 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.9sec), linear its=  3 (0.8sec)
+
+Report step  2/371 at day 1279/12511, date = 01-Dec-1994
+
+Starting time step 0, stepsize 31 days, at day 1279/1310, date = 01-Dec-1994
+    Well 42 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  3 (0.8sec)
+
+Report step  3/371 at day 1310/12511, date = 01-Jan-1995
+
+Starting time step 0, stepsize 31 days, at day 1310/1341, date = 01-Jan-1995
+    Well 42 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.8sec)
+
+Report step  4/371 at day 1341/12511, date = 01-Feb-1995
+
+Starting time step 0, stepsize 28 days, at day 1341/1369, date = 01-Feb-1995
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  2 (0.6sec)
+
+Report step  5/371 at day 1369/12511, date = 01-Mar-1995
+
+Starting time step 0, stepsize 31 days, at day 1369/1400, date = 01-Mar-1995
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  3 (0.8sec)
+
+Report step  6/371 at day 1400/12511, date = 01-Apr-1995
+
+Starting time step 0, stepsize 30 days, at day 1400/1430, date = 01-Apr-1995
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  3 (0.7sec)
+
+Report step  7/371 at day 1430/12511, date = 01-May-1995
+
+Starting time step 0, stepsize 31 days, at day 1430/1461, date = 01-May-1995
+    Well 1 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  2 (1.1sec)
+
+Report step  8/371 at day 1461/12511, date = 01-Jun-1995
+
+Starting time step 0, stepsize 30 days, at day 1461/1491, date = 01-Jun-1995
+    Well 1 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  4 (0.8sec)
+
+Report step  9/371 at day 1491/12511, date = 01-Jul-1995
+
+Starting time step 0, stepsize 31 days, at day 1491/1522, date = 01-Jul-1995
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.8sec)
+
+Report step 10/371 at day 1522/12511, date = 01-Aug-1995
+
+Starting time step 0, stepsize 31 days, at day 1522/1553, date = 01-Aug-1995
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.8sec)
+
+Report step 11/371 at day 1553/12511, date = 01-Sep-1995
+
+Starting time step 0, stepsize 30 days, at day 1553/1583, date = 01-Sep-1995
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.8sec)
+
+Report step 12/371 at day 1583/12511, date = 01-Oct-1995
+
+Starting time step 0, stepsize 31 days, at day 1583/1614, date = 01-Oct-1995
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  4 (0.9sec)
+
+Report step 13/371 at day 1614/12511, date = 01-Nov-1995
+
+Starting time step 0, stepsize 30 days, at day 1614/1644, date = 01-Nov-1995
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  4 (0.9sec)
+
+Report step 14/371 at day 1644/12511, date = 01-Dec-1995
+
+Starting time step 0, stepsize 31 days, at day 1644/1675, date = 01-Dec-1995
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  4 (0.8sec)
+
+Report step 15/371 at day 1675/12511, date = 01-Jan-1996
+
+Starting time step 0, stepsize 31 days, at day 1675/1706, date = 01-Jan-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  4 (0.8sec)
+
+Report step 16/371 at day 1706/12511, date = 01-Feb-1996
+
+Starting time step 0, stepsize 29 days, at day 1706/1735, date = 01-Feb-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  4 (0.8sec)
+
+Report step 17/371 at day 1735/12511, date = 01-Mar-1996
+
+Starting time step 0, stepsize 31 days, at day 1735/1766, date = 01-Mar-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (1.9sec), linear its=  4 (0.8sec)
+
+Report step 18/371 at day 1766/12511, date = 01-Apr-1996
+
+Starting time step 0, stepsize 30 days, at day 1766/1796, date = 01-Apr-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  3 (0.7sec)
+
+Report step 19/371 at day 1796/12511, date = 01-May-1996
+
+Starting time step 0, stepsize 31 days, at day 1796/1827, date = 01-May-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  4 (0.8sec)
+
+Report step 20/371 at day 1827/12511, date = 01-Jun-1996
+
+Starting time step 0, stepsize 30 days, at day 1827/1857, date = 01-Jun-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  4 (0.8sec)
+
+Report step 21/371 at day 1857/12511, date = 01-Jul-1996
+
+Starting time step 0, stepsize 31 days, at day 1857/1888, date = 01-Jul-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  4 (0.8sec)
+
+Report step 22/371 at day 1888/12511, date = 01-Aug-1996
+
+Starting time step 0, stepsize 31 days, at day 1888/1919, date = 01-Aug-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (1.2sec)
+
+Report step 23/371 at day 1919/12511, date = 01-Sep-1996
+
+Starting time step 0, stepsize 30 days, at day 1919/1949, date = 01-Sep-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+Well 52 will be shut as it can not operate under current reservoir conditions.
+ Newton its= 2, linearizations= 3 (0.7sec), linear its=  3 (0.7sec)
+
+Report step 24/371 at day 1949/12511, date = 01-Oct-1996
+
+Starting time step 0, stepsize 31 days, at day 1949/1980, date = 01-Oct-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+Well 52 will be shut as it can not operate under current reservoir conditions.
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  4 (0.8sec)
+
+Report step 25/371 at day 1980/12511, date = 01-Nov-1996
+
+Starting time step 0, stepsize 30 days, at day 1980/2010, date = 01-Nov-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 100 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 101 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+Well 52 will be shut as it can not operate under current reservoir conditions.
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.8sec)
+
+Report step 26/371 at day 2010/12511, date = 01-Dec-1996
+
+Starting time step 0, stepsize 31 days, at day 2010/2041, date = 01-Dec-1996
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 100 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 101 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  4 (0.8sec)
+
+Report step 27/371 at day 2041/12511, date = 01-Jan-1997
+
+Starting time step 0, stepsize 31 days, at day 2041/2072, date = 01-Jan-1997
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 100 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 101 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.7sec)
+
+Report step 28/371 at day 2072/12511, date = 01-Feb-1997
+
+Starting time step 0, stepsize 28 days, at day 2072/2100, date = 01-Feb-1997
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 100 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 101 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.8sec)
+
+Report step 29/371 at day 2100/12511, date = 01-Mar-1997
+
+Starting time step 0, stepsize 31 days, at day 2100/2131, date = 01-Mar-1997
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 100 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 101 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  3 (0.7sec)
+
+Report step 30/371 at day 2131/12511, date = 01-Apr-1997
+
+Starting time step 0, stepsize 30 days, at day 2131/2161, date = 01-Apr-1997
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 100 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 101 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  4 (0.8sec)
+
+Report step 31/371 at day 2161/12511, date = 01-May-1997
+
+Starting time step 0, stepsize 31 days, at day 2161/2192, date = 01-May-1997
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 100 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 101 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+ Newton its= 2, linearizations= 3 (0.8sec), linear its=  4 (0.8sec)
+
+Report step 32/371 at day 2192/12511, date = 01-Jun-1997
+
+Starting time step 0, stepsize 30 days, at day 2192/2222, date = 01-Jun-1997
+    Well 1 control mode changed from LRAT to BHP
+    Well 10 control mode changed from LRAT to BHP
+    Well 2 control mode changed from LRAT to BHP
+    Well 3 control mode changed from LRAT to BHP
+    Well 42 control mode changed from LRAT to BHP
+    Well 46 control mode changed from LRAT to BHP
+    Well 51 control mode changed from LRAT to BHP
+    Well 53 control mode changed from LRAT to BHP
+    Well 6 control mode changed from LRAT to BHP
+    Well 60 control mode changed from LRAT to BHP
+    Well 7 control mode changed from LRAT to BHP
+    Well 70 control mode changed from LRAT to BHP
+    Well 8 control mode changed from LRAT to BHP
+    Well 52 control mode changed from LRAT to BHP
+    Well 13 control mode changed from LRAT to BHP
+    Well 43 control mode changed from LRAT to BHP
+    Well 22 control mode changed from LRAT to BHP
+    Well 78 control mode changed from LRAT to BHP
+    Well 57 control mode changed from LRAT to BHP
+    Well 65 control mode changed from LRAT to BHP
+    Well 66 control mode changed from LRAT to BHP
+    Well 88 control mode changed from LRAT to BHP
+    Well 94 control mode changed from LRAT to BHP
+    Well 56 control mode changed from LRAT to BHP
+    Well 58 control mode changed from LRAT to BHP
+    Well 67 control mode changed from LRAT to BHP
+    Well 79 control mode changed from LRAT to BHP
+    Well 95 control mode changed from LRAT to BHP
+    Well 68 control mode changed from LRAT to BHP
+    Well 89 control mode changed from LRAT to BHP
+    Well 76 control mode changed from LRAT to BHP
+    Well 77 control mode changed from LRAT to BHP
+    Well 80 control mode changed from LRAT to BHP
+    Well 27 control mode changed from LRAT to BHP
+    Well 62 control mode changed from LRAT to BHP
+    Well 63 control mode changed from LRAT to BHP
+    Well 74 control mode changed from LRAT to BHP
+    Well 75 control mode changed from LRAT to BHP
+    Well 64 control mode changed from LRAT to BHP
+    Well 100 control mode changed from LRAT to BHP
+    Well 73 control mode changed from LRAT to BHP
+    Well 81 control mode changed from LRAT to BHP
+    Well 92 control mode changed from LRAT to BHP
+    Well 55 control mode changed from LRAT to BHP
+    Well 101 control mode changed from LRAT to BHP
+    Well 18 control mode changed from LRAT to BHP
+    Well 93 control mode changed from LRAT to BHP
+    Well 82 control mode changed from LRAT to BHP
+    Well 48 control mode changed from LRAT to BHP

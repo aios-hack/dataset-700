@@ -1,0 +1,473 @@
+clear
+hostnamectl
+lscpu
+free -h
+df -hT
+lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINTS
+nvidia-smi
+command -v git docker python3 pip3 nvcc
+python3 --version
+git --version
+docker --version
+systemctl is-active docker
+find /root -maxdepth 2 -mindepth 1 -type d -print | sort
+lspci | grep -Ei 'nvidia|vga|3d|display'
+apt-cache policy docker.io python3.12 python3.13 python3.14-venv python3-pip
+apt-get update
+apt-cache search '^uv$'
+apt-cache search '^python3.1[234]-venv$'
+DEBIAN_FRONTEND=noninteractive apt-get install -y docker.io python3.14-venv python3-pip build-essential git-lfs curl ca-certificates tmux htop rsync unzip
+curl -LsSf https://astral.sh/uv/install.sh -o /tmp/uv-install.sh
+sh /tmp/uv-install.sh
+/root/.local/bin/uv python install 3.12
+/root/.local/bin/uv python update-shell
+mkdir -p /root/aios-hack
+cd /root/aios-hack
+git clone https://github.com/aios-hack/docs.git
+git clone https://github.com/aios-hack/aios.git
+systemctl enable --now docker
+cd /root/aios-hack/aios
+/root/.local/bin/uv venv --python 3.12 .venv
+/root/.local/bin/uv pip install --python .venv/bin/python -e '.[dev]'
+/root/.local/bin/uv pip install --python .venv/bin/python anthropic numpy scipy pandas scikit-learn tensorboard
+/root/.local/bin/uv pip install --python .venv/bin/python --index-url https://download.pytorch.org/whl/cpu torch
+docker pull openporousmedia/opmreleases:latest
+.venv/bin/python -c "import torch,numpy,scipy,pandas,sklearn,anthropic; print('python ok'); print('torch', torch.__version__, 'cuda', torch.cuda.is_available()); print('numpy', numpy.__version__); print('scipy', scipy.__version__); print('pandas', pandas.__version__); print('sklearn', sklearn.__version__)"
+AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/pytest -q contracts/tests surrogate/tests optimizer/tests
+docker run --rm openporousmedia/opmreleases:latest flow --version
+docker image inspect openporousmedia/opmreleases:latest --format '{{.Id}} {{.Size}}'
+git -C /root/aios-hack/docs rev-parse --short HEAD
+git -C /root/aios-hack/aios rev-parse --short HEAD
+df -h /
+rg -n 'AIOS_RUN|skipif|OPM' bridge/tests conftest.py | head -80
+DEBIAN_FRONTEND=noninteractive apt-get install -y ripgrep jq
+rg -n 'AIOS_RUN|skipif|OPM' bridge/tests conftest.py | head -80
+sed -n '1,70p' bridge/tests/test_base_run.py
+sed -n '1,45p' bridge/tests/test_dataset_opm.py
+sed -n '1,45p' bridge/tests/test_opm_deck.py
+AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/pytest -q config/tests connectivity/tests contracts/tests economics/tests llm/tests optimizer/tests policy/tests robustness/tests schedule/tests surrogate/tests ui/tests
+git status --short
+find surrogate -maxdepth 2 -type f -print | sort
+ls -la data 2>/dev/null
+systemctl is-active docker
+docker images --format '{{.Repository}}:{{.Tag}} {{.Size}}'
+.venv/bin/python --version
+/root/.local/bin/uv --version
+df -h /
+git lfs install
+mkdir -p /root/aios-hack/aios/data/base_run
+mkdir -p /root/aios-hack/aios/data/dataset-main
+cd /root
+exit
+cd /root/aios-hack/aios
+AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -c "import conftest; from pathlib import Path; from bridge.dataset import DatasetGenerator; from bridge.dataset_plan import PlanConfig,build_plan; g=DatasetGenerator(conftest.model_z_dir(),Path('data/dataset-main'),max_workers=8,timeout_seconds=7200.0); p=build_plan(g.base_schedule(),seed=20260816,config=PlanConfig(n_level_scenarios=110,n_unreachable_scenarios=40,n_shutdown_scenarios=35,n_conversion_scenarios=14)); a,s=g.prepare(p); print(len(p),len(a),len(s),p.plan_hash)"
+tmux new-session -d -s dataset -c /root/aios-hack/aios
+tmux set-option -t dataset remain-on-exit on
+tmux pipe-pane -t dataset -o 'cat >> /root/aios-hack/aios/data/dataset-main/generation.log'
+tmux send-keys -t dataset "env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -c 'import conftest; from pathlib import Path; from bridge.dataset import DatasetGenerator; from bridge.dataset_plan import PlanConfig,build_plan; g=DatasetGenerator(conftest.model_z_dir(),Path(\"data/dataset-main\"),max_workers=8,timeout_seconds=7200.0); p=build_plan(g.base_schedule(),seed=20260816,config=PlanConfig(n_level_scenarios=110,n_unreachable_scenarios=40,n_shutdown_scenarios=35,n_conversion_scenarios=14)); r=g.build(p); print(\"DONE\",r.dataset_hash,r.n_simulated,r.n_from_cache,len(r.failed),len(r.skipped),r.wallclock_seconds)'" C-m
+tmux list-sessions
+tmux capture-pane -pt dataset -S -30
+ps -eo pid,etimes,pcpu,pmem,cmd | grep -E 'python -u -c|docker run|flow' | grep -v grep
+cd /root/aios-hack/aios
+tmux capture-pane -pt dataset -S -25
+wc -l data/dataset-main/manifest.jsonl 2>/dev/null || true
+docker ps --format 'table {{.Names}}\t{{.Status}}'
+du -sh data/dataset-main 2>/dev/null || true
+df -h /
+cd /root/aios-hack/aios
+.venv/bin/python -m py_compile surrogate/model.py surrogate/model_z_context.py surrogate/train.py surrogate/tests/test_model.py
+.venv/bin/python -m pytest surrogate/tests/test_model.py -q
+tmux capture-pane -pt dataset -S -8
+wc -l data/dataset-main/manifest.jsonl 2>/dev/null || true
+docker ps --format '{{.Names}} {{.Status}}'
+mkdir -p data/model-task34
+tmux kill-session -t training-watch 2>/dev/null || true
+tmux new-session -d -s training-watch
+tmux pipe-pane -o -t training-watch 'cat >> /root/aios-hack/aios/data/model-task34/training.log'
+tmux send-keys -t training-watch 'cd /root/aios-hack/aios && while [ ! -f data/dataset-main/manifest.jsonl ] || [ "$(wc -l < data/dataset-main/manifest.jsonl)" -lt 200 ]; do sleep 60; done; sleep 60; env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -m surrogate.train --model-dir /root/aios-hack/docs/models/Model_Z --dataset-root /root/aios-hack/aios/data/dataset-main --normatives /root/aios-hack/docs/models/CHDD_PYTHON/input/Нормативы_ЧДД.xlsx --output-dir /root/aios-hack/aios/data/model-task34 --seed 20260816 --epochs 80 --patience 10 --workers 8' C-m
+tmux list-sessions
+tmux capture-pane -pt training-watch -S -10
+.venv/bin/python -m pytest surrogate/tests -q
+date -u
+wc -l data/dataset-main/manifest.jsonl 2>/dev/null || true
+du -sh data/dataset-main
+docker stats --no-stream --format '{{.Name}} {{.CPUPerc}} {{.MemUsage}}' | head -8
+.venv/bin/python -m surrogate.train --help | head -25
+.venv/bin/python -m pytest surrogate/tests -q
+docker logs --tail 12 opm-run-20260816T200926-8b4da543d1ed 2>&1 | tail -12
+date -u
+wc -l data/dataset-main/manifest.jsonl 2>/dev/null || true
+docker logs --tail 3 opm-run-20260816T200926-8b4da543d1ed 2>&1 | tail -3
+df -h /
+docker ps --format '{{.Names}} {{.Status}}'
+exit
+cd /root/aios-hack/aios
+date -u
+wc -l data/dataset-main/manifest.jsonl 2>/dev/null || true
+du -sh data/dataset-main data/base_run 2>/dev/null || true
+df -h /
+docker ps --format '{{.Names}} {{.Status}}'
+tmux list-sessions
+find data/dataset-main -maxdepth 3 -type d | head -40
+du -h --max-depth=3 data/dataset-main | sort -h | tail -20
+head -1 data/dataset-main/manifest.jsonl | jq '{scenario_id,run_id,status,response_hash,artifacts}'
+du -ah data/dataset-main/runs/20260816T200926-8b4da543d1ed | sort -h | tail -20
+du -ah data/dataset-main/decks/levels-0000 | sort -h | tail -15
+openssl rand -hex 10
+tmux kill-session -t dashboard 2>/dev/null || true
+tmux new-session -d -s dashboard "cd /root/aios-hack/aios && env AIOS_DASHBOARD_PASSWORD=<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> .venv/bin/python -u -m surrogate.dashboard --root /root/aios-hack/aios/data --host 0.0.0.0 --port 8080"
+sleep 1
+curl -sS -o /dev/null -w 'anon=%{http_code}\n' http://127.0.0.1:8080/
+curl -sS -u aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> -o /dev/null -w 'auth=%{http_code}\n' http://127.0.0.1:8080/
+curl -sS -u aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> http://127.0.0.1:8080/api/status | jq '{stage,dataset:{target:.dataset.target,completed:.dataset.completed,eta:.dataset.eta_seconds},runtime,system:{load:.system.load1,disk:.system.disk_fraction}}'
+.venv/bin/python -m py_compile surrogate/dashboard.py
+tmux list-sessions
+exit
+cd /root/aios-hack/aios
+date -u
+jq '{target:(.scenarios|length),plan_hash,seed}' data/dataset-main/plan.json
+jq -s 'group_by(.scenario_id)|map(last)|{unique:length,ok:(map(select(.status=="OK"))|length),failed:(map(select(.status!="OK"))|length),cached:(map(select(.from_cache==true))|length),families:(group_by(.family)|map({family:.[0].family,count:length}))}' data/dataset-main/manifest.jsonl
+docker ps --format 'table {{.Names}}\t{{.Status}}'
+tmux list-sessions
+tmux capture-pane -pt dataset -S -12
+tmux capture-pane -pt training-watch -S -12
+tmux capture-pane -pt dashboard -S -8
+du -sh data/dataset-main data/model-task34 2>/dev/null || true
+df -h /
+free -h
+ls -lh data/model-task34 2>/dev/null || true
+curl -sS -u aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> http://127.0.0.1:8080/api/status | jq '{stage,progress:{completed:.dataset.completed,target:.dataset.target,eta_seconds:.dataset.eta_seconds,median_seconds:.dataset.median_wallclock_seconds},runtime,system:{load1:.system.load1,memory_used_gib:.system.memory_used_gib,disk_used_gib:.system.disk_used_gib,disk_total_gib:.system.disk_total_gib}}'
+tail -20 data/model-task34/training.log
+exit
+cd /root/aios-hack/aios && while [ ! -f data/dataset-main/manifest.jsonl ] || [ "$(wc -l < data/dataset-main/manifest.jsonl)" -lt 200 ]; do sleep 60; done; sleep 60; env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -m surrogate.train --model-dir /root/aios-hack/docs/models/Model_Z --dataset-root /root/aios-hack/aios/data/dataset-main --normatives /root/aios-hack/docs/models/CHDD_PYTHON/input/Нормативы_ЧДД.xlsx --output-dir /root/aios-hack/aios/data/model-task34 --seed 20260816 --epochs 80 --patience 10 --workers 8
+cd /root/aios-hack/aios
+.venv/bin/python -m py_compile bridge/dataset.py surrogate/train.py surrogate/cycle.py surrogate/dashboard.py
+.venv/bin/python -m pytest bridge/tests/test_dataset_compaction.py surrogate/tests/test_cycle.py surrogate/tests/test_model.py -q
+tmux kill-session -t training-watch 2>/dev/null || true
+tmux kill-session -t cycle-watch 2>/dev/null || true
+tmux new-session -d -s cycle-watch "cd /root/aios-hack/aios && env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -m surrogate.cycle --model-dir /root/aios-hack/docs/models/Model_Z --normatives /root/aios-hack/docs/models/CHDD_PYTHON/input/Нормативы_ЧДД.xlsx --data-root /root/aios-hack/aios/data --workers 8 --epochs 80 --patience 10 --poll-seconds 60"
+tmux pipe-pane -o -t cycle-watch 'cat >> /root/aios-hack/aios/data/cycle-terminal.log'
+sleep 2
+cat data/cycle.json | jq '{phase,stages:[.stages[]|{id,status,target,completed}]}'
+tmux list-sessions
+tmux kill-session -t dashboard
+tmux new-session -d -s dashboard "cd /root/aios-hack/aios && env AIOS_DASHBOARD_PASSWORD=<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> .venv/bin/python -u -m surrogate.dashboard --root /root/aios-hack/aios/data --host 0.0.0.0 --port 8080"
+sleep 1
+curl -sS -u aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> http://127.0.0.1:8080/api/status | jq '{phase,active_stage,stages:[.stages[]|{id,title,status,completed:.dataset.completed,target:.dataset.target}]}'
+curl -sS -o /dev/null -w 'anon=%{http_code}\n' http://127.0.0.1:8080/
+curl -sS -u aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> -o /dev/null -w 'auth=%{http_code}\n' http://127.0.0.1:8080/
+.venv/bin/python -m pytest bridge/tests surrogate/tests -q
+tmux capture-pane -pt cycle-watch -S -12
+jq '{phase,error,stages:[.stages[]|{id,status,completed,target}]}' data/cycle.json
+wc -l data/cycle-events.jsonl
+tail -5 data/cycle-events.jsonl
+docker ps --format '{{.Names}} {{.Status}}' | head
+docker ps --format '{{.Names}}' | wc -l
+docker inspect opm-run-20260816T230445-960c8c4f978a --format '{{json .Mounts}}'
+ps -eo pid,ppid,etime,cmd | rg 'pytest|flow|docker run' | head -30
+curl -sS -u aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> http://127.0.0.1:8080/ | rg -o 'Пилот 200|Расширение 500|Итого 700' | sort -u
+curl -sS -u aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> http://127.0.0.1:8080/api/status | jq '{phase,active_stage,stages:[.stages[]|{id,status,done:.dataset.completed,target:.dataset.target}]}'
+df -h /
+tmux list-sessions
+curl -sS -u aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН> http://127.0.0.1:8080/ | rg -o 'id="tabs"' | head -1
+exit
+cd /root/aios-hack/aios
+date -u
+jq '{phase,error,stages:[.stages[]|{id,status,completed,target}]}' data/cycle.json
+free -h
+df -h /
+docker ps --format '{{.Names}}' | wc -l
+docker stats --no-stream --format '{{.Name}} {{.CPUPerc}} {{.MemUsage}}'
+tmux list-sessions
+ps -eo pid,ppid,etime,rss,cmd | rg 'surrogate.cycle|DatasetGenerator|python -u -m surrogate' | head -20
+cd /root/aios-hack/aios
+.venv/bin/python -m py_compile surrogate/cycle.py
+jq -s 'group_by(.scenario_id)|map(last)|{ok:(map(select(.status=="OK"))|length),failed:(map(select(.status!="OK"))|length)}' data/dataset-extra-500/manifest.jsonl
+docker ps --format '{{.Names}}' | while read name; do docker inspect "$name" --format '{{.Name}} {{range .Mounts}}{{.Source}} {{end}}'; done
+tmux kill-session -t cycle-watch
+docker rm -f opm-run-20260817T072444-74bf291af728 opm-run-20260817T072330-be127a3cfa62 opm-run-20260817T072217-f034d55640e0 opm-run-20260817T072216-1e81d1d97f42 opm-run-20260817T072208-da6b68db40f5 opm-run-20260817T072204-71324c6c57a4 opm-run-20260817T072042-2c5fb9865140 opm-run-20260817T071803-34cfb3ca57c8
+docker ps --format '{{.Names}}'
+tmux new-session -d -s cycle-watch "cd /root/aios-hack/aios && env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -m surrogate.cycle --resume-extra --model-dir /root/aios-hack/docs/models/Model_Z --normatives /root/aios-hack/docs/models/CHDD_PYTHON/input/Нормативы_ЧДД.xlsx --data-root /root/aios-hack/aios/data --workers 24 --epochs 80 --patience 10 --poll-seconds 60"
+tmux pipe-pane -o -t cycle-watch 'cat >> /root/aios-hack/aios/data/cycle-terminal.log'
+sleep 2
+tmux capture-pane -pt cycle-watch -S -12
+ps -eo pid,etime,rss,cmd | rg 'surrogate.cycle' | head
+sleep 20
+docker ps --format '{{.Names}}' | wc -l
+free -h
+ps -o pid,etime,rss,%cpu,stat,cmd -p 73167
+tmux capture-pane -pt cycle-watch -S -20
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat,cmd -p 73167
+tmux capture-pane -pt cycle-watch -S -25
+free -h
+uptime
+df -h /
+sleep 20
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat,cmd -p 73167
+tmux capture-pane -pt cycle-watch -S -25
+sleep 30
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat,cmd -p 73167
+ls -lh data/cycle.json data/cycle-events.jsonl
+jq '{phase,updated_at,error}' data/cycle.json 2>/dev/null
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 73167
+tail -n 3 data/cycle-terminal.log
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 73167
+free -h
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 73167
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 73167
+sleep 30
+docker stats --no-stream --format '{{.Name}} {{.CPUPerc}} {{.MemUsage}}'
+free -h
+uptime
+df -h /
+jq -s 'group_by(.scenario_id)|map(last)|{ok:(map(select(.status=="OK"))|length),failed:(map(select(.status!="OK"))|length)}' data/dataset-extra-500/manifest.jsonl
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq '{phase,extra:(.stages[]|select(.id=="extra-500")|{completed,target,active,failed,eta_seconds})}'
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq 'keys'
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq '.' | head -80
+ps -o pid,etime,rss,%cpu,stat -p 73167
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq '{phase,runtime,system,extra:(.stages[]|select(.id=="extra-500")|{status,dataset})}'
+sleep 30
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq '{phase,active:.runtime.active_runs,containers:.runtime.docker_containers,load1:.system.load1,ram_used_gib:.system.memory_used_gib,ram_total_gib:.system.memory_total_gib,completed:(.stages[]|select(.id=="extra-500")|.dataset.completed),target:(.stages[]|select(.id=="extra-500")|.dataset.target),failed:(.stages[]|select(.id=="extra-500")|.dataset.failed),eta_seconds:(.stages[]|select(.id=="extra-500")|.dataset.eta_seconds)}'
+ps -o pid,etime,rss,%cpu,stat -p 73167
+dmesg --since '10 minutes ago' 2>/dev/null | grep -Ei 'oom|out of memory|killed process' | tail -5
+exit
+cd /root/aios-hack/aios
+uptime
+free -h
+docker ps --format '{{.Names}}' | wc -l
+dmesg --since '15 minutes ago' 2>/dev/null | grep -Ei 'oom|out of memory|killed process' | tail -5
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq '{active:.runtime.active_runs,load1:.system.load1,ram_used_gib:.system.memory_used_gib,ram_total_gib:.system.memory_total_gib,completed:(.stages[]|select(.id=="extra-500")|.dataset.completed),failed:(.stages[]|select(.id=="extra-500")|.dataset.failed)}'
+exit
+cd /root/aios-hack/aios
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq '{now,phase,active:.runtime.active_runs,load1:.system.load1,extra:(.stages[]|select(.id=="extra-500")|{status,completed:.dataset.completed,target:.dataset.target,failed:.dataset.failed,median_seconds:.dataset.median_wallclock_seconds,eta_seconds:.dataset.eta_seconds}),combined:(.stages[]|select(.id=="combined-700")|{status})}'
+tmux capture-pane -pt cycle-watch -S -20
+ls -lh data/model-task34-700/training_report.json 2>/dev/null || true
+exit
+cd /root/aios-hack/aios
+uptime
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq '{now,active:.runtime.active_runs,load1:.system.load1,used:.system.memory_used_gib,extra:(.stages[]|select(.id=="extra-500")|{completed:.dataset.completed,failed:.dataset.failed,median:.dataset.median_wallclock_seconds,eta:.dataset.eta_seconds})}'
+jq -s '[.[]|select(.status=="OK" and .run_id >= "20260817T073600")]|{new_completed:length,new_median:(map(.wallclock_seconds)|sort|if length==0 then null elif length%2==1 then .[length/2|floor] else ((.[length/2-1]+.[length/2])/2) end),new_min:(map(.wallclock_seconds)|min),new_max:(map(.wallclock_seconds)|max)}' data/dataset-extra-500/manifest.jsonl
+jq -s '[.[]|select(.status=="OK" and .run_id < "20260817T073600" and .from_cache==false)]|{old_simulated:length,old_median:(map(.wallclock_seconds)|sort|if length==0 then null elif length%2==1 then .[length/2|floor] else ((.[length/2-1]+.[length/2])/2) end)}' data/dataset-extra-500/manifest.jsonl
+exit
+cd /root/aios-hack/aios
+jq -s 'group_by(.scenario_id)|map(last)|{ok:(map(select(.status=="OK"))|length),failed:(map(select(.status!="OK"))|length)}' data/dataset-extra-500/manifest.jsonl
+docker ps --format '{{.Names}}' | sort
+tmux ls
+tmux kill-session -t cycle-watch
+docker rm -f opm-run-20260817T080418-9875b067a73d opm-run-20260817T080455-de71548ee6fc opm-run-20260817T080500-cb18aaafa5f4 opm-run-20260817T080510-7f8e4f08f5b3 opm-run-20260817T080519-ad0a20a0f6b9 opm-run-20260817T080520-1a1c4e575bbb opm-run-20260817T080520-bdddd34df916 opm-run-20260817T080536-135eb2d2255c opm-run-20260817T080537-4dd7cd5c800a opm-run-20260817T080537-a9fc909b94f4 opm-run-20260817T080537-e1c71ec1837d opm-run-20260817T080538-6902c8ec0352 opm-run-20260817T080538-73f44caa06c6 opm-run-20260817T080539-9b317db839ad opm-run-20260817T080558-39d9c2b07ad9 opm-run-20260817T080559-406f0c107dac opm-run-20260817T080559-ce6dedc1d6f5 opm-run-20260817T080600-0ab42da0fc75 opm-run-20260817T080600-2acf9be4e5e9 opm-run-20260817T080600-695c5a61dce2 opm-run-20260817T080600-d3a4b5a173f2 opm-run-20260817T080601-6a22c14f6d77 opm-run-20260817T080623-5cbf5b863805 opm-run-20260817T080639-a8817cddcea3
+free -h
+docker ps --format '{{.Names}}' | wc -l
+tmux new-session -d -s cycle-watch "cd /root/aios-hack/aios && env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -m surrogate.cycle --resume-extra --model-dir /root/aios-hack/docs/models/Model_Z --normatives /root/aios-hack/docs/models/CHDD_PYTHON/input/Нормативы_ЧДД.xlsx --data-root /root/aios-hack/aios/data --workers 22 --epochs 80 --patience 10 --poll-seconds 60"
+tmux pipe-pane -t cycle-watch -o "cat >> /root/aios-hack/aios/data/cycle-terminal.log"
+sleep 3
+tmux capture-pane -pt cycle-watch -S -20
+pgrep -af 'surrogate.cycle.*workers 22'
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 81680
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 81680
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 81680
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 81680
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 81680
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 81680
+sleep 45
+docker ps --format '{{.Names}}' | wc -l
+ps -o pid,etime,rss,%cpu,stat -p 81680
+sleep 30
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | jq '{active:.runtime.active_runs,containers:.runtime.docker_containers,load1:.system.load1,ram_used_gib:.system.memory_used_gib,ram_total_gib:.system.memory_total_gib,completed:(.stages[]|select(.id=="extra-500")|.dataset.completed),failed:(.stages[]|select(.id=="extra-500")|.dataset.failed)}'
+docker stats --no-stream --format '{{.CPUPerc}} {{.MemUsage}}' | awk '{gsub("%", "", $1); cpu+=$1; n+=1} END {printf "containers=%d cpu_sum=%.1f%% cpu_avg=%.1f%%\n", n, cpu, cpu/n}'
+free -h
+dmesg --since '15 minutes ago' 2>/dev/null | grep -Ei 'oom|out of memory|killed process' | tail -5
+exit
+cd /root/aios-hack/aios
+printf 'STATE\n'
+jq '{updated_at,phase,stages}' data/cycle.json
+printf 'TMUX\n'
+tmux ls 2>&1
+tmux capture-pane -pt cycle-watch -S -80 2>&1
+printf 'PROCESS\n'
+pgrep -af 'surrogate.cycle|surrogate.train' || true
+printf 'REPORT\n'
+find data/model-task34-700 -maxdepth 2 -type f -printf '%p %s bytes\n' 2>/dev/null | sort
+printf 'EVENTS\n'
+tail -n 30 data/cycle-events.jsonl
+printf 'SYSTEM\n'
+free -h
+df -h /
+dmesg --since '12 hours ago' 2>/dev/null | grep -Ei 'oom|out of memory|killed process' | tail -20
+printf 'TRACEBACK\n'
+tail -n 120 data/cycle-terminal.log
+printf 'CYCLE END\n'
+tail -n 80 surrogate/cycle.py
+exit
+cd /root/aios-hack/aios
+.venv/bin/python -m py_compile surrogate/model_z_context.py surrogate/schedule_roles.py surrogate/tests/test_model_z_context.py
+.venv/bin/pytest -q surrogate/tests/test_model_z_context.py surrogate/tests/test_model.py surrogate/tests/test_cycle.py
+tmux has-session -t cycle-watch 2>/dev/null && tmux kill-session -t cycle-watch || true
+tmux new-session -d -s cycle-watch "cd /root/aios-hack/aios && env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -m surrogate.cycle --resume-extra --model-dir /root/aios-hack/docs/models/Model_Z --normatives /root/aios-hack/docs/models/CHDD_PYTHON/input/Нормативы_ЧДД.xlsx --data-root /root/aios-hack/aios/data --workers 22 --epochs 80 --patience 10 --poll-seconds 60"
+tmux pipe-pane -t cycle-watch -o "cat >> /root/aios-hack/aios/data/cycle-terminal.log"
+sleep 3
+tmux capture-pane -pt cycle-watch -S -20
+pgrep -af 'surrogate.cycle.*resume-extra'
+sleep 45
+jq '{updated_at,phase,error}' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat -p 162677
+docker ps --format '{{.Names}}' | wc -l
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat -p 162677
+tail -n 5 data/cycle-events.jsonl
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+top -b -n1 -p 162677 | tail -3
+free -h
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+free -h
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+sleep 45
+jq -r '.phase' data/cycle.json
+ps -o pid,etime,rss,%cpu,stat,nlwp -p 162677
+jq '{updated_at,phase,error}' data/cycle.json
+tmux capture-pane -pt cycle-watch -S -100 2>&1
+tail -n 100 data/cycle-terminal.log
+.venv/bin/python -m py_compile surrogate/features.py
+.venv/bin/pytest -q surrogate/tests/test_features.py surrogate/tests/test_model_z_context.py surrogate/tests/test_model.py surrogate/tests/test_cycle.py
+tmux has-session -t cycle-watch 2>/dev/null && tmux kill-session -t cycle-watch || true
+tmux new-session -d -s cycle-watch "cd /root/aios-hack/aios && env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -m surrogate.cycle --resume-extra --model-dir /root/aios-hack/docs/models/Model_Z --normatives /root/aios-hack/docs/models/CHDD_PYTHON/input/Нормативы_ЧДД.xlsx --data-root /root/aios-hack/aios/data --workers 22 --epochs 80 --patience 10 --poll-seconds 60"
+tmux pipe-pane -t cycle-watch -o "cat >> /root/aios-hack/aios/data/cycle-terminal.log"
+sleep 3
+pgrep -af 'surrogate.cycle.*resume-extra'
+tmux capture-pane -pt cycle-watch -S -10
+while [ "$(jq -r '.phase' data/cycle.json)" = "generating_extra_500" ]; do date -u +%H:%M:%S; ps -o etime=,rss=,%cpu= -p 163654; sleep 30; done
+jq '{phase,error,updated_at}' data/cycle.json
+pgrep -af 'surrogate.cycle.*resume-extra'
+free -h
+exit
+cd /root/aios-hack/aios
+jq '{updated_at,phase,error,combined:(.stages[]|select(.id=="combined-700")|{status,completed,best_epoch,model_version})}' data/cycle.json
+pgrep -af 'surrogate.cycle|surrogate.train' || true
+tail -n 15 data/cycle-events.jsonl
+find data/model-task34-700 -maxdepth 1 -type f -printf '%f %s bytes\n' 2>/dev/null | sort
+free -h
+uptime
+exit
+cd /root/aios-hack/aios
+jq -s '[.[]|select(.status=="OK")]|first|{scenario_id,run_id,response_hash}' data/dataset-main/manifest.jsonl
+jq -s '[.[]|select(.status=="OK")]|first|{scenario_id,run_id,response_hash}' data/dataset-extra-500/manifest.jsonl
+find data/dataset-main -maxdepth 3 -type f | head -30
+rg -l '20260816T200927-07df855524d5' data/dataset-main/cache | head
+jq '.' $(rg -l '20260816T200927-07df855524d5' data/dataset-main/cache | head -1)
+find data/dataset-main/runs/20260816T200927-07df855524d5 -maxdepth 2 -type f -printf '%f %s\n' | sort
+.venv/bin/python -c "from pathlib import Path; from bridge.dataset_plan import dataset_base_schedule; from bridge.summary import build_summary_plan; from bridge.response_loader import _read_smspec,_read_unsmry_report_rows,_build_well_rows,load_density_by_pvtnum; m=Path('/root/aios-hack/docs/models/Model_Z'); o=Path('data/dataset-main/runs/20260816T200927-07df855524d5/output'); s=dataset_base_schedule(m); p=build_summary_plan(m,s.meta.wells); x=_read_smspec(o/'MODEL_Z.SMSPEC'); rr=_read_unsmry_report_rows(o/'MODEL_Z.UNSMRY',x.n_vectors); w=_build_well_rows(x,rr,p,load_density_by_pvtnum(m)); a=w[147]['102']; b=w[146]['102']; print('state147',a); print('deltas',a.oil_mass_cum-b.oil_mass_cum,a.liquid_cum-b.liquid_cum,a.injection_cum-b.injection_cum)"
+.venv/bin/python -c "from pathlib import Path; import math; from bridge.dataset_plan import dataset_base_schedule; from bridge.summary import build_summary_plan; from bridge.response_loader import _read_smspec,_read_unsmry_report_rows,_build_well_rows,load_density_by_pvtnum; m=Path('/root/aios-hack/docs/models/Model_Z'); s=dataset_base_schedule(m); p=build_summary_plan(m,s.meta.wells); paths=list(Path('data').glob('dataset*/runs/*/output/MODEL_Z.UNSMRY')); x=_read_smspec(paths[0].with_suffix('.SMSPEC')); d=load_density_by_pvtnum(m); print('paths',len(paths)); exec(\"for i,path in enumerate(paths):\\n rr=_read_unsmry_report_rows(path,x.n_vectors)\\n w=_build_well_rows(x,rr,p,d)\\n a=w[147]['102']; b=w[146]['102']\\n vals={'oil_mass_delta':a.oil_mass_cum-b.oil_mass_cum,'liquid_volume_delta':a.liquid_cum-b.liquid_cum,'injection_volume_delta':a.injection_cum-b.injection_cum,'liquid_rate':a.liquid_rate,'injection_rate':a.injection_rate,'bhp':a.bhp}\\n if any((not math.isfinite(v) or v < 0) for v in vals.values()): print(i,path,vals); break\\n if i and i%50==0: print('checked',i)\")"
+ps -eo pid,etime,%cpu,%mem,rss,cmd | grep -E '[s]urrogate.cycle|[p]ython.*surrogate' || true
+printf 'CYCLE_STATE\n'
+python3 - <<'PY'
+import json
+from pathlib import Path
+p=Path('data/cycle.json')
+print(json.dumps(json.loads(p.read_text()), ensure_ascii=False, indent=2) if p.exists() else 'missing')
+PY
+
+printf 'ARTIFACTS\n'
+find data/model-task34-700 -maxdepth 2 -type f -print 2>/dev/null | sort
+printf 'TMUX\n'
+tmux ls 2>/dev/null || true
+cd /root/aios-hack/aios
+.venv/bin/python -m py_compile surrogate/model.py surrogate/cycle.py surrogate/dashboard.py
+.venv/bin/pytest -q surrogate/tests/test_model.py surrogate/tests/test_features.py surrogate/tests/test_model_z_context.py surrogate/tests/test_cycle.py
+tmux has-session -t dashboard 2>/dev/null && tmux kill-session -t dashboard || true
+tmux new-session -d -s dashboard "cd /root/aios-hack/aios && env AIOS_DASHBOARD_PASSWORD='<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' .venv/bin/python -u -m surrogate.dashboard --root /root/aios-hack/aios/data --host 0.0.0.0 --port 8080"
+tmux pipe-pane -t dashboard -o "cat >> /root/aios-hack/aios/data/dashboard.log"
+tmux has-session -t cycle-watch 2>/dev/null && tmux kill-session -t cycle-watch || true
+tmux new-session -d -s cycle-watch "cd /root/aios-hack/aios && env AIOS_DOCS_ROOT=/root/aios-hack/docs .venv/bin/python -u -m surrogate.cycle --resume-extra --model-dir /root/aios-hack/docs/models/Model_Z --normatives /root/aios-hack/docs/models/CHDD_PYTHON/input/Нормативы_ЧДД.xlsx --data-root /root/aios-hack/aios/data --workers 22 --epochs 80 --patience 10 --poll-seconds 60"
+tmux pipe-pane -t cycle-watch -o "cat >> /root/aios-hack/aios/data/cycle-terminal.log"
+sleep 2
+tmux ls
+printf 'CYCLE\n'
+python3 - <<'PY'
+import json
+print(json.dumps(json.load(open('data/cycle.json')), ensure_ascii=False, indent=2))
+PY
+
+printf 'DASHBOARD\n'
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | python3 -m json.tool | head -80
+printf 'PROCESS\n'
+ps -eo pid,etime,%cpu,%mem,rss,cmd | grep '[s]urrogate.cycle'
+printf 'TRAINING_API\n'
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/api/status | python3 -c "import json,sys; d=json.load(sys.stdin); s=d['stages'][2]; print(json.dumps({'phase':d['phase'],'stage_status':s['status'],'training':s['training']},ensure_ascii=False,indent=2))"
+printf 'DASH_HTML\n'
+curl -sS -u 'aios:<ПАРОЛЬ ДАШБОРДА ВЫРЕЗАН>' http://127.0.0.1:8080/ | grep -o 'Статус обучения модели' | head -1
