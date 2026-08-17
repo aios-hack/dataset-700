@@ -1,3 +1,4 @@
+
 31306	.bash_history
 3175	.bashrc
 0	.cache/motd.legal-displayed
@@ -893,7 +894,7 @@
 3536	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_deployment_paused_reason_error.py
 4173	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_deployment_run.py
 261	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_deployment_status.py
-757	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_deployment_system_message_event.py
+757	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_deployment_system_message_event.py
 1108	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_deployment_user_define_outcome_event.py
 1130	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_deployment_user_message_event.py
 324	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_effort_high.py
@@ -929,7 +930,7 @@
 960	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_mcp_toolset_default_config_params.py
 1067	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_mcp_toolset_params.py
 1710	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_memory_store.py
-439	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_memory_store_archived_deployment_paused_reason_error.py
+439	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_memory_store_archived_deployment_paused_reason_error.py
 463	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_memory_store_archived_run_error.py
 876	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_memory_store_resource_config.py
 907	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_managed_agents_memory_store_resource_param.py
@@ -1057,7 +1058,7 @@
 916	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_text_citation_param.py
 269	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_text_delta.py
 372	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_text_editor_code_execution_create_result_block.py
-438	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_text_editor_code_execution_create_result_block_param.py
+438	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_text_editor_code_execution_create_result_block_param.py
 580	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_text_editor_code_execution_str_replace_result_block.py
 643	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_text_editor_code_execution_str_replace_result_block_param.py
 1103	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/beta_text_editor_code_execution_tool_result_block.py
@@ -1208,7 +1209,7 @@
 532	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/environments/beta_session_work_data.py
 1035	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/environments/work_heartbeat_params.py
 689	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/environments/work_list_params.py
-1143	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/environments/work_poll_params.py
+1143	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/environments/work_poll_params.py
 656	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/environments/work_stop_params.py
 789	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/environments/work_update_params.py
 1110	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/file_list_params.py
@@ -1292,7 +1293,7 @@
 1440	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/sessions/beta_managed_agents_memory_store_resource.py
 1191	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/sessions/beta_managed_agents_model_overloaded_error.py
 1139	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/sessions/beta_managed_agents_model_rate_limited_error.py
-1183	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/sessions/beta_managed_agents_model_request_failed_error.py
+1183	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/sessions/beta_managed_agents_model_request_failed_error.py
 494	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/sessions/beta_managed_agents_plain_text_document_source.py
 569	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/sessions/beta_managed_agents_plain_text_document_source_param.py
 358	.cache/uv/archive-v0/JkqqLflBTsPLVRTF/anthropic/types/beta/sessions/beta_managed_agents_redacted_block.py
@@ -5571,7 +5572,7 @@
 1338	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/_native_batch_norm_legit_no_training_native.h
 3576	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/_native_batch_norm_legit_no_training_ops.h
 7612	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/_native_batch_norm_legit_ops.h
-3843	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/_native_multi_head_attention.h
+3843	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/_native_multi_head_attention.h
 1955	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/_native_multi_head_attention_compositeexplicitautograd_dispatch.h
 1383	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/_native_multi_head_attention_cpu_dispatch.h
 1385	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/_native_multi_head_attention_cuda_dispatch.h
@@ -8347,7 +8348,7 @@
 2993	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/index_copy_ops.h
 1296	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/index_cpu_dispatch.h
 1298	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/index_cuda_dispatch.h
-2740	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/index_fill.h
+2740	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/index_fill.h
 1800	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/index_fill_compositeexplicitautograd_dispatch.h
 1160	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/index_fill_cpu_dispatch.h
 1162	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/index_fill_cuda_dispatch.h
@@ -8576,7 +8577,7 @@
 1450	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/leaky_relu_backward_cuda_dispatch.h
 922	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/leaky_relu_backward_meta.h
 1450	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/leaky_relu_backward_meta_dispatch.h
-984	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/leaky_relu_backward_native.h
+984	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/leaky_relu_backward_native.h
 2493	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/leaky_relu_backward_ops.h
 1183	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/leaky_relu_compositeexplicitautogradnonfunctional_dispatch.h
 1353	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/ATen/ops/leaky_relu_cpu_dispatch.h
@@ -12012,7 +12013,7 @@
 5653	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/google/protobuf/util/delimited_message_util.h
 10756	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/google/protobuf/util/field_comparator.h
 11631	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/google/protobuf/util/field_mask_util.h
-8683	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/google/protobuf/util/json_util.h
+8683	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/google/protobuf/util/json_util.h
 45532	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/google/protobuf/util/message_differencer.h
 12407	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/google/protobuf/util/time_util.h
 3107	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/include/google/protobuf/util/type_resolver.h
@@ -13427,7 +13428,7 @@
 187	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/nn/qat/dynamic/__init__.py
 78	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/nn/qat/dynamic/modules/__init__.py
 416	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/nn/qat/dynamic/modules/linear.py
-480	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/nn/qat/modules/__init__.py
+480	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/nn/qat/modules/__init__.py
 406	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/nn/qat/modules/conv.py
 437	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/nn/qat/modules/embedding_ops.py
 392	.cache/uv/archive-v0/Nci5vUBRx_FQv4do/torch/nn/qat/modules/linear.py
@@ -15720,7 +15721,7 @@
 161	.cache/uv/archive-v0/R4DXonOOziqYDUWi/numpy/typing/tests/data/pass/warnings_and_errors.py
 27471	.cache/uv/archive-v0/R4DXonOOziqYDUWi/numpy/typing/tests/data/reveal/arithmetic.pyi
 3017	.cache/uv/archive-v0/R4DXonOOziqYDUWi/numpy/typing/tests/data/reveal/array_api_info.pyi
-17064	.cache/uv/archive-v0/R4DXonOOziqYDUWi/numpy/typing/tests/data/reveal/array_constructors.pyi
+17064	.cache/uv/archive-v0/R4DXonOOziqYDUWi/numpy/typing/tests/data/reveal/array_constructors.pyi
 1193	.cache/uv/archive-v0/R4DXonOOziqYDUWi/numpy/typing/tests/data/reveal/arraypad.pyi
 772	.cache/uv/archive-v0/R4DXonOOziqYDUWi/numpy/typing/tests/data/reveal/arrayprint.pyi
 4880	.cache/uv/archive-v0/R4DXonOOziqYDUWi/numpy/typing/tests/data/reveal/arraysetops.pyi
@@ -17553,7 +17554,7 @@
 1838	.cache/uv/archive-v0/W5uE5xdzf1PPbapi/sympy/utilities/memoization.py
 16000	.cache/uv/archive-v0/W5uE5xdzf1PPbapi/sympy/utilities/misc.py
 935	.cache/uv/archive-v0/W5uE5xdzf1PPbapi/sympy/utilities/pkgdata.py
-440	.cache/uv/archive-v0/W5uE5xdzf1PPbapi/sympy/utilities/pytest.py
+440	.cache/uv/archive-v0/W5uE5xdzf1PPbapi/sympy/utilities/pytest.py
 435	.cache/uv/archive-v0/W5uE5xdzf1PPbapi/sympy/utilities/randtest.py
 451	.cache/uv/archive-v0/W5uE5xdzf1PPbapi/sympy/utilities/runtests.py
 1127	.cache/uv/archive-v0/W5uE5xdzf1PPbapi/sympy/utilities/source.py
@@ -17782,7 +17783,7 @@
 32707	.cache/uv/archive-v0/ZIFOpLFBRR4vjpc1/werkzeug/wrappers/response.py
 21676	.cache/uv/archive-v0/ZIFOpLFBRR4vjpc1/werkzeug/wsgi.py
 82	.cache/uv/archive-v0/agA_ajFVE38vciwB/et_xmlfile-2.0.0.dist-info/AUTHORS.txt
-14688	.cache/uv/archive-v0/agA_ajFVE38vciwB/et_xmlfile-2.0.0.dist-info/LICENCE.python
+14688	.cache/uv/archive-v0/agA_ajFVE38vciwB/et_xmlfile-2.0.0.dist-info/LICENCE.python
 1131	.cache/uv/archive-v0/agA_ajFVE38vciwB/et_xmlfile-2.0.0.dist-info/LICENCE.rst
 2711	.cache/uv/archive-v0/agA_ajFVE38vciwB/et_xmlfile-2.0.0.dist-info/METADATA
 841	.cache/uv/archive-v0/agA_ajFVE38vciwB/et_xmlfile-2.0.0.dist-info/RECORD
@@ -18563,7 +18564,7 @@
 9938	.cache/uv/archive-v0/hNuAaQfcmqoMFGZ6/sklearn/linear_model/tests/test_theil_sen.py
 735	.cache/uv/archive-v0/hNuAaQfcmqoMFGZ6/sklearn/manifold/__init__.py
 113729	.cache/uv/archive-v0/hNuAaQfcmqoMFGZ6/sklearn/manifold/_barnes_hut_tsne.cpython-312-x86_64-linux-gnu.so
-11270	.cache/uv/archive-v0/hNuAaQfcmqoMFGZ6/sklearn/manifold/_barnes_hut_tsne.pyx
+11270	.cache/uv/archive-v0/hNuAaQfcmqoMFGZ6/sklearn/manifold/_barnes_hut_tsne.pyx
 6381	.cache/uv/archive-v0/hNuAaQfcmqoMFGZ6/sklearn/manifold/_classical_mds.py
 15833	.cache/uv/archive-v0/hNuAaQfcmqoMFGZ6/sklearn/manifold/_isomap.py
 30945	.cache/uv/archive-v0/hNuAaQfcmqoMFGZ6/sklearn/manifold/_locally_linear.py
@@ -19309,7 +19310,7 @@
 5879	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/algorithms/shortest_paths/tests/test_unweighted.py
 35502	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/algorithms/shortest_paths/tests/test_weighted.py
 17825	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/algorithms/shortest_paths/unweighted.py
-84155	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/algorithms/shortest_paths/weighted.py
+84155	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/algorithms/shortest_paths/weighted.py
 72679	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/algorithms/similarity.py
 31091	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/algorithms/simple_paths.py
 13565	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/algorithms/smallworld.py
@@ -19428,7 +19429,7 @@
 12128	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/classes/tests/test_coreviews.py
 12283	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/classes/tests/test_digraph.py
 3668	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/classes/tests/test_digraph_historical.py
-5851	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/classes/tests/test_filters.py
+5851	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/classes/tests/test_filters.py
 35481	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/classes/tests/test_function.py
 31798	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/classes/tests/test_graph.py
 258	.cache/uv/archive-v0/i2Q80eOgApV7yBUI/networkx/classes/tests/test_graph_historical.py
@@ -20199,7 +20200,7 @@
 559	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/io/arff/tests/data/test7.arff
 429	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/io/arff/tests/data/test8.arff
 311	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/io/arff/tests/data/test9.arff
-13094	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/io/arff/tests/test_arffread.py
+13094	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/io/arff/tests/test_arffread.py
 538	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/io/harwell_boeing.py
 504	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/io/idl.py
 2247	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/io/matlab/__init__.py
@@ -20703,7 +20704,7 @@
 38600	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/optimize/tests/test_differentiable_functions.py
 13749	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/optimize/tests/test_direct.py
 1104	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/optimize/tests/test_extending.py
-14337	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/optimize/tests/test_hessian_update_strategy.py
+14337	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/optimize/tests/test_hessian_update_strategy.py
 7113	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/optimize/tests/test_isotonic_regression.py
 1934	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/optimize/tests/test_lbfgsb_hessinv.py
 3683	.cache/uv/archive-v0/rWac2XpH_ai4WqXc/scipy/optimize/tests/test_lbfgsb_setulb.py
@@ -21783,7 +21784,7 @@
 0	.cache/uv/archive-v0/xHsY3YyycoBUfSHr/pandas/core/util/__init__.py
 10487	.cache/uv/archive-v0/xHsY3YyycoBUfSHr/pandas/core/util/hashing.py
 4305	.cache/uv/archive-v0/xHsY3YyycoBUfSHr/pandas/core/util/numba_.py
-450	.cache/uv/archive-v0/xHsY3YyycoBUfSHr/pandas/core/window/__init__.py
+450	.cache/uv/archive-v0/xHsY3YyycoBUfSHr/pandas/core/window/__init__.py
 6785	.cache/uv/archive-v0/xHsY3YyycoBUfSHr/pandas/core/window/common.py
 5764	.cache/uv/archive-v0/xHsY3YyycoBUfSHr/pandas/core/window/doc.py
 39714	.cache/uv/archive-v0/xHsY3YyycoBUfSHr/pandas/core/window/ewm.py
@@ -23015,7 +23016,7 @@
 7	.cache/uv/archive-v0/xRxWiNU360N_LxnN/pluggy-1.6.0.dist-info/top_level.txt
 811	.cache/uv/archive-v0/xRxWiNU360N_LxnN/pluggy/__init__.py
 5991	.cache/uv/archive-v0/xRxWiNU360N_LxnN/pluggy/_callers.py
-25218	.cache/uv/archive-v0/xRxWiNU360N_LxnN/pluggy/_hooks.py
+25218	.cache/uv/archive-v0/xRxWiNU360N_LxnN/pluggy/_hooks.py
 20219	.cache/uv/archive-v0/xRxWiNU360N_LxnN/pluggy/_manager.py
 3098	.cache/uv/archive-v0/xRxWiNU360N_LxnN/pluggy/_result.py
 2073	.cache/uv/archive-v0/xRxWiNU360N_LxnN/pluggy/_tracing.py
@@ -23845,7 +23846,7 @@
 13454	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/encodings/mac_cyrillic.py
 15170	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/encodings/mac_farsi.py
 13721	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/encodings/mac_greek.py
-13498	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/encodings/mac_iceland.py
+13498	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/encodings/mac_iceland.py
 14118	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/encodings/mac_latin2.py
 13480	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/encodings/mac_roman.py
 13661	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/encodings/mac_romanian.py
@@ -26082,7 +26083,7 @@
 1684	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/n/nwp517-w
 448	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/o/oblit
 810	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/o/oc100
-625	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/o/ofcons
+625	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/o/ofcons
 447	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/o/oldpc3
 525	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/o/oldsun
 871	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/o/oldxterm+sm+1006
@@ -26518,7 +26519,7 @@
 1466	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/t/tws-generic
 1441	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/t/tws2102-sna
 1452	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/t/tws2103
-1439	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/t/tws2103-sna
+1439	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/t/tws2103-sna
 1442	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/u/uniterm
 320	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/u/unknown
 786	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/u/uts30
@@ -26554,7 +26555,7 @@
 1295	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/v/vip-w
 979	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/v/visa50
 585	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/v/vp3a+
-520	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/v/vp60
+520	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/v/vp60
 561	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/v/vp90
 431	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/v/vremote
 427	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/v/vsc
@@ -26717,7 +26718,7 @@
 1748	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/w/wy520-wvb
 1565	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/w/wy60
 1569	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/w/wy60-25
-1575	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/w/wy60-25-w
+1575	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/w/wy60-25-w
 1593	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/w/wy60-42
 1603	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/w/wy60-42-w
 1573	.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/share/terminfo/w/wy60-43
@@ -27152,7 +27153,7 @@
 1472	aios-hack/aios/data/cycle.json
 182459	aios-hack/aios/data/cycle/extra-500.json
 73153	aios-hack/aios/data/cycle/pilot-200.json
-61322	aios-hack/aios/data/dashboard.log
+61373	aios-hack/aios/data/dashboard.log
 776	aios-hack/aios/data/dataset-extra-500/cache/001b473bfaa84f4a6d930391642592b9cf96664732efa794f26da4057894ed6b.json
 775	aios-hack/aios/data/dataset-extra-500/cache/0113d2b43a14ffb1b74fa11bb6375b32d63a5745a0216530568d561e2a69a2c8.json
 776	aios-hack/aios/data/dataset-extra-500/cache/013241ae3953fc24ac042b4060ab01325edfa1260af7f4795ebd1c9fca74376d.json
@@ -28184,7 +28185,7 @@
 607120	aios-hack/aios/data/dataset-extra-500/runs/20260817T080600-695c5a61dce2/flow.log
 7605780	aios-hack/aios/data/dataset-extra-500/runs/20260817T080600-695c5a61dce2/output/MODEL_Z.DBG
 20014400	aios-hack/aios/data/dataset-extra-500/runs/20260817T080600-695c5a61dce2/output/MODEL_Z.EGRID
-2997926	aios-hack/aios/data/dataset-extra-500/runs/20260817T080600-695c5a61dce2/output/MODEL_Z.ESMRY
+2997926	aios-hack/aios/data/dataset-extra-500/runs/20260817T080600-695c5a61dce2/output/MODEL_Z.ESMRY
 22473212	aios-hack/aios/data/dataset-extra-500/runs/20260817T080600-695c5a61dce2/output/MODEL_Z.INIT
 6327060	aios-hack/aios/data/dataset-extra-500/runs/20260817T080600-695c5a61dce2/output/MODEL_Z.PRT
 101168	aios-hack/aios/data/dataset-extra-500/runs/20260817T080600-695c5a61dce2/output/MODEL_Z.SMSPEC
@@ -28974,7 +28975,7 @@
 5505576	aios-hack/aios/data/dataset-extra-500/runs/20260817T153836-98362eb6bb3e/output/MODEL_Z.UNSMRY
 101168	aios-hack/aios/data/dataset-extra-500/runs/20260817T153845-b347813acdb3/output/MODEL_Z.SMSPEC
 5476896	aios-hack/aios/data/dataset-extra-500/runs/20260817T153845-b347813acdb3/output/MODEL_Z.UNSMRY
-761	aios-hack/aios/data/dataset-main/cache/005d9cf8cb70a0c8c4bea78b7aa059cbae767b46038624f091148630adc27e13.json
+761	aios-hack/aios/data/dataset-main/cache/005d9cf8cb70a0c8c4bea78b7aa059cbae767b46038624f091148630adc27e13.json
 757	aios-hack/aios/data/dataset-main/cache/01d75d806ef37fef846ae7c7ee9583181acd9be84ccb8eaf6c54219a4d325544.json
 761	aios-hack/aios/data/dataset-main/cache/01f9106df0bb13317102ee167df74bdd215f191cad859733caa6d03c7faf537f.json
 759	aios-hack/aios/data/dataset-main/cache/0209eb675433344bf1d6b9a1b4e2843eae130b26b1195f0064f30abe667cb8a0.json
@@ -29630,7 +29631,7 @@
 47989	aios-hack/aios/llm/tests/__pycache__/test_diagnostics.cpython-312-pytest-9.1.1.pyc
 19482	aios-hack/aios/llm/tests/__pycache__/test_explainer.cpython-312-pytest-9.1.1.pyc
 5076	aios-hack/aios/llm/tests/conftest.py
-717	aios-hack/aios/llm/tests/test_client.py
+717	aios-hack/aios/llm/tests/test_client.py
 10017	aios-hack/aios/llm/tests/test_diagnostics.py
 4333	aios-hack/aios/llm/tests/test_explainer.py
 1139	aios-hack/aios/optimizer/__init__.py
