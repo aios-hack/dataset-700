@@ -1,0 +1,89 @@
+{"at": "2026-08-16T23:06:26.766433+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 79, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:08:26.769157+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 80, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:22:26.788951+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 81, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:23:26.790827+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 85, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:24:26.792481+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 87, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:26:26.795123+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 88, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:39:26.809365+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 91, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:40:26.811113+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 94, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:41:26.813180+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 95, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:42:26.815234+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 96, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:56:26.832074+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 98, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:57:26.833559+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 102, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:58:26.835164+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 103, "target": 200, "failed": 0}
+{"at": "2026-08-16T23:59:26.836769+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 104, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:13:26.854930+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 108, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:14:26.856511+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 111, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:16:26.859278+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 112, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:29:26.875450+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 114, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:30:26.877226+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 117, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:31:26.911548+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 119, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:33:26.914756+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 120, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:45:26.930676+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 122, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:46:26.932484+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 123, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:47:26.934302+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 127, "target": 200, "failed": 0}
+{"at": "2026-08-17T00:49:26.937874+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 128, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:01:26.955457+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 130, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:02:26.957160+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 131, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:03:26.959006+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 132, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:04:26.960735+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 135, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:07:26.965489+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 136, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:18:26.980493+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 138, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:19:26.982217+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 139, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:20:26.984220+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 143, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:23:26.988501+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 144, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:34:27.004987+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 145, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:35:27.006982+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 146, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:36:27.029310+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 148, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:37:27.032082+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 151, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:40:27.037390+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 152, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:51:27.054430+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 154, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:52:27.057097+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 155, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:53:27.059962+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 158, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:54:27.062227+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 159, "target": 200, "failed": 0}
+{"at": "2026-08-17T01:57:27.067900+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 160, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:07:27.084152+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 161, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:08:27.085979+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 163, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:09:27.088769+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 164, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:10:27.090755+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 167, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:13:27.097554+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 168, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:24:27.115555+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 170, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:25:27.117616+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 171, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:26:27.119903+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 173, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:27:27.121922+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 175, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:30:27.128433+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 176, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:41:27.147970+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 179, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:43:27.432922+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 183, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:47:27.441142+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 184, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:57:27.458990+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 186, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:58:27.461255+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 187, "target": 200, "failed": 0}
+{"at": "2026-08-17T02:59:27.464104+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 190, "target": 200, "failed": 0}
+{"at": "2026-08-17T03:00:27.466239+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 191, "target": 200, "failed": 0}
+{"at": "2026-08-17T03:03:27.471862+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 192, "target": 200, "failed": 0}
+{"at": "2026-08-17T03:13:27.490346+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 194, "target": 200, "failed": 0}
+{"at": "2026-08-17T03:14:27.492574+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 196, "target": 200, "failed": 0}
+{"at": "2026-08-17T03:15:27.494900+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 199, "target": 200, "failed": 0}
+{"at": "2026-08-17T03:19:27.502443+00:00", "phase": "waiting_pilot", "stage": "pilot-200", "completed": 200, "target": 200, "failed": 0}
+{"at": "2026-08-17T03:19:27.503432+00:00", "phase": "freezing_pilot_200"}
+{"at": "2026-08-17T03:25:06.014539+00:00", "phase": "generating_extra_500"}
+{"at": "2026-08-17T07:30:39.331045+00:00", "phase": "generating_extra_500"}
+{"at": "2026-08-17T08:21:01.252589+00:00", "phase": "generating_extra_500"}
+{"at": "2026-08-17T16:02:48.711052+00:00", "phase": "loading_pilot_200"}
+{"at": "2026-08-17T16:09:34.377103+00:00", "phase": "training_combined_700"}
+{"at": "2026-08-17T16:09:34.663496+00:00", "phase": "failed", "error": "AttributeError: '_WellTimeline' object has no attribute 'role'"}
+{"at": "2026-08-17T17:35:35.054678+00:00", "phase": "generating_extra_500"}
+{"at": "2026-08-17T17:52:36.702407+00:00", "phase": "loading_pilot_200"}
+{"at": "2026-08-17T18:00:12.940466+00:00", "phase": "training_combined_700"}
+{"at": "2026-08-17T18:00:44.126476+00:00", "phase": "failed", "error": "FeatureError: '102': SET_LRAT применён не к PROD"}
+{"at": "2026-08-17T18:04:16.842233+00:00", "phase": "generating_extra_500"}
+{"at": "2026-08-17T18:21:17.966970+00:00", "phase": "loading_pilot_200"}
+{"at": "2026-08-17T18:28:55.983788+00:00", "phase": "training_combined_700"}
+{"at": "2026-08-17T18:48:00.623380+00:00", "phase": "failed", "error": "SurrogateModelError: отрицательная/нечисловая цель ('102', 0)"}
+{"at": "2026-08-17T19:20:54.570255+00:00", "phase": "generating_extra_500"}
+{"at": "2026-08-17T19:38:24.192511+00:00", "phase": "loading_pilot_200"}
+{"at": "2026-08-17T19:46:15.745295+00:00", "phase": "preparing_training_700"}
+{"at": "2026-08-17T19:46:15.746059+00:00", "phase": "splitting_700"}
+{"at": "2026-08-17T19:46:15.746927+00:00", "phase": "building_context_700"}
+{"at": "2026-08-17T19:46:48.870638+00:00", "phase": "featureizing_700"}
+{"at": "2026-08-17T20:07:00.807078+00:00", "phase": "training_combined_700"}
+{"at": "2026-08-17T20:07:01.222701+00:00", "phase": "failed", "error": "SurrogateModelError: отрицательная цель ('102', 24) oil_mass_delta=-0.0015047038505144883"}

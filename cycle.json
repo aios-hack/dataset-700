@@ -1,0 +1,45 @@
+{
+  "error": "SurrogateModelError: отрицательная цель ('102', 24) oil_mass_delta=-0.0015047038505144883",
+  "format": "aios.model-z-cycle.v1",
+  "phase": "failed",
+  "stages": [
+    {
+      "completed": 200,
+      "dataset_hash": "3a580e48a6582ac6a1219b478d2abd2155471ec73f773cfacc4084a240312a59",
+      "dataset_root": "dataset-main",
+      "failed": 0,
+      "id": "pilot-200",
+      "plan_hash": "86c74787ab3837c6200a6bb78c32c822150060a730acf99ee8a3b1b6f21c1ba9",
+      "seed": 20260816,
+      "snapshot": "cycle/pilot-200.json",
+      "status": "complete",
+      "target": 200,
+      "title": "Пилот 200"
+    },
+    {
+      "completed": 500,
+      "dataset_hash": "6933a8eec6d9f77e956473193d6f2a766a85dec8f01fbee6d68dde7ccccfbee6",
+      "dataset_root": "dataset-extra-500",
+      "failed": 0,
+      "id": "extra-500",
+      "plan_hash": "2243f65ffa90da3c3f8567daafdc38f17bbba7422da645f84a524a25ade826f7",
+      "seed": 20260817,
+      "snapshot": "cycle/extra-500.json",
+      "status": "complete",
+      "target": 500,
+      "title": "Расширение 500"
+    },
+    {
+      "current_epoch": 0,
+      "dataset_root": "",
+      "id": "combined-700",
+      "max_epochs": 80,
+      "report": "model-task34-700/training_report.json",
+      "status": "training",
+      "target": 700,
+      "title": "Итого 700",
+      "training_started_at": "2026-08-17T19:46:15.745423+00:00"
+    }
+  ],
+  "updated_at": "2026-08-17T20:07:01.221841+00:00"
+}

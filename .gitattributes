@@ -1,0 +1,8 @@
+* -text
+
+*.UNSMRY binary
+*.SMSPEC binary
+*.jsonl text eol=lf
+*.json text eol=lf
+*.log text eol=lf
+*.md text eol=lf

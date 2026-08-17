@@ -1,0 +1,1617 @@
+{
+  "created_at": "2026-08-17T03:25:06.012183+00:00",
+  "dataset_hash": "3a580e48a6582ac6a1219b478d2abd2155471ec73f773cfacc4084a240312a59",
+  "families": {
+    "BASELINE": 1,
+    "CONVERSION": 14,
+    "LEVELS": 110,
+    "SHUTDOWN": 35,
+    "UNREACHABLE": 40
+  },
+  "format": "aios.dataset-stage-snapshot.v1",
+  "n_scenarios": 200,
+  "plan_hash": "86c74787ab3837c6200a6bb78c32c822150060a730acf99ee8a3b1b6f21c1ba9",
+  "scenarios": [
+    {
+      "canonical_schedule_hash": "91f1b8ffd027fd0839d3425b15ac7ff64aaaa77d6ec559cf8044a21b2aa1ca11",
+      "family": "BASELINE",
+      "response_hash": "2886ff805ab1a77acaaec7626eb71c70764aad74253fdb485c9cb4ca34faa540",
+      "run_id": "20260816T200926-8b4da543d1ed",
+      "scenario_id": "baseline",
+      "wallclock_seconds": 1096.4262849159998
+    },
+    {
+      "canonical_schedule_hash": "6a512321af9526bff1fce245e3437fd013042be6c94a1d45f47373281f832896",
+      "family": "CONVERSION",
+      "response_hash": "8aec0bf243f204d799ace121114dd826cdd4542a7d67723f732ba2b4fff36a77",
+      "run_id": "20260817T024119-a855e1f208f3",
+      "scenario_id": "conversion-0000",
+      "wallclock_seconds": 921.3643273489979
+    },
+    {
+      "canonical_schedule_hash": "930220bb5acbe2c3097a1661971e1cc2d769c8b52652f910dee381a909eaae58",
+      "family": "CONVERSION",
+      "response_hash": "fc956439d0d4dc7568b2ff1ac29139a895369345bd5a991ce299f873a4882b3b",
+      "run_id": "20260817T024232-f80ec15950ad",
+      "scenario_id": "conversion-0001",
+      "wallclock_seconds": 969.7464311429976
+    },
+    {
+      "canonical_schedule_hash": "685673eb393d4b46a06200b107b9d7ac2e384dca69ff7a0d1fe17b90aff2e266",
+      "family": "CONVERSION",
+      "response_hash": "ead36546bead843d78bc1979031518ef6af3275c15ab66de95aebb893789769b",
+      "run_id": "20260817T024250-ae4245929ec1",
+      "scenario_id": "conversion-0002",
+      "wallclock_seconds": 958.2067796180017
+    },
+    {
+      "canonical_schedule_hash": "893be12279d5ab34053dbe796877bcd66860fb27feb50e6af541561735e41cfb",
+      "family": "CONVERSION",
+      "response_hash": "04967ee1ab9768360c692afb656a704b80b2c3db7810278023af32dc4ed1b1ec",
+      "run_id": "20260817T024315-11dc9bd61d4c",
+      "scenario_id": "conversion-0003",
+      "wallclock_seconds": 945.7278067469997
+    },
+    {
+      "canonical_schedule_hash": "f0715ec1b3c33a78d9c89316096490b0e9529d6ee90eebb0955d8b89294099ec",
+      "family": "CONVERSION",
+      "response_hash": "5cf7315e297936593685a8fa2338245afb166edf4f9301c69646df4e068565e4",
+      "run_id": "20260817T024326-9f5b2894d503",
+      "scenario_id": "conversion-0004",
+      "wallclock_seconds": 968.5729089429988
+    },
+    {
+      "canonical_schedule_hash": "dc52244f97792da612ba658e2467ac5d726fcce62cf1943028b5e4c465c727f7",
+      "family": "CONVERSION",
+      "response_hash": "f38729821da05bde0b3c8eb780c2cd597bb85691c5a1fedd9f6ef2d03719c2a6",
+      "run_id": "20260817T024710-15ee70f604b6",
+      "scenario_id": "conversion-0005",
+      "wallclock_seconds": 945.2316224770002
+    },
+    {
+      "canonical_schedule_hash": "573470ca0e86676d4914fda9f7ef315dd5cdbbc43bba280d02cd202f9e4063d4",
+      "family": "CONVERSION",
+      "response_hash": "36e973fcb544cff3ce246a214eb413a3d5a3dcb16f6402b0996fe098d8cf0e96",
+      "run_id": "20260817T025642-94a3807148a9",
+      "scenario_id": "conversion-0006",
+      "wallclock_seconds": 952.7430723290017
+    },
+    {
+      "canonical_schedule_hash": "5e4ad86b30769b4f3e1774d6672eeb888946cdc6e1260bbdea84577ef06614a3",
+      "family": "CONVERSION",
+      "response_hash": "4cfe8577575a6f59033fe619f7cb61027099bc0b23d6c2c003cce1a2a891526e",
+      "run_id": "20260817T025721-470442075d9c",
+      "scenario_id": "conversion-0007",
+      "wallclock_seconds": 927.1748016150013
+    },
+    {
+      "canonical_schedule_hash": "f1037414902bc32c2fd4d12245eff556028537ea8aafbdbb4ecae3f604acc722",
+      "family": "CONVERSION",
+      "response_hash": "fbc0ab10dcd6ec8fd83b7e855730a0fc27d435fc41e9477071159868c91adc0b",
+      "run_id": "20260817T025738-bcee0fa27639",
+      "scenario_id": "conversion-0008",
+      "wallclock_seconds": 966.3217868579995
+    },
+    {
+      "canonical_schedule_hash": "8eb4974aef3ef41be6724a7d8bc4d8076636ef0b6a8fc7dedf32d15f8017e49e",
+      "family": "CONVERSION",
+      "response_hash": "72b7f91c7ac1fe93bc9c5108bd2a44ff6564abd4e15858bbd94636706546ee66",
+      "run_id": "20260817T025843-d3fde7f76bce",
+      "scenario_id": "conversion-0009",
+      "wallclock_seconds": 980.2934188699983
+    },
+    {
+      "canonical_schedule_hash": "5718d23def2564807346cfeaa3e51feae8282e34730ff1e6f526f413df7043f1",
+      "family": "CONVERSION",
+      "response_hash": "7c7753570c3e851dd4b9135d5ec3ae444b7f1c54908beedaf7755ad7c03f613e",
+      "run_id": "20260817T025850-bb8756493397",
+      "scenario_id": "conversion-0010",
+      "wallclock_seconds": 946.5776573229996
+    },
+    {
+      "canonical_schedule_hash": "b8dfa6407b6d8bd5c9d4e956a670581c6ee529dd3b92c84f476391a776383f64",
+      "family": "CONVERSION",
+      "response_hash": "28799134722aa2f43d0598d483b1a58ffc89ccf4c913cea6e61aa48c7578b1c9",
+      "run_id": "20260817T025902-fc25f24d0660",
+      "scenario_id": "conversion-0011",
+      "wallclock_seconds": 908.7164974789994
+    },
+    {
+      "canonical_schedule_hash": "685f3b3699be2e2571174b71d3b96ffc7695cf6d11038a9fb2f7161278e472d2",
+      "family": "CONVERSION",
+      "response_hash": "21fa63bbeae4c711d62e719b333d1c086dd79d7e1b1c825897e6a0a2c38550f0",
+      "run_id": "20260817T025936-d7469c68c54e",
+      "scenario_id": "conversion-0012",
+      "wallclock_seconds": 944.5445059829981
+    },
+    {
+      "canonical_schedule_hash": "0f59ec9e83612e710ccb134f978c8146cf9862c92b74c26a4bc09c8d7c5a6020",
+      "family": "CONVERSION",
+      "response_hash": "be5ee8277693082b39f97ee3fc5a0149eb6b421782c7da114e15d7b26f7aaf5f",
+      "run_id": "20260817T030257-c907a8dc12a5",
+      "scenario_id": "conversion-0013",
+      "wallclock_seconds": 965.010414886001
+    },
+    {
+      "canonical_schedule_hash": "f4dd3debf6f510f45a3727810731ca3d3c5cbf675c145215ec3a6dd62222f910",
+      "family": "LEVELS",
+      "response_hash": "ef8470b3b9d40ad6a72b8213e50f5fd0024997068da4544552a41d84f26d8914",
+      "run_id": "20260816T200927-35f96cae4ea4",
+      "scenario_id": "levels-0000",
+      "wallclock_seconds": 1113.463758746
+    },
+    {
+      "canonical_schedule_hash": "0f46c7d06663583d1adf1d6ebe64c985bab22db561f41a2d8baca2859a304f2b",
+      "family": "LEVELS",
+      "response_hash": "79794460be35c66677e7eafbfff47cbf5b198e7e62ae1cf4eb20cfe434da9c61",
+      "run_id": "20260816T200927-baa4a520aea9",
+      "scenario_id": "levels-0001",
+      "wallclock_seconds": 1103.065817363
+    },
+    {
+      "canonical_schedule_hash": "d9781fbef00db5797e71c9e9e49dacfa08d315f14285f604db7596dd408f4464",
+      "family": "LEVELS",
+      "response_hash": "4302283f5ab151e444510905cb44dd9ca545a82dde8abaa163075f7dce01118b",
+      "run_id": "20260816T200927-07df855524d5",
+      "scenario_id": "levels-0002",
+      "wallclock_seconds": 1068.8673504279998
+    },
+    {
+      "canonical_schedule_hash": "e387dcb91c2e5685372dc412c068bfe0f1ca5a180531180c4dd3a0a6847004c0",
+      "family": "LEVELS",
+      "response_hash": "72d301ac305929063ff1a4dccc5c115d7f3056c825fd61656131d4e1cde14c71",
+      "run_id": "20260816T200927-bb0410e02c12",
+      "scenario_id": "levels-0003",
+      "wallclock_seconds": 1078.0432602139997
+    },
+    {
+      "canonical_schedule_hash": "a524f9c73e3ef06160fafefa3198461167ba414d8f5288adb9fd39e9d03e725c",
+      "family": "LEVELS",
+      "response_hash": "ec7c7faaba0525660e890572b6902872b96f06af54d590167cdbe3e2a4b43f74",
+      "run_id": "20260816T200927-6bc31f0e7a66",
+      "scenario_id": "levels-0004",
+      "wallclock_seconds": 1078.241841602
+    },
+    {
+      "canonical_schedule_hash": "a94306800ce344005fa981893e0a8d362ee6c9b3eaf2039244e2d8cb34d649de",
+      "family": "LEVELS",
+      "response_hash": "865351cbed47183362040f79b1c30bbd87353d9890f22fb022bf3f324f70c01b",
+      "run_id": "20260816T200927-d0ffe9201315",
+      "scenario_id": "levels-0005",
+      "wallclock_seconds": 1096.3803464540001
+    },
+    {
+      "canonical_schedule_hash": "131cfd84c24998f8fb52c6a5be6cfd8cc883cddb60317349195dbbca25ebfcf1",
+      "family": "LEVELS",
+      "response_hash": "0fba1f96919d79d7d2e5a82213195c69a37cb6590560c1bc521dffeb12e0428a",
+      "run_id": "20260816T200927-1d61975734c8",
+      "scenario_id": "levels-0006",
+      "wallclock_seconds": 1073.3683608509998
+    },
+    {
+      "canonical_schedule_hash": "d5c1691e8b4081973e316c0b08443bbc28fe0628b5858fc481e6cfe5b6be1337",
+      "family": "LEVELS",
+      "response_hash": "b07120fced13d0b2dad87bdd93bab26e255b65c7a9700e70b29c3fb6c0c67e85",
+      "run_id": "20260816T202718-f13be8f3c70f",
+      "scenario_id": "levels-0007",
+      "wallclock_seconds": 1050.2051870600003
+    },
+    {
+      "canonical_schedule_hash": "5b2dd4829d9674250a0fb87380ea194d0867c88104057d2b32ee760de15a8c55",
+      "family": "LEVELS",
+      "response_hash": "0ca741fec078b8770c3615a0b0bc77e585e95a71f269c9621d25f96e4ab00e93",
+      "run_id": "20260816T202723-4abe2f0fc590",
+      "scenario_id": "levels-0008",
+      "wallclock_seconds": 1054.7955619489999
+    },
+    {
+      "canonical_schedule_hash": "339696b77c9d59293af0a4810d6e17d58143cef2ec82a6c21d413e51ebd809b6",
+      "family": "LEVELS",
+      "response_hash": "fc9d1c89af38b305123ff50ba114a0c3050cc370645a280871ecea2be3b6c23e",
+      "run_id": "20260816T202728-7860cd640fc5",
+      "scenario_id": "levels-0009",
+      "wallclock_seconds": 1077.3103006760002
+    },
+    {
+      "canonical_schedule_hash": "09764cc0a6d31caa171ee8831fe24775954066f70ee5b9ac045ddc520060dbd1",
+      "family": "LEVELS",
+      "response_hash": "2b03fa829cbe36348476d8d7cfb1f5cb267640d074b9dd0f96e2e7018c15a16b",
+      "run_id": "20260816T202728-11515521a2d1",
+      "scenario_id": "levels-0010",
+      "wallclock_seconds": 1069.6622415730003
+    },
+    {
+      "canonical_schedule_hash": "7dcba5f71f7b85e7266f352bdd3ba587c04737a5b85cc5461ae67348b99b25a1",
+      "family": "LEVELS",
+      "response_hash": "a4e435db4f1bc3d384fb5cefd28e8316c25d80f2204bdd9638e8366b2113c603",
+      "run_id": "20260816T202745-379da27469f1",
+      "scenario_id": "levels-0011",
+      "wallclock_seconds": 1055.648509188
+    },
+    {
+      "canonical_schedule_hash": "bf83566b045037a8acc3cee8c78ed93f8d9a296765e0621aa7ed744341c02f1a",
+      "family": "LEVELS",
+      "response_hash": "fdee06276301ed20694e57f82b8588e6f1d24a52c2db763dab8781c14b34e2e4",
+      "run_id": "20260816T202746-c2793a3dadc5",
+      "scenario_id": "levels-0012",
+      "wallclock_seconds": 1049.2153731560002
+    },
+    {
+      "canonical_schedule_hash": "37d661717a63ef92f9eacab8fbecdc6db52ccb1b12e2dea4513491820628b834",
+      "family": "LEVELS",
+      "response_hash": "8fd4368c7d459da0e2bd496cff6743daa93dcbde27425feefd970991c0ab5021",
+      "run_id": "20260816T202753-11dc58dfe3f6",
+      "scenario_id": "levels-0013",
+      "wallclock_seconds": 1052.698991874
+    },
+    {
+      "canonical_schedule_hash": "06ec45d23b1fa3d76a4257ab10e70e6beff04a1317a96392264535eb7cdb98ba",
+      "family": "LEVELS",
+      "response_hash": "e8e632339b816eb39399e7b9672bf5d05d1417f6c6b0dd582f671f731aa01768",
+      "run_id": "20260816T202804-e2008f9dae13",
+      "scenario_id": "levels-0014",
+      "wallclock_seconds": 1052.4469366830003
+    },
+    {
+      "canonical_schedule_hash": "a452103dea62f6b0e21a77648cc26de1e985d282af0138b041e94a1ad49d814f",
+      "family": "LEVELS",
+      "response_hash": "154ae74977467eb0d40d2262499e46b8a159eebf5b6c1f1b38b844b8b01583b8",
+      "run_id": "20260816T204450-e261bab35649",
+      "scenario_id": "levels-0015",
+      "wallclock_seconds": 1026.4443476439997
+    },
+    {
+      "canonical_schedule_hash": "7b29825692cf2bb1ef6d6ce21afc31055a5b810290f97b5e4f7a90df11e4fcc0",
+      "family": "LEVELS",
+      "response_hash": "08b388cc55c290e2ee27f896eaae1d975f05af74b6f3108a73d0e5c04dbbf323",
+      "run_id": "20260816T204459-194bf47f51ec",
+      "scenario_id": "levels-0016",
+      "wallclock_seconds": 1044.5811093820002
+    },
+    {
+      "canonical_schedule_hash": "967b01708fd99f4ace5c6c5fbbe010143095758d6c3256e8a1a7ba26156cd11d",
+      "family": "LEVELS",
+      "response_hash": "7f79658a1b2f568f5b06a349026c83616c849371a01996e26e6b8cb99256d7ba",
+      "run_id": "20260816T204517-2486f3a96f74",
+      "scenario_id": "levels-0017",
+      "wallclock_seconds": 1051.2427365429999
+    },
+    {
+      "canonical_schedule_hash": "ea89985a13a7e0f23571c4a6f3f5aba767a862dceb2f3ca17c076a5ab1bc0825",
+      "family": "LEVELS",
+      "response_hash": "f5272313e801b40af689a7a6b13f7aa38a6a0f1870ee770bda5a3d4d279a661e",
+      "run_id": "20260816T204519-f80ac41eaca2",
+      "scenario_id": "levels-0018",
+      "wallclock_seconds": 1039.5509818680002
+    },
+    {
+      "canonical_schedule_hash": "597430a4f7a305241e5e10a35106e5a522740fe9165d6d20311c3955c1e62ab7",
+      "family": "LEVELS",
+      "response_hash": "30f52912406483124df2c3f66712eaf5ce0c75bc4bff62e93d8aca599df4ee19",
+      "run_id": "20260816T204523-01333f500615",
+      "scenario_id": "levels-0019",
+      "wallclock_seconds": 1070.3804619310004
+    },
+    {
+      "canonical_schedule_hash": "a2a04fa18485a5b929979e677f854ed73909518fd92b357f606e132ba4b9fb42",
+      "family": "LEVELS",
+      "response_hash": "872cdd6b981e8bdf8c811c68e3de381efe2824ffd43b34088f126f21607c93fe",
+      "run_id": "20260816T204528-34a8fa3a8d76",
+      "scenario_id": "levels-0020",
+      "wallclock_seconds": 1070.191342264
+    },
+    {
+      "canonical_schedule_hash": "c531395da2377514dbd89c243b68633610b024e6819824ba4d09d77b97591ed7",
+      "family": "LEVELS",
+      "response_hash": "84c9306beb50d7586001971f15a27e33790eed576bb97f3d792505f58c58fde0",
+      "run_id": "20260816T204528-ceabe74bfd73",
+      "scenario_id": "levels-0021",
+      "wallclock_seconds": 1060.2452749189997
+    },
+    {
+      "canonical_schedule_hash": "6835b1ab18947943d93105879015bb32cfc68ed85778e468e7def09753ba5f58",
+      "family": "LEVELS",
+      "response_hash": "42f824566d1cdc5e60832332a7e7721ace2483a2abeb0b4829e7287486b7f5a4",
+      "run_id": "20260816T204538-e9793fcce2d0",
+      "scenario_id": "levels-0022",
+      "wallclock_seconds": 1039.796947421
+    },
+    {
+      "canonical_schedule_hash": "a212112b8c290efa7ca34093fa63ddf2f254e8168d71490b7d3de92c21d8c7c6",
+      "family": "LEVELS",
+      "response_hash": "8b079e1b1d4af14b7f909aa4a3f0aa2ece4e013874d541741f26e71bc4c74c5d",
+      "run_id": "20260816T210158-d390a40a25c7",
+      "scenario_id": "levels-0023",
+      "wallclock_seconds": 1061.3737771589995
+    },
+    {
+      "canonical_schedule_hash": "64f32fd238a27f324c3b7c36ba869db61375dbc3deac046fdb3cac524db03d40",
+      "family": "LEVELS",
+      "response_hash": "561fe95fa347cb583695a75d998f189f42f7087c88fce3c356f3de058e6c7314",
+      "run_id": "20260816T210225-5160c7fef160",
+      "scenario_id": "levels-0024",
+      "wallclock_seconds": 1176.8729707920002
+    },
+    {
+      "canonical_schedule_hash": "5dd218fbc2d9c4feb26822cae03f50d6a5f99b0045fd477dfbcc17071d7d8860",
+      "family": "LEVELS",
+      "response_hash": "78ad48c7d02689ce221b11ab5fea30b0c6c1465327c094a9ea6813e202685f79",
+      "run_id": "20260816T210241-64c3bca9719e",
+      "scenario_id": "levels-0025",
+      "wallclock_seconds": 1041.242470479
+    },
+    {
+      "canonical_schedule_hash": "a34e29c3c15b376ca4e81a5e25295153aad325e1a4e828d6524ec7c381c7f288",
+      "family": "LEVELS",
+      "response_hash": "c83e06a88b6e5a084754de38300f9b43bd1fd86454dfcf09d807306b78ffe0ce",
+      "run_id": "20260816T210250-6bb9a5a4b341",
+      "scenario_id": "levels-0026",
+      "wallclock_seconds": 1132.5961880920004
+    },
+    {
+      "canonical_schedule_hash": "5328a1e288c3f9a15b7c624bf82e4547afed0c8abb45ece7e9e98507ca3fe603",
+      "family": "LEVELS",
+      "response_hash": "369425532868821fe2548a017436482a2d3e2ad844780458c6d29d83ddf0ce52",
+      "run_id": "20260816T210259-9032cd777aa1",
+      "scenario_id": "levels-0027",
+      "wallclock_seconds": 1135.6519918969998
+    },
+    {
+      "canonical_schedule_hash": "4c8a4c864a4bf41be4896894c52740fca1c1762537a2b29cc1bb3e18215fef13",
+      "family": "LEVELS",
+      "response_hash": "dbf59f04c7979ce0dfbba986316ffc837c598c87ae4d009ce1660a44c20666e5",
+      "run_id": "20260816T210310-993a4122b29d",
+      "scenario_id": "levels-0028",
+      "wallclock_seconds": 1136.8779407149996
+    },
+    {
+      "canonical_schedule_hash": "6fc9f461100f0af29d045f37cd0269e7b2dd3a8be41af8138a68e19fe0608e98",
+      "family": "LEVELS",
+      "response_hash": "99ffcf52c24dd0285a30f748ac37594e63f4e82456289c559b73a50af5c5abe8",
+      "run_id": "20260816T210315-6a23ce810edb",
+      "scenario_id": "levels-0029",
+      "wallclock_seconds": 1107.8070780749995
+    },
+    {
+      "canonical_schedule_hash": "ac0f8372de149cc9d1d7cd27cb40d484df652c0dd5df241174f1d7879bf62077",
+      "family": "LEVELS",
+      "response_hash": "215a7fbeae17e3259375c7300da8554fad0336f243230074da4a95e9c28f808d",
+      "run_id": "20260816T210321-ce32743bcc97",
+      "scenario_id": "levels-0030",
+      "wallclock_seconds": 1168.0543686289993
+    },
+    {
+      "canonical_schedule_hash": "0aa23931e0e33a090434d22d11341a685ac41c16d962cc7b59431f0277d1bd28",
+      "family": "LEVELS",
+      "response_hash": "add66bfadf245bfba44e2e56036734613f3c69370dcb421b3464772340ac7699",
+      "run_id": "20260816T211941-66c0c4fa3328",
+      "scenario_id": "levels-0031",
+      "wallclock_seconds": 1139.7627803639998
+    },
+    {
+      "canonical_schedule_hash": "13a4b76e3e79cc959434abc4b389a9f5a2f5ce7bc786ac73e920830c33aadb15",
+      "family": "LEVELS",
+      "response_hash": "afbad773fd0176d987eaf5c750ff4d7ebc7b267800560ad5a60c81c0af6c1b36",
+      "run_id": "20260816T212004-07d93d3a5550",
+      "scenario_id": "levels-0032",
+      "wallclock_seconds": 1147.04974202
+    },
+    {
+      "canonical_schedule_hash": "2b2c987e0dcd2d94c5c5502ee84a3891eaa80c3c4f05e6c38ec1dd4b44880e12",
+      "family": "LEVELS",
+      "response_hash": "a4910317bc9a82e20689a50a0807f03d4924262f3633605df49df71273bc8927",
+      "run_id": "20260816T212145-01533bd4ace8",
+      "scenario_id": "levels-0033",
+      "wallclock_seconds": 1062.4175383399997
+    },
+    {
+      "canonical_schedule_hash": "ebba72cf1f19e820aca0f10d223820bb71da904094dd97aaa54eefdd24e4968c",
+      "family": "LEVELS",
+      "response_hash": "8c212b92806486ae7e5c6b8d93408ea76c1e42b7cd880b16dd721f2a5a16da9d",
+      "run_id": "20260816T212145-8a0aeb90e382",
+      "scenario_id": "levels-0034",
+      "wallclock_seconds": 1072.1146360960001
+    },
+    {
+      "canonical_schedule_hash": "526a690b43862470b2a09920a1c0d24bbea55d6a23ebbbe9aae8670a3ce5e0ca",
+      "family": "LEVELS",
+      "response_hash": "aaa047afd69bfdfe9ba380fe505b5fdf516bece996c40bc49de741490b01d198",
+      "run_id": "20260816T212157-913a1382d0dd",
+      "scenario_id": "levels-0035",
+      "wallclock_seconds": 1056.4083388640001
+    },
+    {
+      "canonical_schedule_hash": "ed8beb4ec9fcf928e126d4bee94ca05266b201e9430edf819a89645195147fdd",
+      "family": "LEVELS",
+      "response_hash": "8f8af537c290ffa90fd5046db555cbcc03ba2a9cd2566caaab028d9c36b923b9",
+      "run_id": "20260816T212204-710ecc065fe9",
+      "scenario_id": "levels-0036",
+      "wallclock_seconds": 994.3649638460001
+    },
+    {
+      "canonical_schedule_hash": "e71d5e952d55367eb60ea0eb46178c5fe9bbb93058c47cef2a6f3d490e8106e7",
+      "family": "LEVELS",
+      "response_hash": "004f24791d01bcfe8fa6716e3512cda150cc07656e6e0ec8a5447ac3f3746f92",
+      "run_id": "20260816T212209-520488be7afc",
+      "scenario_id": "levels-0037",
+      "wallclock_seconds": 1076.644592691
+    },
+    {
+      "canonical_schedule_hash": "2df6014051dbbb51f0bf6f09ca7685600c30a75b807d7710fcdb94deb047ffff",
+      "family": "LEVELS",
+      "response_hash": "698ecd9b4f68158168884c82176b40204fabc3d40e8a01df97c22ab1a1e66f02",
+      "run_id": "20260816T212251-5d730be53a41",
+      "scenario_id": "levels-0038",
+      "wallclock_seconds": 1034.29299894
+    },
+    {
+      "canonical_schedule_hash": "c89123f898ee342276321b6131ba68e2d61c7ede4b6cea19096f51816ccbfa5a",
+      "family": "LEVELS",
+      "response_hash": "05a720a9a9d6c644564624ea35c124f1f075131da4d3ea8d65910fdcde244933",
+      "run_id": "20260816T213840-0d18d9bdd6a2",
+      "scenario_id": "levels-0039",
+      "wallclock_seconds": 1044.6627442990002
+    },
+    {
+      "canonical_schedule_hash": "30736f75f52ed8615b8d5711217945f83a16b64c04cce0675d346b925d9ca52c",
+      "family": "LEVELS",
+      "response_hash": "b7d5e8462b16e10f574d9bf6db2f4afb638bb663862856510b2704dc4a4559cc",
+      "run_id": "20260816T213843-73457975cc2b",
+      "scenario_id": "levels-0040",
+      "wallclock_seconds": 1013.7017930769998
+    },
+    {
+      "canonical_schedule_hash": "c02a254cf2909ee4d58570768839d386fb7c9d580beb6c093f1477c08eed8a45",
+      "family": "LEVELS",
+      "response_hash": "41695fb7c8d7680a9316bc4078e57eba4e4d8881109137e637e08e5eaa3f4f99",
+      "run_id": "20260816T213913-a2388d93c449",
+      "scenario_id": "levels-0041",
+      "wallclock_seconds": 1035.5434961970004
+    },
+    {
+      "canonical_schedule_hash": "6d92cd7f732fa23938b901dfb4dfb67685f49ad8970ff80e7270386f134c18fd",
+      "family": "LEVELS",
+      "response_hash": "7566285c717660a0ff77c81603bc5d5188bc1e4b0fd936dd61699110676636f9",
+      "run_id": "20260816T213929-206781340126",
+      "scenario_id": "levels-0042",
+      "wallclock_seconds": 1059.2870484630002
+    },
+    {
+      "canonical_schedule_hash": "8035fdb8bc0357287347b7a1fec3ec0491a557380f5555540c56bf3bac85733b",
+      "family": "LEVELS",
+      "response_hash": "2ee6b277e329c406ccbe032140b6d92cb2fa25c061411415e9761b9c53295c97",
+      "run_id": "20260816T213935-1807b4cf0d0d",
+      "scenario_id": "levels-0043",
+      "wallclock_seconds": 1007.3320937729995
+    },
+    {
+      "canonical_schedule_hash": "16918a14243e98a0a47673d8b8e5916e643c73ffdc302daa1d1dc2dd8e993652",
+      "family": "LEVELS",
+      "response_hash": "7c7c3910e7d0467dc084fd183bb206b6d84e44236372e6361ebe4be559c052af",
+      "run_id": "20260816T213939-0cfd00547495",
+      "scenario_id": "levels-0044",
+      "wallclock_seconds": 1030.0005565910005
+    },
+    {
+      "canonical_schedule_hash": "f4ccd5c5dfa63d8853b0c184b03b0789f86e18c475a26e642dd783b713f3eb2f",
+      "family": "LEVELS",
+      "response_hash": "ef01ccd192c5dae8bbbf174160e9c90a0f81bed6172eb0abd4f548421b3b94a6",
+      "run_id": "20260816T214008-1490388952fa",
+      "scenario_id": "levels-0045",
+      "wallclock_seconds": 1060.9678310199997
+    },
+    {
+      "canonical_schedule_hash": "f878fb5b15eaf5632cfb808f54b186f9b724f512079ac220121a2d9e5f076b39",
+      "family": "LEVELS",
+      "response_hash": "a55235e2dfef278d8ad073d4d7e2e8c2f5617c3fb4b6ac9cbe06dab03de8dcb4",
+      "run_id": "20260816T214008-c7d393dea775",
+      "scenario_id": "levels-0046",
+      "wallclock_seconds": 1057.0845219539997
+    },
+    {
+      "canonical_schedule_hash": "e9e509e5477b5d2144f6fd1b40ef1a84012803230c3352e430f5f31ceb81cecf",
+      "family": "LEVELS",
+      "response_hash": "8167f4bc97690711561b4f6c7eb85b9fc5b97bb274c7d900c0e69cfb2c374072",
+      "run_id": "20260816T215540-eca96aa30e65",
+      "scenario_id": "levels-0047",
+      "wallclock_seconds": 1051.9987497769998
+    },
+    {
+      "canonical_schedule_hash": "f3d65241bb8246b43188b1e02694eece4d8b1d524c804b86c99f87b30d436097",
+      "family": "LEVELS",
+      "response_hash": "07ee73d9b64f0236f77f99fb343ff0ca6ebc42b87a7da340be5e6d36906eeb6c",
+      "run_id": "20260816T215606-7c5350ec9cd5",
+      "scenario_id": "levels-0048",
+      "wallclock_seconds": 1052.5017663140006
+    },
+    {
+      "canonical_schedule_hash": "f355fe3e05ea1359393341d6187bed6a3d37a4e7ffcd48d66260312ba7bfcc72",
+      "family": "LEVELS",
+      "response_hash": "6665338aa4960548a7b7b0769c3099684c3b038de3e145c46aacf7728d3af95b",
+      "run_id": "20260816T215624-e2c7b9a63f53",
+      "scenario_id": "levels-0049",
+      "wallclock_seconds": 1046.6699762479984
+    },
+    {
+      "canonical_schedule_hash": "b0e0e6e7b2dcf4b900ab9cac0aacf92593658ed7b974acf7f23ac51644742e5c",
+      "family": "LEVELS",
+      "response_hash": "87f2c77793f8845bcb4d43cf9b90bd6d64819204015ee13b5f0ff9e898ff61aa",
+      "run_id": "20260816T215630-90e6fb999859",
+      "scenario_id": "levels-0050",
+      "wallclock_seconds": 1041.4979885930006
+    },
+    {
+      "canonical_schedule_hash": "b328d81f367222ce59748f60a984f252beacd7a8e177a3947c4e54aac3777300",
+      "family": "LEVELS",
+      "response_hash": "91537f7884040f12a320b74bb39ea90bc68ea303cf58a0b8aa291006167d7cdc",
+      "run_id": "20260816T215651-4426bcb186bf",
+      "scenario_id": "levels-0051",
+      "wallclock_seconds": 1038.4511016039996
+    },
+    {
+      "canonical_schedule_hash": "e31bceba06199718bc4420df434ff24dadb3252b3198edaa421f1a80dc792bef",
+      "family": "LEVELS",
+      "response_hash": "23da7bc409552dd59488fdd9a837581ab3ddf8ed622637599821c6e120598a25",
+      "run_id": "20260816T215710-3c2de16e45f3",
+      "scenario_id": "levels-0052",
+      "wallclock_seconds": 1051.8923196859996
+    },
+    {
+      "canonical_schedule_hash": "0643a465fce33d3e5c6e01a5f3d216793a879d22fd25992953e826c273cde80e",
+      "family": "LEVELS",
+      "response_hash": "a5f584455076f7300ba26ec01877700bc909d56eccc774e9d62a4425c05dc42a",
+      "run_id": "20260816T215747-fb4a7fb15660",
+      "scenario_id": "levels-0053",
+      "wallclock_seconds": 1033.9250873170004
+    },
+    {
+      "canonical_schedule_hash": "7a7b2bd2df920d228fb682bb6ce48a2d9d5283baa37f11a2cdaf91dcc8198b3d",
+      "family": "LEVELS",
+      "response_hash": "c5b7687ec4e2f11c499eebfce193d69e3f6af44f3e201d3674be490e42f9c44d",
+      "run_id": "20260816T215750-deafe32ae739",
+      "scenario_id": "levels-0054",
+      "wallclock_seconds": 1043.5467254529995
+    },
+    {
+      "canonical_schedule_hash": "511c4fc8b9bc8eb1ef24b686725cb66986b0adc3a95215aa078f7b7be0b5c882",
+      "family": "LEVELS",
+      "response_hash": "ba4c2163b6583ee1feb1522837ca2df1f036f54e468e34e953dbd3c0fdcb2aaa",
+      "run_id": "20260816T221314-89a93400cafe",
+      "scenario_id": "levels-0055",
+      "wallclock_seconds": 1060.259067162
+    },
+    {
+      "canonical_schedule_hash": "33692816676508502f060f144d9891ee8e324a2579ef19c2bcc9b8bb605aeb26",
+      "family": "LEVELS",
+      "response_hash": "b70fc4340bcc0203d574654b2e0380d3a28a9d5c4f4812fc3da050452bf4c9a1",
+      "run_id": "20260816T221341-20144e5bc260",
+      "scenario_id": "levels-0056",
+      "wallclock_seconds": 1041.591299885
+    },
+    {
+      "canonical_schedule_hash": "9d1055dba34b60ab4041ed2c64d19d466b8c038c8e085c4981d925226eec7a01",
+      "family": "LEVELS",
+      "response_hash": "cdc00bc4e28fbec3269ee99c6bcf13882f109c0c7f4d01cc473787572e947973",
+      "run_id": "20260816T221353-5408b75e1974",
+      "scenario_id": "levels-0057",
+      "wallclock_seconds": 1028.7376201429997
+    },
+    {
+      "canonical_schedule_hash": "b84715b77a817fb53ce12744b08622a4d1e14b4a27dfd29cf412fde63277d0b3",
+      "family": "LEVELS",
+      "response_hash": "65aeabdbbb6ff90060f45f8d8abae3d39d8c27917d94f7bc0844a1035ac16daa",
+      "run_id": "20260816T221354-e16ec95f97d8",
+      "scenario_id": "levels-0058",
+      "wallclock_seconds": 1035.7922338119988
+    },
+    {
+      "canonical_schedule_hash": "4e0a2a2d34a01fa9aaf1e36495f15e155ead4bf887368669c1cde16e19bad18a",
+      "family": "LEVELS",
+      "response_hash": "aaf6f6d7e56942a1c565bd84023a57e49e50b438f76c623149a4c92e761712b9",
+      "run_id": "20260816T221411-e50b3c2f8f84",
+      "scenario_id": "levels-0059",
+      "wallclock_seconds": 1050.5244777389998
+    },
+    {
+      "canonical_schedule_hash": "a42b340beb3024d10793b8b53e20c54c8c4e27a357006ef9f637855bf338d241",
+      "family": "LEVELS",
+      "response_hash": "e6104a9811c0c3006324e57063fddbed24fb5f9baa56e2fd5ec2293a85a5853b",
+      "run_id": "20260816T221444-4438ab95c214",
+      "scenario_id": "levels-0060",
+      "wallclock_seconds": 1035.5573081620005
+    },
+    {
+      "canonical_schedule_hash": "8917f55660c534ec03d79d6fa7b4b8c2dd69d47aecc75bc70165e438fe42d3e2",
+      "family": "LEVELS",
+      "response_hash": "65d15f5de3611f47f9f99ffc1f43530d533bdbe0f4dd7585e5e21dad1c50c1de",
+      "run_id": "20260816T221502-96c2d022cceb",
+      "scenario_id": "levels-0061",
+      "wallclock_seconds": 1096.0372850160002
+    },
+    {
+      "canonical_schedule_hash": "c7842cf19d94b2131b67bf9f70b1d666da27b4d3b0f07b692bc4b8ca907d6114",
+      "family": "LEVELS",
+      "response_hash": "ce57869376f49022775083b07df90e1121660469d767c21224e9747630ad10dd",
+      "run_id": "20260816T221516-34eb42ad106f",
+      "scenario_id": "levels-0062",
+      "wallclock_seconds": 1031.1797356610004
+    },
+    {
+      "canonical_schedule_hash": "f839adb706f10c575e7d515ca0b3ffd0ad9b17b2541a3750dcf04745dc94c658",
+      "family": "LEVELS",
+      "response_hash": "bf6395b5078e9b73ece60c5c157b0911f554d4c73e2f23e13e1b68d3d3691179",
+      "run_id": "20260816T223055-7b457778d84a",
+      "scenario_id": "levels-0063",
+      "wallclock_seconds": 997.1547305739987
+    },
+    {
+      "canonical_schedule_hash": "329421b91a43c433ff73f1fdd8f3862088a83feeb160ff336c6ca32f86069eeb",
+      "family": "LEVELS",
+      "response_hash": "55d8a800f207c5c159fc5ebd983870cf6bda2f2e6d5fb2bc84b2508ce2fa1d39",
+      "run_id": "20260816T223105-e40e13ef7dd6",
+      "scenario_id": "levels-0064",
+      "wallclock_seconds": 1010.8541453380003
+    },
+    {
+      "canonical_schedule_hash": "283c56b2d47be61e12eb9af7bdce58565ba5187b41b1d10d15568d9af04309fb",
+      "family": "LEVELS",
+      "response_hash": "343b149843a9f7a41e3a7915b97a7a5277b16800b43b1702c5af175fb9cd0b2a",
+      "run_id": "20260816T223105-9f5e3ac22981",
+      "scenario_id": "levels-0065",
+      "wallclock_seconds": 1049.8212981849993
+    },
+    {
+      "canonical_schedule_hash": "d0e4314dbe266d358f67f3c412f6b14145d72f18ce72403ce699f8c939706ceb",
+      "family": "LEVELS",
+      "response_hash": "d80ab08c151489c4fac38f249da49ad2c9f0324c7a402d44cdd59cb4b2e82fa9",
+      "run_id": "20260816T223111-43e815e1a97e",
+      "scenario_id": "levels-0066",
+      "wallclock_seconds": 1060.4258732729995
+    },
+    {
+      "canonical_schedule_hash": "9816269b3694ebcd844410064d06d24d2982114b4f76685e0f767dcd7b10d143",
+      "family": "LEVELS",
+      "response_hash": "ab756817b80891a7a2b0c7a8b553238bab2d7c0f1df7eb0f695422fae44ee601",
+      "run_id": "20260816T223145-8bbafb308c89",
+      "scenario_id": "levels-0067",
+      "wallclock_seconds": 1005.9146400949994
+    },
+    {
+      "canonical_schedule_hash": "a23bc4624b80c4f855d657df65122cf39d2410719b89a0f2420220ab74f076d5",
+      "family": "LEVELS",
+      "response_hash": "0d6e8dca5e33c53a8591b3f80523e7780180038cb4a989148bdbf302a4d798bb",
+      "run_id": "20260816T223201-e2c8512a9483",
+      "scenario_id": "levels-0068",
+      "wallclock_seconds": 1021.4828598990007
+    },
+    {
+      "canonical_schedule_hash": "bb49ed34c8b62ede76349d7f19fa30a6ea4f1412fa671a0a3aa0cba4f6fdcf80",
+      "family": "LEVELS",
+      "response_hash": "a8477e06135caf1ab3835217d91407b36a7d6e4dd17cefb2687cf057932efc75",
+      "run_id": "20260816T223228-935d240402af",
+      "scenario_id": "levels-0069",
+      "wallclock_seconds": 1027.713716414999
+    },
+    {
+      "canonical_schedule_hash": "55357809b6470a684108d092be90c7e313249212207c7d18ad223e77d1a0bfe8",
+      "family": "LEVELS",
+      "response_hash": "8eeeac446c4f1c88596c092417d67525b1e538b472403176ad6db7f3f8fc6e5b",
+      "run_id": "20260816T223320-3d2d7c221d70",
+      "scenario_id": "levels-0070",
+      "wallclock_seconds": 1021.5924868740003
+    },
+    {
+      "canonical_schedule_hash": "971272cc1e6a9c8307df566bb7658b99aed4485beef0878b28839c94a0aa88de",
+      "family": "LEVELS",
+      "response_hash": "043a19fd555d71ca4ade1ad3885cb7b3d03445bf391f4058134b20d2654b18ca",
+      "run_id": "20260816T224734-32ddfc956c10",
+      "scenario_id": "levels-0071",
+      "wallclock_seconds": 1028.9217544410003
+    },
+    {
+      "canonical_schedule_hash": "ca0fa3e749ec495c7754d9149a4cb1f6f4fe9c6464d4f4e9a2833afdbac3c4eb",
+      "family": "LEVELS",
+      "response_hash": "be19317c16deae08e55d2b48585e62840db372babb4e47deafb738ae5a84ab58",
+      "run_id": "20260816T224758-a782ffa2dac9",
+      "scenario_id": "levels-0072",
+      "wallclock_seconds": 1036.753502427
+    },
+    {
+      "canonical_schedule_hash": "8ee73e3c11674152644cb1ab830109be18dff19665cd4cdf9ea3b2ed202b7bb4",
+      "family": "LEVELS",
+      "response_hash": "167a7d386620df827dfa562d01a0d3ef465213b1bf721d87f04c19c43dc93b3a",
+      "run_id": "20260816T224832-4ac34d1f4b84",
+      "scenario_id": "levels-0073",
+      "wallclock_seconds": 1010.5579075019996
+    },
+    {
+      "canonical_schedule_hash": "51c95ce22e9c1b03270d581644d67f18b68596c3cbb334320349b9ad5e7a4860",
+      "family": "LEVELS",
+      "response_hash": "70e1259a1e3acc7ff49c3626c82fd6ce1dc27e9e434a7bae141188003e2333f5",
+      "run_id": "20260816T224837-4ba417d4d3bd",
+      "scenario_id": "levels-0074",
+      "wallclock_seconds": 1035.8668432189988
+    },
+    {
+      "canonical_schedule_hash": "ebd1a773a4e231bae4b1881a577249e794f63f0b43b0b7dafa6d5fa3ed30a524",
+      "family": "LEVELS",
+      "response_hash": "e742a88fcbe1e23c9501db2b1a7fb8e297fb4d655edb6c983a2e1dff0317196c",
+      "run_id": "20260816T224853-92e63c6e81fb",
+      "scenario_id": "levels-0075",
+      "wallclock_seconds": 1027.8933917329996
+    },
+    {
+      "canonical_schedule_hash": "08337de6bbbe70d1974ca4a1309111b3364ca07e3814f042ae20272d369b4a91",
+      "family": "LEVELS",
+      "response_hash": "12d9f335294b4a6c806e166d1279cd4c102aff87ee5caf828cd97fd8f73e44cb",
+      "run_id": "20260816T224904-996bbc83d3a5",
+      "scenario_id": "levels-0076",
+      "wallclock_seconds": 1008.2290611990011
+    },
+    {
+      "canonical_schedule_hash": "cf76f09abd07ff9cfd9e6c9e85db9b97cf3d1cc77a57c0f24662671c6c688dcf",
+      "family": "LEVELS",
+      "response_hash": "5c8fca6c2531d3ad49d3fc63b03eb8eaf053f68469ddce68b169342b64cfb187",
+      "run_id": "20260816T224938-25e05e5614be",
+      "scenario_id": "levels-0077",
+      "wallclock_seconds": 1002.4046331999998
+    },
+    {
+      "canonical_schedule_hash": "168c0bc04a5b6642a2ef092b972e82c8073b9269086adf20d31df1f7a543f467",
+      "family": "LEVELS",
+      "response_hash": "80fca2632a57c103f48091d654556939dcd5dc178319b8427a9cc2e6cf3c63ba",
+      "run_id": "20260816T225023-e9b446759bca",
+      "scenario_id": "levels-0078",
+      "wallclock_seconds": 1053.3752143429992
+    },
+    {
+      "canonical_schedule_hash": "4403e9074a2ab0f6341c30dd27d18f6d506d3c18843d02763ecea78487519f13",
+      "family": "LEVELS",
+      "response_hash": "8a096ccfff61fcd0be552bb71dbf3e2f42ef61132e53f7f77f49bf283e6eefae",
+      "run_id": "20260816T230445-960c8c4f978a",
+      "scenario_id": "levels-0079",
+      "wallclock_seconds": 1051.7109105319996
+    },
+    {
+      "canonical_schedule_hash": "04d766ae0037d153771726524d403f24b2a2db44bef167c364ac648b98d6cdbb",
+      "family": "LEVELS",
+      "response_hash": "8cafd9c9ea9f69154cec002f27fa5e3aab16d920833ba83df16df9471d28768b",
+      "run_id": "20260816T230516-7f9afb0a3117",
+      "scenario_id": "levels-0080",
+      "wallclock_seconds": 1030.2846639029995
+    },
+    {
+      "canonical_schedule_hash": "0f461c6025afc180f37581ac10cd3f4ed2fcac9a70624d98e8a75eb398cab9a1",
+      "family": "LEVELS",
+      "response_hash": "38db0724964917910033888a36b1d6a417dcc5ca28b4a4924b52bf67bab074f2",
+      "run_id": "20260816T230525-ae8d69c2999f",
+      "scenario_id": "levels-0081",
+      "wallclock_seconds": 1067.2676311430005
+    },
+    {
+      "canonical_schedule_hash": "2dc48f332e19403147c4d17b67e8888346460ee649b627277ddb3a52238d8983",
+      "family": "LEVELS",
+      "response_hash": "f921e3a512c3e98a51c59f9285e14fcd76edc3d12267bcc385d6f984014a2d7a",
+      "run_id": "20260816T230555-60ad64acf5df",
+      "scenario_id": "levels-0082",
+      "wallclock_seconds": 1053.1268698860003
+    },
+    {
+      "canonical_schedule_hash": "190d687eafc58cbc7f3a3187afb5dff335a2faea02d6f3b4b6fe7dda58ff7fdb",
+      "family": "LEVELS",
+      "response_hash": "040590a5026fd93d151b67fa0097352f162e8dd00f108a36496b3fa46394bb71",
+      "run_id": "20260816T230555-778c9025c42e",
+      "scenario_id": "levels-0083",
+      "wallclock_seconds": 1015.6475684809993
+    },
+    {
+      "canonical_schedule_hash": "6cf5a7ca62f4093df957c62d93a1b33dcd0568f945a6119578fd32c54e95bf6b",
+      "family": "LEVELS",
+      "response_hash": "63a4bbf0c41a17529210ce92c29c2654bcf91f04b8e8d057fa9fff65dd445fbe",
+      "run_id": "20260816T230602-5786314fe31b",
+      "scenario_id": "levels-0084",
+      "wallclock_seconds": 1034.2689457150009
+    },
+    {
+      "canonical_schedule_hash": "daf8817ab6b2f17709a89e5efdd1826c2f61194ceb7c6fc7bcb72568071a6e23",
+      "family": "LEVELS",
+      "response_hash": "e5c6af867d7c4f430823dc96d5bf1fa51030f38bd688aa26fc4f414bb220d588",
+      "run_id": "20260816T230622-c03b7538dfd7",
+      "scenario_id": "levels-0085",
+      "wallclock_seconds": 1030.9771421280002
+    },
+    {
+      "canonical_schedule_hash": "9013e5d5a32590d33121d4eb4ab25de5da6792160cd84e2d5f620f4a1bd26329",
+      "family": "LEVELS",
+      "response_hash": "4389ed04c9d9b8cf679f2b7afa50c062dfaee48c2eea733e12c662441377d9e4",
+      "run_id": "20260816T230758-0ca6848a642a",
+      "scenario_id": "levels-0086",
+      "wallclock_seconds": 1052.1953056409984
+    },
+    {
+      "canonical_schedule_hash": "89c2ab7539511dbc0e2fa4ea0454164de328f19c96c3d7fdd175ced8022c27a7",
+      "family": "LEVELS",
+      "response_hash": "7a5a9835d772c2be55d785a9c22da3dc24f19084fbe2a096d5fd3918c60da34c",
+      "run_id": "20260816T232218-d5fc34da4bbd",
+      "scenario_id": "levels-0087",
+      "wallclock_seconds": 1008.4633397900016
+    },
+    {
+      "canonical_schedule_hash": "b60c90893b689c312240c87fc47e2510d8c2f6f0aa3163cd7b600fbec5cd3369",
+      "family": "LEVELS",
+      "response_hash": "0a185d3e2413b1e3b14b422d49af272dbf50836c7faef5ebc4475015dbb41aee",
+      "run_id": "20260816T232228-e7e8b75cb4f9",
+      "scenario_id": "levels-0088",
+      "wallclock_seconds": 1006.0825297209994
+    },
+    {
+      "canonical_schedule_hash": "61975b436aaae5b8310240738e0bb2b0456c2d6da5b4974970d249bcc97d7a60",
+      "family": "LEVELS",
+      "response_hash": "a9bd567961c6f9ce8162d4f071eec2c0e37f9dfa1edf92764279ac6afaf10f95",
+      "run_id": "20260816T232255-e327b40e5a16",
+      "scenario_id": "levels-0089",
+      "wallclock_seconds": 983.3812317890006
+    },
+    {
+      "canonical_schedule_hash": "d5dcd51add6f46b58f4da604f5fe0ffdb94e7765a48e2a291726416a89d654dd",
+      "family": "LEVELS",
+      "response_hash": "630989cb5314fc956a32fefc0f67d24242a3899d5d2cf721a3517019e433f8f2",
+      "run_id": "20260816T232313-6b927d65fd5b",
+      "scenario_id": "levels-0090",
+      "wallclock_seconds": 1002.2546419329992
+    },
+    {
+      "canonical_schedule_hash": "d0abff1f6aa3a7474bcf091cdce50b7a8585320888ee2dcff17b8145f0e59e10",
+      "family": "LEVELS",
+      "response_hash": "950de7a7ab2133c8e8b2c14666e1970b6c8aa0e479a6d686828d76832907f45a",
+      "run_id": "20260816T232318-82dc79c3c47d",
+      "scenario_id": "levels-0091",
+      "wallclock_seconds": 984.7648318070005
+    },
+    {
+      "canonical_schedule_hash": "a9bc50ece29f0c8db1f3bf77703bbe229223898e00c7d75b9faf5ad13bf5db86",
+      "family": "LEVELS",
+      "response_hash": "ec391a265a1fc3667dbb11bb730df3e2d80a2d80f169bba9cb96d777bd9b8c37",
+      "run_id": "20260816T232330-34ecd1cddac9",
+      "scenario_id": "levels-0092",
+      "wallclock_seconds": 1032.4864055929993
+    },
+    {
+      "canonical_schedule_hash": "f68f42c7db50af4cdbb78a19c53c10709fb3589d373c939f1b1dda8d0c53d2fd",
+      "family": "LEVELS",
+      "response_hash": "355beeefb36128c6615fe80f9d70f6fd36cbffd4364821f1a615a4dbe3d088a8",
+      "run_id": "20260816T232334-584f056961c6",
+      "scenario_id": "levels-0093",
+      "wallclock_seconds": 1000.2626625110006
+    },
+    {
+      "canonical_schedule_hash": "d61bf8b066e23bc6440dfa41001b940c94b065859bbaa936856fbcb266b3b37e",
+      "family": "LEVELS",
+      "response_hash": "731b758a5a32d186d55f6f3a6803732773864ae58d502b7ab20946756332f243",
+      "run_id": "20260816T232532-832b99b47633",
+      "scenario_id": "levels-0094",
+      "wallclock_seconds": 996.7741274939999
+    },
+    {
+      "canonical_schedule_hash": "fb810c87c0194c3eebb78ce2af95be57771df1be882dc7d79ea2d4ddbce5e939",
+      "family": "LEVELS",
+      "response_hash": "fd97c9ea9d5b150c403729a825174e743858efa4d8290195ac26f465758cbc4b",
+      "run_id": "20260816T233908-a93f837dc4fd",
+      "scenario_id": "levels-0095",
+      "wallclock_seconds": 1052.5244964520007
+    },
+    {
+      "canonical_schedule_hash": "f64e618522d849af81512a88979b459f205e6492c13ff74018c11c02cf201549",
+      "family": "LEVELS",
+      "response_hash": "6a08316e62507d8e57482192bddcdb05fde6f38301455746ee72d80416376db4",
+      "run_id": "20260816T233916-27d5bccb1c51",
+      "scenario_id": "levels-0096",
+      "wallclock_seconds": 1001.5217077360012
+    },
+    {
+      "canonical_schedule_hash": "70512f8bd5c28c35eb147892bb5b0974b825d8363c51584007503cc77709ce1e",
+      "family": "LEVELS",
+      "response_hash": "2795ac20c89eec0cf6c4b31be1fec1cb050d216413e1b1bdb6823dfb7b50ffa6",
+      "run_id": "20260816T233920-e4675e8acc77",
+      "scenario_id": "levels-0097",
+      "wallclock_seconds": 1050.051083037999
+    },
+    {
+      "canonical_schedule_hash": "6f6dcfd302ae4c4ce0c7aaf166765237c1064a6c08cded77983825456de569ae",
+      "family": "LEVELS",
+      "response_hash": "810b5204436aef64c2a04b90ce48c03fbe74343428363745c4bc69c7c355e59e",
+      "run_id": "20260816T233945-eb289250c969",
+      "scenario_id": "levels-0098",
+      "wallclock_seconds": 992.6839465619996
+    },
+    {
+      "canonical_schedule_hash": "148d001a4fa1d8bea54a28a0c05f6bcf511aac7575fa1fb385d75dbe1821e5d3",
+      "family": "LEVELS",
+      "response_hash": "c30709c3110af99f829783bbfc1289cdc88bd275b7811d71018c1a34571606c7",
+      "run_id": "20260816T233957-9078ed4854d4",
+      "scenario_id": "levels-0099",
+      "wallclock_seconds": 995.7742816089994
+    },
+    {
+      "canonical_schedule_hash": "5d6c4c1207449ef3962a5cf1d348f17bee319034cc3d0e2f5aa3f84b8e5c5b1e",
+      "family": "LEVELS",
+      "response_hash": "2949b7f0b1cbd3dc79929c78dc0995a10738f4ebd74b8f2f39df0d33f1409570",
+      "run_id": "20260816T234017-8adbac462c9b",
+      "scenario_id": "levels-0100",
+      "wallclock_seconds": 1024.3247443620003
+    },
+    {
+      "canonical_schedule_hash": "afde5c6831e2314a59dd87f98ff6bac99ab3d59fe2344ec3528d05a5ea28e9ea",
+      "family": "LEVELS",
+      "response_hash": "97f2d85219ce6a4ace191e017aa8b665f733f1572619ac8694356adb543690d6",
+      "run_id": "20260816T234044-423bd13bf845",
+      "scenario_id": "levels-0101",
+      "wallclock_seconds": 1010.6240990860006
+    },
+    {
+      "canonical_schedule_hash": "5b4933ae1cbab584115f5a8e3754056940bbed7e27d221b0a699427884766a65",
+      "family": "LEVELS",
+      "response_hash": "ae28d29a02474feb253485160cc354b607b641e2d7234e75993a4f726066016d",
+      "run_id": "20260816T234211-f1284c274a7d",
+      "scenario_id": "levels-0102",
+      "wallclock_seconds": 1007.6779654269994
+    },
+    {
+      "canonical_schedule_hash": "ac6ac3070f48bcfcfabcac08bad958a752f91c94717d5ed60cbbd29ed5e0920f",
+      "family": "LEVELS",
+      "response_hash": "477c6777e5cd73a7e1a731b7136b6133c0a68fd3578e4e79a5fd4104b3aa124b",
+      "run_id": "20260816T235559-b7278a097f0e",
+      "scenario_id": "levels-0103",
+      "wallclock_seconds": 1011.0397240840011
+    },
+    {
+      "canonical_schedule_hash": "3e16a31267b46a179040ed284349acc50fe812b2a59ca78fdf8204b6d0cbebe7",
+      "family": "LEVELS",
+      "response_hash": "a92bf8012313df558e643a073ec252d65b02f45209ac25ae92e333d91146e87e",
+      "run_id": "20260816T235619-d3d18b249416",
+      "scenario_id": "levels-0104",
+      "wallclock_seconds": 986.9943073729992
+    },
+    {
+      "canonical_schedule_hash": "98f66d73aff20fe9ed46932dc71f7a5fb18022a11b3b3459017e44d48acbde27",
+      "family": "LEVELS",
+      "response_hash": "d901dbb352eb22df008318be7c9a6e35b863a327202a65a07b608befb0103cc6",
+      "run_id": "20260816T235635-76811799da17",
+      "scenario_id": "levels-0105",
+      "wallclock_seconds": 1005.1531805680024
+    },
+    {
+      "canonical_schedule_hash": "42542228f7c0a680457bdad6b8b045e2fff3997bf9fac048a7c0a75e8c3a3acc",
+      "family": "LEVELS",
+      "response_hash": "98d155a81be791560b2559791e0910192e232b58988b2ea2bf992ec58e763b4d",
+      "run_id": "20260816T235643-dba6334cf756",
+      "scenario_id": "levels-0106",
+      "wallclock_seconds": 1015.050375416
+    },
+    {
+      "canonical_schedule_hash": "6bbf12fa18d4c6fbee17f9f681e1c1de88bf2d13ace7d7f9a77f1f4c67380fdb",
+      "family": "LEVELS",
+      "response_hash": "4eeeb8f604e31a382b8609ed7e9afe3ce77dd183e09a037a67d8d0e87dba90ac",
+      "run_id": "20260816T235651-afc68d92ae44",
+      "scenario_id": "levels-0107",
+      "wallclock_seconds": 991.7027897650005
+    },
+    {
+      "canonical_schedule_hash": "20e53535d789f60f6be3da6477ef95aa7448fc09c1732d3e73a393747853b41e",
+      "family": "LEVELS",
+      "response_hash": "55d6c30edc8bcf64fa71b16bb17c69b36c8a60ab08b022b583df0ad6c75524f8",
+      "run_id": "20260816T235723-88fdc98a5a06",
+      "scenario_id": "levels-0108",
+      "wallclock_seconds": 1013.7073643319982
+    },
+    {
+      "canonical_schedule_hash": "04f0f735eff3fc7dd0a841bfff4885dde165cf3b7005cd332d1bd679f86c8088",
+      "family": "LEVELS",
+      "response_hash": "10de1d86a3920ff97ba6ea0a7da53a9386e041b31bbb143339a5cd358b2e14d7",
+      "run_id": "20260816T235736-6ffc9cb62deb",
+      "scenario_id": "levels-0109",
+      "wallclock_seconds": 989.2026799380001
+    },
+    {
+      "canonical_schedule_hash": "0d5847534fed8854f948bf53a75be1ded0577fd6c7b1aa75e6bf6d89d77e12cc",
+      "family": "SHUTDOWN",
+      "response_hash": "48de15ab34ee5744586241650f7ed1114b9ede657f2e6fb8d6292d1c192adfa3",
+      "run_id": "20260817T012319-00d5c4034ee8",
+      "scenario_id": "shutdown-0000",
+      "wallclock_seconds": 1001.4566652970025
+    },
+    {
+      "canonical_schedule_hash": "46ccfdff90994a010007b909d511efb2a41a3ba0fe40c395f772b297cb7b5980",
+      "family": "SHUTDOWN",
+      "response_hash": "143597fabf3f0fa9297066b36014afa939584a56790e047de2aacdbae654d3d0",
+      "run_id": "20260817T013356-696b0b229e06",
+      "scenario_id": "shutdown-0001",
+      "wallclock_seconds": 999.321250453002
+    },
+    {
+      "canonical_schedule_hash": "964bacb0fb7d4fed15c0743ed00a76a31d16436e0a5d2376025bc03295ba4f29",
+      "family": "SHUTDOWN",
+      "response_hash": "631edd63a4f8b21a3020c133bb5b33f07afd31e1ebd73ed4d984767d4c816b2b",
+      "run_id": "20260817T013435-3778fd08bc42",
+      "scenario_id": "shutdown-0002",
+      "wallclock_seconds": 993.5120231929977
+    },
+    {
+      "canonical_schedule_hash": "007a394f9367acacd6e75556082d480fdf0a7ae09b5e1f09366e4bad953e859e",
+      "family": "SHUTDOWN",
+      "response_hash": "34a1be8e1424c4fdc342e52967775cb8a35dee83890686125436e83744d5321a",
+      "run_id": "20260817T013529-d14eb43312a0",
+      "scenario_id": "shutdown-0003",
+      "wallclock_seconds": 978.6279708779985
+    },
+    {
+      "canonical_schedule_hash": "b2533e1bfbd62a90c433faafdda7fa97412de151350be0a2bf3bf4291794b0cf",
+      "family": "SHUTDOWN",
+      "response_hash": "bc02043d47639b1a2af6b52aa9cc753c957d77d7a40adb2a4ece3a72c42af16c",
+      "run_id": "20260817T013617-a319fd563180",
+      "scenario_id": "shutdown-0004",
+      "wallclock_seconds": 985.6788954740005
+    },
+    {
+      "canonical_schedule_hash": "6389283a26462deef7d0e7189c4a6c876629d4c5a69bfda63b750393cadd7b9f",
+      "family": "SHUTDOWN",
+      "response_hash": "b016872b9cca1e05093d925725b7199783bef690557f0c76cec7e50ed35b27a9",
+      "run_id": "20260817T013628-5d834f854b96",
+      "scenario_id": "shutdown-0005",
+      "wallclock_seconds": 1002.8706727360004
+    },
+    {
+      "canonical_schedule_hash": "778c4853a023406855c9d72a51ba1f6ca78585343016b796e2c3211a1ec3905b",
+      "family": "SHUTDOWN",
+      "response_hash": "b4503852cd79256dafc6c51dacb6a9908b2dcd01099e62b4c4a35d37be069c92",
+      "run_id": "20260817T013651-7ac7d6b76455",
+      "scenario_id": "shutdown-0006",
+      "wallclock_seconds": 974.6405524209986
+    },
+    {
+      "canonical_schedule_hash": "3c31c7ac3f14f7be93a358582e2f9704a8e7ebbcbab95c7cf45168f6f212ae4f",
+      "family": "SHUTDOWN",
+      "response_hash": "ad55f121252f23076f55ab2a55cb334f09011ac864342d139d66f2865cc2f29c",
+      "run_id": "20260817T013703-c07c805ce7ba",
+      "scenario_id": "shutdown-0007",
+      "wallclock_seconds": 985.899190944001
+    },
+    {
+      "canonical_schedule_hash": "1f572654624fe76e7ef68e0c83fe5af46c19edb1e456df300cb145d3de11befc",
+      "family": "SHUTDOWN",
+      "response_hash": "f884b659779fdfbd02027d7024d24e994b497afd5a961a8638cd3ccff4a5d1b5",
+      "run_id": "20260817T014002-279632430327",
+      "scenario_id": "shutdown-0008",
+      "wallclock_seconds": 1007.1429480829975
+    },
+    {
+      "canonical_schedule_hash": "dfab036cc7ec7f7f23285a21fde035c1437a00a19b1cd9b1c649bb7264708965",
+      "family": "SHUTDOWN",
+      "response_hash": "1346998420f6e3b9c17aab8f9b6de7b246745894f0547cdb34e9664b2cd26672",
+      "run_id": "20260817T015037-fe65eb982b06",
+      "scenario_id": "shutdown-0009",
+      "wallclock_seconds": 1020.8421799839998
+    },
+    {
+      "canonical_schedule_hash": "1ac9ba31cac1bd1e512f92bd6651ef48a13744d9469f21ad3e461ac4880d9b03",
+      "family": "SHUTDOWN",
+      "response_hash": "b253fbbb124ba8f6d2e1aa8d301ceb82e94e44f4d99f608d6e86b71d662a07ea",
+      "run_id": "20260817T015110-d54c7c70ed22",
+      "scenario_id": "shutdown-0010",
+      "wallclock_seconds": 972.6208063749982
+    },
+    {
+      "canonical_schedule_hash": "d85118444e79d8e163f3f2aa56adebe80a7cdfb822240ff88cdaa9d275b253cc",
+      "family": "SHUTDOWN",
+      "response_hash": "382b561b1fa7e8b54e0a563a0171e31da86d179179027752ac07beb0df6efca0",
+      "run_id": "20260817T015150-0a6ba89a4254",
+      "scenario_id": "shutdown-0011",
+      "wallclock_seconds": 986.9935877780008
+    },
+    {
+      "canonical_schedule_hash": "43275cc00165ef5338bef0d6543e1d933d655b17ab876bc703c2c4f78bdd4796",
+      "family": "SHUTDOWN",
+      "response_hash": "7f8c781de99f75bd6d394646215c2a5700ddaa59708865f7baae3f8e1c427bd6",
+      "run_id": "20260817T015244-672cfb0d12aa",
+      "scenario_id": "shutdown-0012",
+      "wallclock_seconds": 982.7853696739985
+    },
+    {
+      "canonical_schedule_hash": "9efe21fb43856da0d6638252a9d3495833a059e57c33184f10af309f3a73ff7e",
+      "family": "SHUTDOWN",
+      "response_hash": "a69add85107627de3bda6e5819b215c2098ccf00bf0d3419751843c792ae9cc9",
+      "run_id": "20260817T015308-b16bcf01c63f",
+      "scenario_id": "shutdown-0013",
+      "wallclock_seconds": 1006.4535731579999
+    },
+    {
+      "canonical_schedule_hash": "9b275e68053d0c72369dcefcf8b90eee85743a1504fa8dbe77dc29fb2a09850b",
+      "family": "SHUTDOWN",
+      "response_hash": "273f5e349e3cd0840c5d4526105f6f2733debf4f1f60e6af7b6037bcfed51f2f",
+      "run_id": "20260817T015313-cdee7111ca57",
+      "scenario_id": "shutdown-0014",
+      "wallclock_seconds": 979.9854568049996
+    },
+    {
+      "canonical_schedule_hash": "58d3f45c7b3e3907dbb0ece4afd32fc17ea211ae039209ef028174adacbee3b7",
+      "family": "SHUTDOWN",
+      "response_hash": "de601798aa23f444f4906eacc36e3014550381ea10f5f78a8beb253277cb1236",
+      "run_id": "20260817T015330-b73074ecf968",
+      "scenario_id": "shutdown-0015",
+      "wallclock_seconds": 999.4137346349999
+    },
+    {
+      "canonical_schedule_hash": "d71d16b5c3b55728dad8f52758fe4bb155181d7c6152f98f8d123e33e1cf031a",
+      "family": "SHUTDOWN",
+      "response_hash": "4422fd76194e7c96d894f924145c7fd02f9f4d429c216c1d9715f69081215a04",
+      "run_id": "20260817T015651-a02b14a60925",
+      "scenario_id": "shutdown-0016",
+      "wallclock_seconds": 986.5099598390007
+    },
+    {
+      "canonical_schedule_hash": "35c8faa2cdb46d5d184476030ceba7e43e29b84f25b7d63159dc977c38c0dbfc",
+      "family": "SHUTDOWN",
+      "response_hash": "3cba058e64a1eafb7c54a31cee517af2f748213fdc94523c45f0b8792461ad22",
+      "run_id": "20260817T020724-79e50831c87b",
+      "scenario_id": "shutdown-0017",
+      "wallclock_seconds": 988.711680987999
+    },
+    {
+      "canonical_schedule_hash": "21c4b26dc5ad00f6ebbbf3ffe4753658f3c84329e084a4fbe289a9c91cfb17a2",
+      "family": "SHUTDOWN",
+      "response_hash": "03909396eb1b895cbef9ffb84dda3fa46482a38db3965eebd60560d447f044f5",
+      "run_id": "20260817T020742-1313e79343a0",
+      "scenario_id": "shutdown-0018",
+      "wallclock_seconds": 996.2558971780018
+    },
+    {
+      "canonical_schedule_hash": "59d99e914713989c5178843cf8c3d6c8ad4e7e74a6e96b2848ac64f69976a217",
+      "family": "SHUTDOWN",
+      "response_hash": "672a0680c6153c801e8b30ce2724f18d4b2ba1e7a7d49994674e5d046f532365",
+      "run_id": "20260817T020818-6e8be5ee993a",
+      "scenario_id": "shutdown-0019",
+      "wallclock_seconds": 992.4283592229986
+    },
+    {
+      "canonical_schedule_hash": "ec0036136e9fe4a73d4ca35dfc80994ef93c5b177543a08822f4875f828f4fcf",
+      "family": "SHUTDOWN",
+      "response_hash": "6fca947629aaa5cbce2a887b3ec3e533e3660bed3cc3e97d59107d5afbfe4c34",
+      "run_id": "20260817T020908-e748a1fb1aca",
+      "scenario_id": "shutdown-0020",
+      "wallclock_seconds": 1003.9011651510009
+    },
+    {
+      "canonical_schedule_hash": "ca3f787c2cdd67e1e05af544176614130a085c34c90a682095d1cdbe8eea9827",
+      "family": "SHUTDOWN",
+      "response_hash": "eef87751d00e4d54a29d3b8eb696cea678eabc73e5daa286fb96d02c59f9338c",
+      "run_id": "20260817T020934-515c4e22961c",
+      "scenario_id": "shutdown-0021",
+      "wallclock_seconds": 984.3642484260017
+    },
+    {
+      "canonical_schedule_hash": "91f2bc0835edce771ccf04572a3451ca070498b58495b79d3f8d8918a3b9745d",
+      "family": "SHUTDOWN",
+      "response_hash": "5ada0c0547da9ca82f87df7074990d83158e928730e7420ebf8e3cea30f8c282",
+      "run_id": "20260817T020956-dce912be22ff",
+      "scenario_id": "shutdown-0022",
+      "wallclock_seconds": 1007.6038192039996
+    },
+    {
+      "canonical_schedule_hash": "eb909753ad7a5861b517892577626ba520b3137758fcfce61e97dec51b071f73",
+      "family": "SHUTDOWN",
+      "response_hash": "e403cb707e42be896ed518df6f5da649d640460b0778df624384fd18230e453b",
+      "run_id": "20260817T021011-a2ce4020fe6b",
+      "scenario_id": "shutdown-0023",
+      "wallclock_seconds": 991.1658501589991
+    },
+    {
+      "canonical_schedule_hash": "42d5445f6f6e2531955422c574dcf94f4accb8135679741c4325b6f243e74614",
+      "family": "SHUTDOWN",
+      "response_hash": "a650d6d368371ad1c0d335d3658b836226774b9b2612b174e44ee8919727062e",
+      "run_id": "20260817T021319-7f73a34bb817",
+      "scenario_id": "shutdown-0024",
+      "wallclock_seconds": 1011.4906151540017
+    },
+    {
+      "canonical_schedule_hash": "07f3a1250038438deb6b2f9f9fc9dfc30f6c6ed36badc61b3c30f04f02712a81",
+      "family": "SHUTDOWN",
+      "response_hash": "aa304be84fc12978cff94a9becfa251d5109869d775da07135946d4048036301",
+      "run_id": "20260817T022354-a41ca3df2f1e",
+      "scenario_id": "shutdown-0025",
+      "wallclock_seconds": 1003.9557318219995
+    },
+    {
+      "canonical_schedule_hash": "8b4594ce5940781d5c1f874ef09e57accbd0c84517ca6dbd533eceee0834de8d",
+      "family": "SHUTDOWN",
+      "response_hash": "d411aa68dd62cc1cb8be553878ac4e84743113914682f00d6965049aedd97f29",
+      "run_id": "20260817T022420-fa0e5b9ffb3c",
+      "scenario_id": "shutdown-0026",
+      "wallclock_seconds": 983.0414815359982
+    },
+    {
+      "canonical_schedule_hash": "8bc182fceeb2f62fc8b2501f0b185880a8faf5a4711b270ebdcfc9c67b8ecdfd",
+      "family": "SHUTDOWN",
+      "response_hash": "d8339fa3e26112b2e46c44117606262532a201a81922fa0314580ba2d74075d4",
+      "run_id": "20260817T022452-39109fa555c8",
+      "scenario_id": "shutdown-0027",
+      "wallclock_seconds": 985.0758471150002
+    },
+    {
+      "canonical_schedule_hash": "b569d151e7dbcd2c2dd7ac59082d96dcb8c0ff4db41220b014dae56caff70d9b",
+      "family": "SHUTDOWN",
+      "response_hash": "32d5e951268d76b4fd7463955851badd22fded646d597899af9e240d4411d4b9",
+      "run_id": "20260817T022554-22dfd90003f2",
+      "scenario_id": "shutdown-0028",
+      "wallclock_seconds": 996.0597167589985
+    },
+    {
+      "canonical_schedule_hash": "963edbf96f159df23082bbd430e68030151456dcf5106b6c6ef1d03456718c05",
+      "family": "SHUTDOWN",
+      "response_hash": "b3617ff5e64375fd797827ae84b0448d73ee54aedb8339bc8b646a88f12dd387",
+      "run_id": "20260817T022600-455ec12940d0",
+      "scenario_id": "shutdown-0029",
+      "wallclock_seconds": 1007.8032857029975
+    },
+    {
+      "canonical_schedule_hash": "e695dddfd1642e8df7c9ce1b2148d10810b893ce847ba3813fd33048e3ff3b33",
+      "family": "SHUTDOWN",
+      "response_hash": "c96678d7896640f1d45a7050ceb8de7f2ede9532c3c8637009de6e30a6bbfcab",
+      "run_id": "20260817T022645-029b2c778236",
+      "scenario_id": "shutdown-0030",
+      "wallclock_seconds": 998.5745013720007
+    },
+    {
+      "canonical_schedule_hash": "9ec2c40c987b81632cc90790509af9ab592a1a3ae2589a65a81988cfb6597be0",
+      "family": "SHUTDOWN",
+      "response_hash": "05739b08dfd768ee765a57cee24f22d8d539b6c33c25ca9e671823d3ec105612",
+      "run_id": "20260817T022646-79a5a18469f5",
+      "scenario_id": "shutdown-0031",
+      "wallclock_seconds": 987.7047531349999
+    },
+    {
+      "canonical_schedule_hash": "53e9d3a69654b922547a7c4a0efc03e9e2dbc3cc04c357a4179f5192ab197f8b",
+      "family": "SHUTDOWN",
+      "response_hash": "01729c52ee87f6b093099ffbf346ccddb63b587149956e1ddbe3e09537551d23",
+      "run_id": "20260817T023012-e94335ed13ba",
+      "scenario_id": "shutdown-0032",
+      "wallclock_seconds": 1016.3252473480024
+    },
+    {
+      "canonical_schedule_hash": "27062fe3970566c122f5e7965beceedb3ce2abbc7aaac611a847ac1fc1467a54",
+      "family": "SHUTDOWN",
+      "response_hash": "251e7328adc476fed61c403e398bbab2eddb78bfdfd5b0bffdd102455b8f4804",
+      "run_id": "20260817T024040-e2610a1c7103",
+      "scenario_id": "shutdown-0033",
+      "wallclock_seconds": 1016.8338296639995
+    },
+    {
+      "canonical_schedule_hash": "92518bd5dbd585a176389dae63a3a8f3de6288f649393052468dc078a01add17",
+      "family": "SHUTDOWN",
+      "response_hash": "d7abe9e3fe4488040e37e05f5f0f37cb942e2d7283cfe2fd711236d9862cf6a0",
+      "run_id": "20260817T024045-166faaf68334",
+      "scenario_id": "shutdown-0034",
+      "wallclock_seconds": 994.0043418829991
+    },
+    {
+      "canonical_schedule_hash": "624a2e7a9e68fc767b9e1fd402cd87b647de8811508e758305edcc284a2fe299",
+      "family": "UNREACHABLE",
+      "response_hash": "991a03563b4e814d5d09ab2017c8b5e921608c6b896f8e84b9da81bcdb5d750e",
+      "run_id": "20260816T235900-642770664788",
+      "scenario_id": "unreachable-0000",
+      "wallclock_seconds": 1016.5696284349979
+    },
+    {
+      "canonical_schedule_hash": "c94c13318fcd37fcf591a64f3f2cd8ad1477ee5795af3f3c8384cadb92bf03aa",
+      "family": "UNREACHABLE",
+      "response_hash": "0f4f92f973116c4439bcbb8426409c896d5eaaf920ed975395079be408922b5f",
+      "run_id": "20260817T001248-c1850537afe7",
+      "scenario_id": "unreachable-0001",
+      "wallclock_seconds": 952.6003079039983
+    },
+    {
+      "canonical_schedule_hash": "74efa4f61ad801b0452c7eb9aa0be3759a6bd81cc4d261454777d0f8b6f7bb61",
+      "family": "UNREACHABLE",
+      "response_hash": "a51a52b6dc57d932ea395c0c98a7caa98c567d962cef5d10df0a1c52c13fa862",
+      "run_id": "20260817T001254-3bfd3d12367a",
+      "scenario_id": "unreachable-0002",
+      "wallclock_seconds": 977.6582390000003
+    },
+    {
+      "canonical_schedule_hash": "2e254b07d73c2c63817ef337f05e65205888793ce8d1f2bf654540234c323961",
+      "family": "UNREACHABLE",
+      "response_hash": "15c07535ad9f799fa8eafaf55e9d6843a5cfb2e91b538491fe1456be0c67d526",
+      "run_id": "20260817T001321-289c0e4c9328",
+      "scenario_id": "unreachable-0003",
+      "wallclock_seconds": 991.7987465080005
+    },
+    {
+      "canonical_schedule_hash": "8bf6a34c202aed2270156b4973ad30078a8a231f6e328c5b706a792927e52223",
+      "family": "UNREACHABLE",
+      "response_hash": "d02d72b61d22991034031ccd607b6f5b6281849616c48940ce4f21fe76b4c09d",
+      "run_id": "20260817T001325-e2423e1aef87",
+      "scenario_id": "unreachable-0004",
+      "wallclock_seconds": 1004.9270855110008
+    },
+    {
+      "canonical_schedule_hash": "98ccf492d9b4df68b396c169046e5c3b62e7f4b4aa538e0873f75e2192ebae00",
+      "family": "UNREACHABLE",
+      "response_hash": "468e3e05e25b04d0b649edb8557cc558dd93b1b6120875f295e90cd13d7c44ec",
+      "run_id": "20260817T001339-53fdb2d1abbc",
+      "scenario_id": "unreachable-0005",
+      "wallclock_seconds": 1028.2021341399995
+    },
+    {
+      "canonical_schedule_hash": "9356eb374c527c3496ea934b9e444e7e53763baad4d38292fc672a680c0e2801",
+      "family": "UNREACHABLE",
+      "response_hash": "6a9faf0d732b7b3489aac8cb0ac81bd4fb50cc48579ac0b77392b46d1024cc5d",
+      "run_id": "20260817T001407-c2f0166d2d16",
+      "scenario_id": "unreachable-0006",
+      "wallclock_seconds": 956.2503904550031
+    },
+    {
+      "canonical_schedule_hash": "5c2c6c378f39ef0fa0f8e61db35a8e3016b628a4a99c3ef51f5ecbd5346aed6d",
+      "family": "UNREACHABLE",
+      "response_hash": "435b44f2cc22741cab90e611a71d5ee1924ab2d59935acc4461a15c7d291ec65",
+      "run_id": "20260817T001418-7ec20d9626ae",
+      "scenario_id": "unreachable-0007",
+      "wallclock_seconds": 986.0613232949981
+    },
+    {
+      "canonical_schedule_hash": "f773cd530c4568b350da4ccacc205edbd99ef394fa4a9536f833c9bbc8d68566",
+      "family": "UNREACHABLE",
+      "response_hash": "5761dba9316b3bfe58d74b0a06f94c72e428b93cfefc83cb0d7141df8c007ff0",
+      "run_id": "20260817T001558-56ed3945fbd7",
+      "scenario_id": "unreachable-0008",
+      "wallclock_seconds": 992.4804387450022
+    },
+    {
+      "canonical_schedule_hash": "b8c3208d17cd583eaf33802dbc3d2dc011a9f93959535a8f97bf4e0d597f90c6",
+      "family": "UNREACHABLE",
+      "response_hash": "c8cda38d3e2be5b91435b913ef23ae6fe71990ccda860064e9595ca2cda6eed4",
+      "run_id": "20260817T002842-1ba2bd04e288",
+      "scenario_id": "unreachable-0009",
+      "wallclock_seconds": 968.1029751310016
+    },
+    {
+      "canonical_schedule_hash": "ff44fb6ad516b46e7b8bdb6d68916ee4cd07e6b590b893fc7bbd5a38507aed57",
+      "family": "UNREACHABLE",
+      "response_hash": "11f0ce37d4848d398463170f1197ffcbac35ae993b92354b75869bdd93a1fbcb",
+      "run_id": "20260817T002913-8b3ebbd8c739",
+      "scenario_id": "unreachable-0010",
+      "wallclock_seconds": 971.913022763998
+    },
+    {
+      "canonical_schedule_hash": "c3da4632f8db3e9d8ec8c7febe7fdb3e2784ae920df878023eaa5516a1b1b7a3",
+      "family": "UNREACHABLE",
+      "response_hash": "c48def6744b777218a31d945bc8ef8b2f603dd56a3ee13a63cdb94b7fd340616",
+      "run_id": "20260817T002955-702889385ec5",
+      "scenario_id": "unreachable-0011",
+      "wallclock_seconds": 1006.8737503469965
+    },
+    {
+      "canonical_schedule_hash": "c75315bdc0132f93a7b7e2ab9d3ad7fd8cb030e16fda27fe207ba89070a321c1",
+      "family": "UNREACHABLE",
+      "response_hash": "f0ef6d6382c645f13abd6d644deb48f6cf08ac58f48aab87489560cb40367548",
+      "run_id": "20260817T003005-02c98c5e8f82",
+      "scenario_id": "unreachable-0012",
+      "wallclock_seconds": 992.9435647399987
+    },
+    {
+      "canonical_schedule_hash": "edb36328c78963b2ba15d7fe2fd3a5ac7e3ca74ad27a995fecb7b3a17aa49787",
+      "family": "UNREACHABLE",
+      "response_hash": "7737567f9f440e2fb381a6667769ffddac15cd6c461c5cf9e3094870cfdba57d",
+      "run_id": "20260817T003011-8a75216a607a",
+      "scenario_id": "unreachable-0013",
+      "wallclock_seconds": 929.1444808819979
+    },
+    {
+      "canonical_schedule_hash": "905a2be4dd6771af64d473bb79beb700ac23cca70d8f13fb3065bb13d893c5cb",
+      "family": "UNREACHABLE",
+      "response_hash": "f5a82c0a0f1db301e33cf744abeac29fe61692ed86ff0163d0b95f93eb467b2b",
+      "run_id": "20260817T003046-8fc2c037684a",
+      "scenario_id": "unreachable-0014",
+      "wallclock_seconds": 971.8254936789999
+    },
+    {
+      "canonical_schedule_hash": "337665f964c908cc570633875525cfdafcfd4201f2009085268045be168ed34d",
+      "family": "UNREACHABLE",
+      "response_hash": "a1cd1e7b99f35838ef0019c2cc4fa0508a6488fe7971f9ec052db7e5fa4ac2ae",
+      "run_id": "20260817T003049-7579c665fb51",
+      "scenario_id": "unreachable-0015",
+      "wallclock_seconds": 976.3325738349995
+    },
+    {
+      "canonical_schedule_hash": "e3da351db1f697df8b033ad91b27ba87cce8832f66976acf53f8716e16751637",
+      "family": "UNREACHABLE",
+      "response_hash": "7f31bff7d26a98c8400829a6dd659b150c155f090b87ff9fd92fd680554b4703",
+      "run_id": "20260817T003232-40a60ad5ffca",
+      "scenario_id": "unreachable-0016",
+      "wallclock_seconds": 1012.9580352960002
+    },
+    {
+      "canonical_schedule_hash": "8a8771c0fe70b5256e15f2f4b436e394da38a0cb22985ac434826e3a57ca6c75",
+      "family": "UNREACHABLE",
+      "response_hash": "0fe208084a6b4d15ba92f6ba560cb21c08e64bf34ffdfd055895c22456d928df",
+      "run_id": "20260817T004452-8b3a6b4189e5",
+      "scenario_id": "unreachable-0017",
+      "wallclock_seconds": 988.559398243
+    },
+    {
+      "canonical_schedule_hash": "856771205afa3e158bffa26024d81381bd9be01cc1ae1863c3b67261ce437887",
+      "family": "UNREACHABLE",
+      "response_hash": "d290a7b44653fb1bff3e8b6d4c2076ebdb9cee32cfafdbc5b373b83db1b6a07e",
+      "run_id": "20260817T004527-0601969cd969",
+      "scenario_id": "unreachable-0018",
+      "wallclock_seconds": 944.5292612420017
+    },
+    {
+      "canonical_schedule_hash": "0202e54809afab09930040f23614f15596c906defbf4c82ee5d7528146ff1067",
+      "family": "UNREACHABLE",
+      "response_hash": "6e87fd980ba0779f67c49c988dae1dacf993585acd91833567d7788ca6c3041d",
+      "run_id": "20260817T004542-0faba5874a0c",
+      "scenario_id": "unreachable-0019",
+      "wallclock_seconds": 995.3334986400005
+    },
+    {
+      "canonical_schedule_hash": "72eb4e00d79c200406605eaf88c4f369d87638dfe528f348b626e485c2eaaae8",
+      "family": "UNREACHABLE",
+      "response_hash": "d7373e9abb9ee4c574025f01854e48b4063154cd5d5cd641c1debae8bf431822",
+      "run_id": "20260817T004640-62784c802b8f",
+      "scenario_id": "unreachable-0020",
+      "wallclock_seconds": 1061.5492718739988
+    },
+    {
+      "canonical_schedule_hash": "f920398349edccf7bb15b57c1178a44df04c61913830451b71570265b2503957",
+      "family": "UNREACHABLE",
+      "response_hash": "a292e7a8e4b9b03af4b798224fe16e6c94f60315ca9da5278a33b6bf33811668",
+      "run_id": "20260817T004643-09ad0b6c71cb",
+      "scenario_id": "unreachable-0021",
+      "wallclock_seconds": 1010.0465653620013
+    },
+    {
+      "canonical_schedule_hash": "38bbf7863856ff59838d1ded7b9a98d7e214b6d9030004d666e247b375501a6c",
+      "family": "UNREACHABLE",
+      "response_hash": "3052bbd6a749e81bccfc3aaad57c21f32fc4fe67c38376008519bdcc1498bb60",
+      "run_id": "20260817T004659-6f21e6a00f10",
+      "scenario_id": "unreachable-0022",
+      "wallclock_seconds": 1009.2772249750014
+    },
+    {
+      "canonical_schedule_hash": "4042c0c7b44a00ae627f5c95cd4d04a120ed46ddf1cfbf2d4cd00985a7974fa8",
+      "family": "UNREACHABLE",
+      "response_hash": "cd0162c513083d758d6cb3a94d93aac550c975b4667b3bd59578723a4f5525e5",
+      "run_id": "20260817T004707-14a974735364",
+      "scenario_id": "unreachable-0023",
+      "wallclock_seconds": 972.0874477569996
+    },
+    {
+      "canonical_schedule_hash": "b0de70f56933b9771dbf335ae1ed63693d08a2e94244837900a426d7a2e207fd",
+      "family": "UNREACHABLE",
+      "response_hash": "3b7a76b8140bd302905420ace4e092556626dcda4732c251e5fa5682151d3979",
+      "run_id": "20260817T004927-9f153f3f6706",
+      "scenario_id": "unreachable-0024",
+      "wallclock_seconds": 1045.1333491580008
+    },
+    {
+      "canonical_schedule_hash": "8a2f6ea2edf89e2a60c631f0a15d6af104304263c36a22fd52939bb04fca79c3",
+      "family": "UNREACHABLE",
+      "response_hash": "07261b13589bf21fd626c6c5cdbf17d6ab9c024cc7295ff7df0200ed4876c785",
+      "run_id": "20260817T010113-7b111f15bdb3",
+      "scenario_id": "unreachable-0025",
+      "wallclock_seconds": 997.4960727239995
+    },
+    {
+      "canonical_schedule_hash": "c8a030f3bff7f9f8d9e875e55b3fa649f90fb93bd83ad1cb2e117cad9c49ff7e",
+      "family": "UNREACHABLE",
+      "response_hash": "b245021cc29808eea3384e7e6c8945b017adb03de8839e21665abe6868638d9f",
+      "run_id": "20260817T010122-37a2d5b950da",
+      "scenario_id": "unreachable-0026",
+      "wallclock_seconds": 981.7331532200005
+    },
+    {
+      "canonical_schedule_hash": "ef5d8d601d211f482eea23518a6132aad47d514a3d5c23e26c0a051bcc03e901",
+      "family": "UNREACHABLE",
+      "response_hash": "f0b30ed2f794a012a11d77207029f5238e07a1ee146aa4057e92a74355f58dbd",
+      "run_id": "20260817T010219-70ce4978a978",
+      "scenario_id": "unreachable-0027",
+      "wallclock_seconds": 998.8861813310032
+    },
+    {
+      "canonical_schedule_hash": "b52fde2e316ac2daf83e8ae294cde53c5111db3534a7d065c28cba8b4e2029a6",
+      "family": "UNREACHABLE",
+      "response_hash": "c5479936e1a1e3adfadf789d915a2f004c5e45d1752d46373228db74c28ae4c5",
+      "run_id": "20260817T010321-63011c9c4260",
+      "scenario_id": "unreachable-0028",
+      "wallclock_seconds": 989.198869728003
+    },
+    {
+      "canonical_schedule_hash": "db790c3a4cb6b5af0b9265457c767510af19d21265c91a84d8c51fe10d23920f",
+      "family": "UNREACHABLE",
+      "response_hash": "bf783939c60f3fe56c808fa614ac6a025cda2222253bef46a8bc3bd3c9b9a214",
+      "run_id": "20260817T010339-fbe8db3b68c0",
+      "scenario_id": "unreachable-0029",
+      "wallclock_seconds": 988.1446528899978
+    },
+    {
+      "canonical_schedule_hash": "a7b294dc6349ac691840b97c145e780de88a251f32228af08fea689ae704a2c5",
+      "family": "UNREACHABLE",
+      "response_hash": "cd7cadb43a9a5e41ec4061e7316b71bdacec0d99e43cad6c36b5f34750bb4e05",
+      "run_id": "20260817T010350-3f8e2e686223",
+      "scenario_id": "unreachable-0030",
+      "wallclock_seconds": 989.522965807002
+    },
+    {
+      "canonical_schedule_hash": "08d4e8c9150d238a67e7db3862b4ccc78c9741fc2bd822f3fa39b4c64bb5973f",
+      "family": "UNREACHABLE",
+      "response_hash": "5f21dd768cee33a347d21456a1d1b6a5de4bdffdd0d458ef0d6b48dfd5ef1a66",
+      "run_id": "20260817T010423-6a43a03dc903",
+      "scenario_id": "unreachable-0031",
+      "wallclock_seconds": 957.493276428002
+    },
+    {
+      "canonical_schedule_hash": "d5e250eb061e536f7a6452e7a44d7350662c9f6c38d415bb95cd8548747ae885",
+      "family": "UNREACHABLE",
+      "response_hash": "d2932ad3386079640fc1fa7d219612aa55a382470c2df0fff1457a566f26be9f",
+      "run_id": "20260817T010654-2447e86bf056",
+      "scenario_id": "unreachable-0032",
+      "wallclock_seconds": 984.1564012400013
+    },
+    {
+      "canonical_schedule_hash": "ce84e3e490ac3b98abc4af11c36199db305fcb128db4f63984f7d10cdcb937e4",
+      "family": "UNREACHABLE",
+      "response_hash": "ae488675f65e55d1e0f55fadac3bcf87f077a1c2306b6e58ab0618c6126826ad",
+      "run_id": "20260817T011745-5929a3890bf2",
+      "scenario_id": "unreachable-0033",
+      "wallclock_seconds": 968.6810811239993
+    },
+    {
+      "canonical_schedule_hash": "5f0a6cafdd5e49a5da9d2e3523a379cc531c61943df92d8ca3fc9869abeb4b02",
+      "family": "UNREACHABLE",
+      "response_hash": "ded1b0753baad9a16464a80d9c9d3e8bba78a640787f0650f8d1fa331de84fc6",
+      "run_id": "20260817T011752-397d0f5f29b4",
+      "scenario_id": "unreachable-0034",
+      "wallclock_seconds": 1001.3846064419995
+    },
+    {
+      "canonical_schedule_hash": "84cc278ff23c93f0ff3f2c624269508ce2bb0324b78f665077cee6cc620fd434",
+      "family": "UNREACHABLE",
+      "response_hash": "0901cfe60adb59cb9ef7e5402b321b411d2ac5be132a863c5cbef2dc590020d8",
+      "run_id": "20260817T011859-0894bfefaa9a",
+      "scenario_id": "unreachable-0035",
+      "wallclock_seconds": 988.6219510660012
+    },
+    {
+      "canonical_schedule_hash": "2b2b326f0d5b57a3afd609fd6e0e7642e9949b145cc29ebf04293a7096cc7fd5",
+      "family": "UNREACHABLE",
+      "response_hash": "86f7a5ca5cfcaf01101f781a7f337c3a384ffb7d5710b938c23caac54c2b5ce5",
+      "run_id": "20260817T011951-66ad03d61499",
+      "scenario_id": "unreachable-0036",
+      "wallclock_seconds": 983.8066521990004
+    },
+    {
+      "canonical_schedule_hash": "023a52eee482c4b6742aee20999593a2aa20e3e9ed7f8b4b4c423e0db959b98a",
+      "family": "UNREACHABLE",
+      "response_hash": "dc95b2dadbd8002802bcaf25fb47fd820a5579f8ca49fffb665694215a565ab1",
+      "run_id": "20260817T012008-c3a13ac16f13",
+      "scenario_id": "unreachable-0037",
+      "wallclock_seconds": 978.6015936180011
+    },
+    {
+      "canonical_schedule_hash": "de5d6804ed26c8735b654e848a6c1f2d3dc6066cd2b744179a9457058824c421",
+      "family": "UNREACHABLE",
+      "response_hash": "5cbfed84f9c739637e15abbbce325c0c37ace3dd37b54eb4d3d91e2974434b5a",
+      "run_id": "20260817T012022-cd9eb68bc29f",
+      "scenario_id": "unreachable-0038",
+      "wallclock_seconds": 999.1317894110034
+    },
+    {
+      "canonical_schedule_hash": "c757295affb2f12e397ca31839f82b7e7d299e370ae28951a79564e7db3c0b1c",
+      "family": "UNREACHABLE",
+      "response_hash": "d496b794fb9ec237852a50fe4c76500f8c7c6194968f7c6cd1a70931a0736b79",
+      "run_id": "20260817T012022-871acd16d080",
+      "scenario_id": "unreachable-0039",
+      "wallclock_seconds": 987.3099371610006
+    }
+  ],
+  "seed": 20260816
+}
