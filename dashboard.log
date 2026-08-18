@@ -1275,3 +1275,457 @@ dashboard listening on 0.0.0.0:8080
 194.54.176.74 "GET /api/status HTTP/1.1" 200 -
 194.54.176.74 "GET /api/status HTTP/1.1" 200 -
 5.61.209.44 "GET /SDK/webLanguage HTTP/1.1" 401 -
+dashboard listening on 0.0.0.0:8080
+127.0.0.1 "GET / HTTP/1.1" 401 -
+127.0.0.1 "GET / HTTP/1.1" 200 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+205.210.31.81 code 400, message Bad request version ('À\x13À')
+205.210.31.81 " î  ê<ïå)ôYÞKsú¤§åL[#õ[Ê8>N~||O 9õ¨Ã(äCI[ê~ó)ø8õõÆ:L¢ &À+À/À,À0Ì©Ì¨À	ÀÀ" 400 -
+205.210.31.81 code 400, message Bad request version ('À(À$À\x14À')
+205.210.31.81 " Ê  ÆßÉ4È&èN²°`JÁ{óntS·k¶tR  hÌÌÀ/À+À0À,ÀÀÀ'À#ÀÀ	À(À$ÀÀ" 400 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+----------------------------------------
+Exception occurred during processing of request from ('173.255.221.189', 57073)
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 408, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+173.255.221.189 "GET / HTTP/1.1" 401 -
+66.228.53.162 "GET / HTTP/1.1" 401 -
+194.54.176.74 "GET / HTTP/1.1" 401 -
+194.54.176.74 "GET / HTTP/1.1" 401 -
+194.54.176.74 "GET / HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+90.151.171.108 code 501, message Unsupported method ('CONNECT')
+90.151.171.108 "CONNECT eth0.me:443 HTTP/1.1" 501 -
+186.237.105.207 code 400, message Bad HTTP/0.9 request type ('ç¥\x05éYBD{\x15´_0NÎ\x84\x95\x02×º')
+186.237.105.207 "ç¥éYBD{´_0NÎ×º èô" 400 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+90.151.171.108 code 400, message Bad request syntax ('\x04\x01\x00P¬C¨\x960\x00')
+90.151.171.108 " P¬C¨0 " 400 -
+90.151.171.108 "GET http://eth0.me?Z78948424051Q1 HTTP/1.1" 401 -
+90.151.171.108 code 400, message Bad request syntax ('\x05\x01\x00')
+90.151.171.108 " " 400 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('68.183.74.245', 48349)
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 408, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+68.183.74.245 "GET / HTTP/1.0" 401 -
+68.183.74.245 code 501, message Unsupported method ('OPTIONS')
+68.183.74.245 "OPTIONS / HTTP/1.0" 501 -
+68.183.74.245 code 400, message Bad request version ('RTSP/1.0')
+68.183.74.245 "OPTIONS / RTSP/1.0" 400 -
+68.183.74.245 "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 401 -
+68.183.74.245 code 400, message Bad request syntax ('\x05\x04\x00\x01\x02\x80\x05\x01\x00\x03')
+68.183.74.245 "  " 400 -
+68.183.74.245 code 400, message Bad request syntax ('\x04\x01\x00\x16\x7f\x00\x00\x01root\x00')
+68.183.74.245 "   root " 400 -
+68.183.74.245 code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+68.183.74.245 "  (rþ          |                    " 400 -
+----------------------------------------
+Exception occurred during processing of request from ('68.183.74.245', 8995)
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 296, in parse_request
+    raise ValueError
+ValueError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 418, in handle_one_request
+    if not self.parse_request():
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 313, in parse_request
+    self.send_error(
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 495, in send_error
+    self.wfile.write(body)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+68.183.74.245 code 400, message Bad HTTP/0.9 request type ('\x00')
+68.183.74.245 "          versionbind   " 400 -
+68.183.74.245 code 400, message Bad request syntax ('HELP')
+68.183.74.245 "HELP" 400 -
+68.183.74.245 code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+68.183.74.245 "  S  O ?G×÷º,îê²`~ó ý{¹ÕÈwæÄÛ<=Ûoïn  (   " 400 -
+68.183.74.245 code 400, message Bad request version ('\x00/\x00')
+68.183.74.245 "  i  eU§ärandom1random2random3random4   / " 400 -
+68.183.74.245 code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+68.183.74.245 "   qjn0k¡¢" 400 -
+68.183.74.245 code 400, message Bad request version ('0.12\x00')
+68.183.74.245 "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+68.183.74.245 code 400, message Bad HTTP/0.9 request type ('l\x00')
+68.183.74.245 "l          " 400 -
+68.183.74.245 code 400, message Bad request version ('SIP/2.0')
+68.183.74.245 "OPTIONS sip:nm SIP/2.0" 400 -
+165.22.82.204 code 400, message Bad request version ('À\x13À')
+165.22.82.204 " 0:ÝJû\¯Éô8º{DÔGØ~$d)=ã¯SI CÊùËQC¥ûì¤ö<Flý¼@:jÙ§¯>¹Å|M& &À+À/À,À0Ì©Ì¨À	ÀÀ" 400 -
+138.68.70.127 "GET /solr/admin/info/system HTTP/1.1" 401 -
+138.68.70.127 "GET / HTTP/1.1" 401 -
+64.225.106.197 code 400, message Bad request version ("N\x13-¦éúµ5ý¢ú{zÙ³É\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+64.225.106.197 "$  *ç[Ä@5ÌÔÄDà.BÔ æc§Ó¦Ì¸«!lJ ÓZóÒ(ÊÕ~ìý£¹YN-¦éúµ5ý¢ú{zÙ³É >À,À0 Ì©Ì¨ÌªÀ+À/ À$À( kÀ#À' gÀ" 400 -
+138.68.70.127 "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 401 -
+165.22.82.204 code 400, message Bad request version ('À\x13À')
+165.22.82.204 " ù.4yBr$ÈÒÅºÂÚrÊ/`Ï.âa!b Ú)ÎmÒCëM§HØ_ú¥§µ¥sè{´Ó+ËtÆO &À+À/À,À0Ì©Ì¨À	ÀÀ" 400 -
+201.79.3.59 "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 401 -
+167.99.243.162 "GET /cgi-bin/authLogin.cgi HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+64.62.156.172 code 400, message Bad request version ('À\x14À')
+64.62.156.172 " {  w!iL-6f××0vt#¬-ÚRRo«äûÓÖ  À/À+ÀÀÀÀ	ÀÀ" 400 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+167.99.243.162 "GET / HTTP/1.1" 401 -
+167.99.243.162 code 400, message Bad request version ('À\x13À')
+167.99.243.162 " Ià	ÿ	GÕðÇ.Úç·,}î¢uCm9«ºA44ì 'P| ¸£úM´I*à7Î¯ëêáÑÒÿ$! &À+À/À,À0Ì©Ì¨À	ÀÀ" 400 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+164.90.173.76 "GET /v2/_catalog HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+45.205.1.243 "GET / HTTP/1.1" 401 -
+45.205.1.243 "GET /favicon.ico HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('45.79.5.11', 51073)
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 408, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('45.79.5.11', 51078)
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 408, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+23.239.11.64 "GET / HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+192.248.150.180 "GET / HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+94.154.43.70 "GET /login HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 200 -
+194.54.176.74 "GET /api/status HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 401 -
+194.54.176.74 "GET /api/status HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+45.79.5.11 code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00&!à\x00\x00þÊ\x00Cookie:')
+45.79.5.11 "  &!à  þÊ Cookie: mstshash=" 400 -
+172.105.128.12 "GET / HTTP/1.1" 401 -
+5.61.209.44 "GET /SDK/webLanguage HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+176.15.255.165 "GET / HTTP/1.1" 401 -
+176.15.255.165 "GET / HTTP/1.1" 401 -
+----------------------------------------
+Exception occurred during processing of request from ('176.15.255.165', 52121)
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/http/server.py", line 408, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+95.108.213.247 "GET /robots.txt HTTP/1.1" 401 -
+213.180.203.106 "GET / HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+176.15.255.165 "GET / HTTP/1.1" 401 -
+176.15.255.165 "GET / HTTP/1.1" 401 -
+5.35.3.84 code 400, message Bad request version ('±ý\x9fø<ê\x1bm\x90\x9aê¢Pj\x02\x99k\x87\x19O(`}"\x7f\x90i¸\x17·M¼\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À\'\x00gÀ')
+5.35.3.84 "  ü¦×goË8biAóü¦ÝS "!Ú¦£)t®dDæ ±ýø<êmê¢PjkO(`}"i¸·M¼ >À,À0 Ì©Ì¨ÌªÀ+À/ À$À( kÀ#À' gÀ" 400 -
+5.35.3.84 code 400, message Bad request version ("P\x0e¶\x11/£AVéêáfqd^o\x93\x08Å\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+5.35.3.84 "  ü¹ìX9Øj·<k+2_Æõ7·ÇÎØjW:b Uz#x·BoO?eP¶/£AVéêáfqd^oÅ >À,À0 Ì©Ì¨ÌªÀ+À/ À$À( kÀ#À' gÀ" 400 -
+5.35.3.84 code 400, message Bad request version ("þO<\x93V\x05\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+5.35.3.84 "  ü#bÏöÉÄ»Ó¨ÑýÃt	ÈÏG>ï$qÅû*7= ¾ÛIãqóìS±v®VÑRðÝþO<V >À,À0 Ì©Ì¨ÌªÀ+À/ À$À( kÀ#À' gÀ" 400 -
+5.35.3.84 code 400, message Bad request version ("±á\x08Yeì@éù÷\x88Z\x18DòÆD¼Æ\x10ûÇ£³\x16]\x87:q\x1a\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+5.35.3.84 "  ü	GmôàæÜHù{ÀQ;§Æ)¯®w>o&)ØÒpt Ú±áYeì@éù÷ZDòÆD¼ÆûÇ£³]:q >À,À0 Ì©Ì¨ÌªÀ+À/ À$À( kÀ#À' gÀ" 400 -
+5.35.3.84 code 400, message Bad request version ("ÁZM\x00\x05\x07'Û\x8b\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+5.35.3.84 "  ü0jþYþÆ HT­EvÔ (9®\êÍ:4Å D ½Í8 ¡Ø¬p°qÃ]æcè=Õä,ÄÁZM 'Û >À,À0 Ì©Ì¨ÌªÀ+À/ À$À( kÀ#À' gÀ" 400 -
+5.35.3.84 code 400, message Bad request version ("Iè®.ñ\x93ÎÃ®ÁÛ²éT\x95PtYEUdÛ±ï\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+5.35.3.84 "  ü£¿úéô0jJÀù§ì£Ë irÉ?Ä¸ Hqë µ´bõS¨¼Iè®.ñÎÃ®ÁÛ²éTPtYEUdÛ±ï >À,À0 Ì©Ì¨ÌªÀ+À/ À$À( kÀ#À' gÀ" 400 -
+87.250.224.86 "GET /robots.txt HTTP/1.1" 401 -
+95.108.213.88 "GET / HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+38.180.86.224 code 501, message Unsupported method ('CONNECT')
+38.180.86.224 "CONNECT 38.180.86.224:10001 HTTP/1.1" 501 -
+38.180.86.224 code 400, message Bad request syntax ('\x05\x01\x00')
+38.180.86.224 " " 400 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+37.49.224.154 "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 401 -
+165.22.187.82 "GET / HTTP/1.1" 401 -
+185.189.182.234 "GET / HTTP/1.1" 401 -
+205.210.31.218 "GET / HTTP/1.1" 401 -
+90.151.171.108 code 501, message Unsupported method ('CONNECT')
+90.151.171.108 "CONNECT v4.ident.me:443 HTTP/1.1" 501 -
+90.151.171.108 code 400, message Bad request syntax ('\x04\x01\x00PAl\x97?0\x00')
+90.151.171.108 " PAl?0 " 400 -
+90.151.171.108 "GET http://v4.ident.me?Z78948424051Q1 HTTP/1.1" 401 -
+90.151.171.108 code 400, message Bad request syntax ('\x05\x01\x00')
+90.151.171.108 " " 400 -
+5.61.209.44 "GET /SDK/webLanguage HTTP/1.1" 401 -
+147.185.132.225 "GET / HTTP/1.1" 401 -
+5.61.209.92 "GET /SDK/webLanguage HTTP/1.1" 401 -

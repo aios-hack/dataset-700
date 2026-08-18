@@ -1,7 +1,6 @@
 {
-  "error": "SurrogateModelError: отрицательная цель ('102', 24) oil_mass_delta=-0.0015047038505144883",
   "format": "aios.model-z-cycle.v1",
-  "phase": "failed",
+  "phase": "complete",
   "stages": [
     {
       "completed": 200,
@@ -30,16 +29,23 @@
       "title": "Расширение 500"
     },
     {
-      "current_epoch": 0,
+      "best_epoch": 55,
+      "best_validation_loss": 0.000248319225070567,
+      "completed": 700,
+      "current_epoch": 65,
+      "dataset_hash": "ebd319e12140bddc1c61818d4d63a37136599e93cc25e286f035680d6ebfe6a4",
       "dataset_root": "",
       "id": "combined-700",
       "max_epochs": 80,
+      "model_version": "0ba514195adccc8be864024388c944e8b5bf2ed0aaaad8ac8091bbf96787fa57",
       "report": "model-task34-700/training_report.json",
-      "status": "training",
+      "status": "complete",
       "target": 700,
       "title": "Итого 700",
-      "training_started_at": "2026-08-17T19:46:15.745423+00:00"
+      "train_loss": 0.00074350458367916,
+      "training_started_at": "2026-08-18T00:12:13.507697+00:00",
+      "validation_loss": 0.00031246952131061534
     }
   ],
-  "updated_at": "2026-08-17T20:07:01.221841+00:00"
+  "updated_at": "2026-08-18T08:03:20.012064+00:00"
 }
